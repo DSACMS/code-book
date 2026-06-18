@@ -62,19 +62,6 @@ TODO: A list of CONTRIBUTORS is generated below using contributors.yml located i
 ![](https://img.shields.io/github/contributors/DSACMS/code-book?style=flat-square&label=Contributor%20Count(incl.%20bots)) 
 
 <!-- readme: contributors -start -->
-<table>
-	<tbody>
-		<tr>
-            <td align="center">
-                <a href="https://github.com/zionmich">
-                    <img src="https://avatars.githubusercontent.com/u/113551695?v=4" width="100;" alt="zionmich"/>
-                    <br />
-                    <sub><b>zionmich</b></sub>
-                </a>
-            </td>
-		</tr>
-	<tbody>
-</table>
 <!-- readme: contributors -end -->
 
 <!--
