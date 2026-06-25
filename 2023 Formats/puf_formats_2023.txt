@@ -1,0 +1,1077 @@
+/*2023 Format library for PUF file*/
+
+
+value puffmt
+            LOW-HIGH = "PUF_ID Count" ;
+
+value svyrfmt
+2023="2023";
+
+value versfmt
+1="Version 1"
+2="Version 2"
+3="Version 3"
+4="Version 4"
+5="Version 5"
+6="Version 6"
+7="Version 7"
+8="Version 8"
+9="Version 9"
+10="Version 10";
+
+value adlhnm
+.="Inapplicable/Missing"
+0="0:No helpers"
+1="1:1 helper"
+2="2:2 helpers"
+3="3:3 or more helpers";
+
+value age2grp
+1="1:Age <65 years"
+2="2:Age 65-74 years"
+3="3:Age 75+ years"
+.="Inapplicable/Missing"
+.R=".R:Refused"
+.D=".D:Don't know"
+.N=".N:Not ascertained";
+
+value agree
+.="Inapplicable/Missing"
+1="1:Agree a lot"
+2="2:Agree a little"
+3="3:Neither agree nor disagree"
+4="4:Disagree a little "
+5="5:Disagree a lot"
+.R=".R:Refused"
+.D=".D:Don't know"
+.N=".N:Not ascertained";
+         
+value apptfmt
+.="Inapplicable/Missing"
+1="1:Appointment" 
+2="2:Walked in"
+.R=".R:Refused"
+.D=".D:Don't know"
+.N=".N:Not ascertained";
+
+
+value appttime
+.="Inapplicable/Missing"
+0="0:Didn't have wait"
+1="1:1 to 3 days"
+2="2:4 to 9 days"
+3="3:10 or more days"
+.R=".R:Refused"
+.D=".D:Don't know"
+.N=".N:Not ascertained";
+
+value appt2tf
+.="Inapplicable/Missing"
+0="0:Didn't have wait"
+1="1:1 to 3 days"
+2="2:4 to 6 days"
+3="3:7 to 9 days"
+4="4:10 to 20 days"
+5="5:21 days or more"
+.R=".R:Refused"
+.D=".D:Don't know"
+.N=".N:Not ascertained";
+
+value bmifmt
+.="Inapplicable/Missing"
+1="1:Underweight/healthy, <25"
+2="2:Overweight, 25-<30"
+3="3:Obese/high-risk obese, >=30";
+
+value compfmt 
+.="Inapplicable/Missing"
+1="1:Much better"
+2="2:Somewhat better"
+3="3:About the same"
+4="4:Somewhat worse"
+5="5:Much worse"
+.N=".N: Not ascertained"
+.D=".D: Don't know"
+.R=".R: Refused";
+
+value contin
+. = "Inapplicable/Missing"
+.R = "Refused"
+.D = "Don't know"
+.N = "Not ascertained"
+LOW-HIGH = "Range of Values";
+
+value ctrlfmt
+.="Inapplicable/Missing"
+1="1:Very confident"
+2="2:Confident"
+3="3:Somewhat confident"
+4="4:Not confident"
+.R=".R:Refused"
+.D=".D:Don't know"
+.N=".N:Not ascertained";
+
+value d_madv
+.="Inapplicable/Missing"
+.R=".R:Refused"
+.D=".D:Don't know"
+.N=".N:Not ascertained"
+1="1:Enrolled in MA during year"
+2="2:Never enrolled in MA during year";
+
+value diactrpf
+1="1:All/most of the time"                                             
+2="2:Some/a little/none of the time"
+.="Inapplicable/Missing"
+.R=".R:Refused"
+.D=".D:Don't know"
+.N=".N:Not ascertained";                        
+                                       
+value diafmt
+.="Inapplicable/Missing"
+1="1:Type 1 diabetes"
+2="2:Type 2 diabetes"
+3="3:Borderline/gestational/other"
+.R=".R:Refused"
+.D=".D:Don't know"
+.N=".N:Not ascertained";
+
+value difffmt
+.="Inapplicable/Missing"
+1="1:No difficulty"
+2="2:Little difficulty"
+3="3:Some difficulty"
+4="4:A lot of difficulty/Unable to do it"
+.R=".R:Refused"
+.D=".D:Don't know"
+.N=".N:Not ascertained"; 
+
+value drinkday
+.="Inapplicable/Missing"
+0="0:None"
+1="1:One day a month"
+2="2:Two days a month"
+3="3:Three days a month"
+4="4:Four days a month"
+5="5:Five days a month"
+6="6:Six to ten days a month"
+7="7:Eleven to fifteen days a month"
+8="8:Sixteen to twenty days a month"
+9="9:Twenty-one to twenty-five days a month"
+10="10:Twenty-six days to every day"
+.R=".R:Refused"
+.D=".D:Don't know"
+.N=".N:Not ascertained";
+
+value drinkspd 
+.="Inapplicable/Missing"
+0="0:0 drinks per day"
+1="1:One drink per day"
+2="2:Two drinks per day"
+3="3:Three to five drinks per day"
+4="4:Six or more drinks per day"
+.R=".R:Refused"
+.D=".D:Don't know"
+.N=".N:Not ascertained";
+
+value drinkspm 
+.="Inapplicable/Missing"
+0="0:None"
+1="1:One day a month"
+2="2:Two to five days a month"
+3="3:Six days a month to every day"
+.R=".R:Refused"
+.D=".D:Don't know"
+.N=".N:Not ascertained";
+
+value dualfmt
+.="Inapplicable/Missing"
+1="1:Non dual"
+2="2:Part year dual"
+3="3:Full year dual"
+.R=".R:Refused"
+.D=".D:Don't know"
+.N=".N:Not ascertained";
+
+value dwelfmt
+.="Inapplicable/Missing"
+1="1:Single family home (one-family detached)"
+2="2:Multi family dwelling"
+3="3:Apartment/condo/rowhouse/townhouse"
+4="4:Mobile home or trailer"
+5="5:Other"
+.R=".R:Refused"
+.D=".D:Don't know"
+.N=".N:Not ascertained";
+
+value easydiff
+1="1:Very easy"                               
+2="2:Somewhat easy"                           
+3="3:Somewhat difficult"                      
+4="4:Very difficult"
+.="Inapplicable/Missing"
+.R=".R:Refused"
+.D=".D:Don't know"
+.N=".N:Not ascertained";  
+
+value edofmt
+.="Inapplicable/Missing"
+1="1:Optometrist"
+2="2:Ophthalmologist"
+91="91:Other"
+.R=".R:Refused"
+.D=".D:Don't know"
+.N=".N:Not ascertained";
+
+value edu
+.="Inapplicable/Missing"
+1="1:Less than high school"
+2="2:High school or vocational/technical/business"
+3="3:More than high school"
+.R=".R:Refused"
+.D=".D:Don't know"
+.N=".N:Not ascertained";
+
+value fallscal
+.="Inapplicable/Missing"
+1="1:Not at all afraid of falling"
+2="2:A little afraid of falling"
+3="3:Moderately afraid of falling"
+4="4:Afraid of falling"
+5="5:Very afraid of falling"
+6="6:Extremely afraid of falling"
+.R=".R:Refused"
+.D=".D:Don't know"
+.N=".N:Not ascertained";
+
+value felltimf
+.="Inapplicable/Missing"
+1="1:Fell 1 time" 
+2="2:Fell 2 times" 
+3="3:Fell 3 times"
+4="4:Fell 4 times" 
+5="5:Fell 5 or more times"
+.R=".R:Refused"
+.D=".D:Don't know"
+.N=".N:Not ascertained"; 
+
+value ffsfmt
+.="Inapplicable/Missing"
+1="1:No FFS"
+2="2:Part year FFS"
+3="3:Full year FFS"
+.R=".R:Refused"
+.D=".D:Don't know"
+.N=".N:Not ascertained";
+
+value fmtfdlas
+1="1:Often true"                              
+2="2:Sometimes true"                          
+3="3:Never true"
+.="Inapplicable/Missing"
+.R=".R:Refused"
+.D=".D:Don't know"
+.N=".N:Not ascertained";
+
+value freqfmt
+.="Inapplicable/Missing"
+1="1:Often"
+2="2:Sometimes"
+3="3:Never"
+.R=".R:Refused"
+.D=".D:Don't know"
+.N=".N:Not ascertained";
+
+value funlmtf
+.="Inapplicable/Missing"
+0="0:No Functional Limitations"
+1="1:IADLs Only"
+2="2:1 to 2 ADLs"
+3="3:3 to 4 ADLs"
+4="4:5 to 6 ADLs";
+
+value generrp
+1="1:Often"                                   
+2="2:Sometimes"                               
+3="3:Never"                                   
+4="4:Automatically receives generic"
+.="Inapplicable/Missing"
+.R=".R:Refused"
+.D=".D:Don't know"
+.N=".N:Not ascertained";
+
+value genhfmt
+.="Inapplicable/Missing"
+1="1:Excellent"
+2="2:Very good"
+3="3:Good"
+4="4:Fair"
+5="5:Poor" 
+.R=".R:Refused"
+.D=".D:Don't know"
+.N=".N:Not ascertained";
+
+value hccom
+.="Inapplicable/Missing"
+1="1:No trouble" 
+2="2:A little/a lot of trouble"
+.R=".R:Refused"
+.D=".D:Don't know"
+.N=".N:Not ascertained";
+
+value hcfmt
+.="Inapplicable/Missing"
+1="1:No trouble" 
+2="2:A little"
+3="3:A lot of trouble"
+.R=".R:Refused"
+.D=".D:Don't know"
+.N=".N:Not ascertained";
+
+value hh2tot
+.="Inapplicable/Missing"
+0="0:No one"
+1="1:One"
+2="2:Two"
+3="3:Three or more"
+.R=".R:Refused"
+.D=".D:Don't know"
+.N=".N:Not ascertained";
+
+value hhlt
+.="Inapplicable/Missing"
+0="0:No one"
+1="1:One"
+2="2:Two"
+3="3:Three"
+4="4:Four or more"
+.R=".R:Refused"
+.D=".D:Don't know"
+.N=".N:Not ascertained";
+
+value hhtot
+.="Inapplicable/Missing"
+1="1:One"
+2="2:Two"
+3="3:Three"
+4="4:Four"
+5="5:Five"
+6="6:Six or more"
+.R=".R:Refused"
+.D=".D:Don't know"
+.N=".N:Not ascertained";
+
+value howoftn
+1="1:Never"                                  
+2="2:Sometimes"                               
+3="3:Usually"                                 
+4="4:Always"
+5="5:No test result yet" 
+.="Inapplicable/Missing"
+.R=".R:Refused"
+.D=".D:Don't know"
+.N=".N:Not ascertained";
+ 
+value how5oftn
+1="1:Never"                                  
+2="2:Rarely"                               
+3="3:Somtimes"                                 
+4="4:Often"
+5="5:Usually" 
+.="Inapplicable/Missing"
+.R=".R:Refused"
+.D=".D:Don't know"
+.N=".N:Not ascertained";
+ 
+value hracta
+.="Inapplicable/Missing"
+0="0:None"
+1="1:One hour per week"
+2="2:Two hours per week"
+3="3:Three hours per week"
+4="4:Four hours per week"
+5="5:Five hours per week"
+6="6:Six hours per week"
+7="7:Seven hours per week" 
+8="8:Eight to thirteen hours per week"
+9="9:Fourteen hours per week"
+10="10:Fifteen to twenty five hours per week"
+11="11:Twenty six or more hours per week"
+.R=".R:Refused"
+.D=".D:Don't know"
+.N=".N:Not ascertained";
+
+value hractb
+.="Inapplicable/Missing"
+0="0:None"
+1="1:One hour per week"
+2="2:Two hours per week"
+3="3:Three hours per week"
+4="4:Four hours per week"
+5="5:Five hours per week"
+6="6:Six hours per week"
+7="7:Seven hours per week"
+8="8:Eight to nine hours per week"
+9="9:Ten hours per week"
+10="10:Eleven to thirteen" 
+11="11:Fourteen hours per week"
+12="12:Fifteen hours per week"
+13="13:Sixteen to twenty hours per week" 
+14="14:Twenty one to twenty five hours per week"
+15="15:Twenty six to thirty hours per week"
+16="16:Thirty one or more hours per week"
+.R=".R:Refused"
+.D=".D:Don't know"
+.N=".N:Not ascertained";
+
+value hractc
+.="Inapplicable/Missing"
+0="0:None"
+1="1:One hour per week"
+2="2:Two hours per week"
+3="3:Three hours per week"
+4="4:Four hours per week"
+5="5:Five hours per week"
+6="6:Six hours per week"
+7="7:Seven hours per week" 
+8="8:Eight or more hours per week"
+.R=".R:Refused"
+.D=".D:Don't know"
+.N=".N:Not ascertained";
+
+value hypedrnf
+.="Inapplicable/Missing"
+1="1:Yes"
+2="2:No"
+3="3:N/A; Does not drink alcohol"
+.R=".R:Refused"
+.D=".D:Don't know"
+.N=".N:Not ascertained";
+
+value hypetf 
+.="Inapplicable/Missing"
+1="1:Yes"
+2="2:No"
+3="3:Never told. Prior entry in error"
+.R=".R:Refused"
+.D=".D:Don't know"
+.N=".N:Not ascertained";
+
+value incom25f
+1="1:<$25,000"
+2="2:>=$25,000"
+.="Inapplicable/Missing"
+.R=".R:Refused"
+.D=".D:Don't know"
+.N=".N:Not ascertained";
+
+value incsrcef
+.="Inapplicable/Missing"
+1="1:Not imputed"
+2="2:Imputed by carry forward"
+3="3:Imputed by hotdeck";
+
+value indpuf
+0="0:Not indicated"
+1="1:Indicated"
+.="Inapplicable/Missing"
+.R=".R:Refused"
+.D=".D:Don't know"
+.N=".N:Not ascertained";
+
+value insdrds
+.="Inapplicable/Missing"
+.R=".R:Refused"
+.D=".D:Don't know"
+.N=".N:Not ascertained"
+1="1:Had RDS during year"
+2="2:Never had RDS during year";
+
+value ipdayfmt
+.="Inapplicable/Missing"
+0="0:0 day"
+1="1:1 day"
+2="2:2 days"
+3="3:3 days" 
+4="4:4 days"
+5="5:5 or more days"
+.R=".R:Refused"
+.D=".D:Don't know"
+.N=".N:Not ascertained";
+
+value ipr
+1="1: <=100% of the Federal Poverty Level"     
+2="2: >100% and <=120% of the Federal Poverty" 
+3="3: >120% and <=135% of the Federal Poverty"
+4="4: >135% and <=200% of the Federal Poverty" 
+5="5: >200% of the Federal Poverty Level"
+.="Inapplicable/Missing";
+
+value ipsty2f 
+.="Inapplicable/Missing"
+0="0:No visit" 
+1="1:One or more visit"
+.R=".R:Refused"
+.D=".D:Don't know"
+.N=".N:Not ascertained";
+
+value ipstyfmt 
+.="Inapplicable/Missing"
+0="0:No stay" 
+1="1:One stay" 
+2="2:Two stays"
+3="3:Three stays"
+4="4:Four or more stays"
+.R=".R:Refused"
+.D=".D:Don't know"
+.N=".N:Not ascertained";
+
+value ivcore
+.="Inapplicable/Missing"
+1="1:Non-Hispanic white, <65 years" 
+2="2:Non-Hispanic white, 65-74 years" 
+3="3:Non-Hispanic white, 75-84 years" 
+4="4:Non-Hispanic white, 85+ years" 
+5="5:Non-Hispanic black, <65 years" 
+6="6:Non-Hispanic black, 65-74 years" 
+7="7:Non-Hispanic black, 75-84 years" 
+8="8:Non-Hispanic black, 85+ years" 
+9="9:Hispanic, <65 years" 
+10="10:Hispanic, 65-74 years" 
+11="11:Hispanic, 75+ years" 
+12="12:Other, <65 years" 
+13="13:Other, 65-74 years" 
+14="14:Other, 75+ years"
+.R=".R:Refused"
+.D=".D:Don't know"
+.N=".N:Not ascertained";
+
+value kn2f
+1="1:Just about everything you need to know"  
+2="2:Most of what you need to know"           
+3="3:Some of what you need to know"           
+4="4:A little of what you need to know"       
+5="5:Almost none of what you need to know"
+.="Inapplicable/Missing"
+.R=".R:Refused"
+.D=".D:Don't know"
+.N=".N:Not ascertained";  
+
+value kntoftnf
+1="1:Every day"                               
+2="2:A few times per week"                    
+3="3:A few times per month"                   
+4="4:A few times per year or less" 
+.="Inapplicable/Missing"
+.R=".R:Refused"
+.D=".D:Don't know"
+.N=".N:Not ascertained";  
+
+value lang
+.="Inapplicable/Missing"
+1="1:English"
+2="2:Spanish";
+
+value lastfmt
+1="1:Never had an eye exam"
+2="2:Less than 2 years"
+3="3:2 years to less than 5 years"
+4="4:5 years or more"
+.R=".R:Refused"
+.D=".D:Don't know"
+.N=".N:Not ascertained"
+.="Inapplicable/Missing";
+
+value levelfmt
+.="Inapplicable/Missing"
+1="1:One level"
+2="2:Two levels"
+3="3:Three or more levels"
+.R=".R:Refused"
+.D=".D:Don't know"
+.N=".N:Not ascertained"
+-1="-1: Inapplicable" ;
+
+value lookfmt
+.="Inapplicable/Missing"
+1="1:No trouble seeing"
+2="2:A little trouble seeing"
+3="3:A lot of trouble seeing"
+.R=".R:Refused"
+.D=".D:Don't know"
+.N=".N:Not ascertained";
+
+value losturnf
+1="1:At least once/year"                                   
+2="2:Not at all"                               
+.="Inapplicable/Missing"
+.R=".R:Refused"
+.D=".D:Don't know"
+.N=".N:Not ascertained";
+
+value madvnoem
+.="Inapplicable/Missing"
+1="1:1:Yes"
+2="2:2:No"
+3="3:N/A, haven't needed emergency treatment"
+.R=".R:Refused"
+.D=".D:Don't know"
+.N=".N:Not ascertained";
+
+
+value mafmt
+.="Inapplicable/Missing"
+1="1:No MA"
+2="2:Part year MA"
+3="3:Full year MA"
+.R=".R:Refused"
+.D=".D:Don't know"
+.N=".N:Not ascertained";
+
+value marsta
+.="Inapplicable/Missing"
+1="1:Married"
+2="2:Widowed"
+3="3:Divorced/separated"
+4="4:Never Married"
+.R=".R:Refused"
+.D=".D:Don't know"
+.N=".N:Not ascertained";
+
+value mchihelp
+1="1:Makes decisions on own"                  
+2="2:Gets help on decisions"                  
+3="3:Someone else makes decisions"
+.="Inapplicable/Missing"
+.R=".R:Refused"
+.D=".D:Don't know"
+.N=".N:Not ascertained";
+
+value mdtime
+.="Inapplicable/Missing"
+1="1:0 - 60 mins"
+2="2:61 - 120 mins"
+3="3:121 mins or more"
+.R=".R:Refused"
+.D=".D:Don't know"
+.N=".N:Not ascertained";
+
+value medstaf
+.="Inapplicable/Missing"
+1="1:Aged"
+2="2:Disabled"
+3="3:Unknown"
+.R=".R:Refused"
+.D=".D:Don't know"
+.N=".N:Not ascertained";
+
+value metro 
+.="Inapplicable/Missing"
+1="1:Metro area"
+2="2:Non-metro area";
+
+value minsfmt
+.="Inapplicable/Missing"
+1="1:0 to 15 mins"
+2="2:16 to 30 mins"
+3="3:31 to 59 mins"
+4="4:60 to 119 mins"
+5="5:2 hours or more"
+.R=".R:Refused"
+.D=".D:Don't know"
+.N=".N:Not ascertained";
+
+value opmdcd
+.="Inapplicable/Missing"
+1="1:Nondual"
+2="2:Full dual"
+3="3:Partial dual"
+4="4:QMB dual";
+
+value pdconfip
+1="1:Very/extremely confident"
+2="2:Moderately confident"
+3="3:Not/slightly confident"
+.="Inapplicable/Missing"
+.R=".R:Refused"
+.D=".D:Don't know"
+.N=".N:Not ascertained";
+
+value pdrsfmt
+.="Inapplicable/Missing"
+1="1:Not subsidized"
+2="2:Subsidized part year"
+3="3:Subsidized full year"
+.R=".R:Refused"
+.D=".D:Don't know"
+.N=".N:Not ascertained"; 
+
+value phyvist     
+.="Inapplicable/Missing" 
+0="0:No office visit"
+1="1:1 to 5 office visits"
+2="2:6 to 10 office visits"
+3="3:11 to 15 office visits"
+4="4:16 to 20 office visits"
+5="5:21 or more office visits"
+.R=".R:Refused"
+.D=".D:Don't know"
+.N=".N:Not ascertained";
+
+value premfmt
+.="Inapplicable/Missing"
+1="1:No premium subsidy"
+2="2:Part year premium subsidy"
+3="3:Full year premium subsidy"
+.R=".R:Refused"
+.D=".D:Don't know"
+.N=".N:Not ascertained";
+
+value prem2fmt
+.="Inapplicable/Missing"
+1="1:No premium subsidy"
+2="2:Not full year 100% premium subsidy"
+3="3:Full year 100% premium subsidy"
+.R=".R:Refused"
+.D=".D:Don't know"
+.N=".N:Not ascertained";
+
+value privnum
+.="Inapplicable/Missing"
+0="0:No private plan"
+1="1:One private plan"
+2="2:Two private plans"
+3="3:Three or more private plans"
+.R=".R:Refused"
+.D=".D:Don't know"
+.N=".N:Not ascertained";
+
+value proxy 
+.="Inapplicable/Missing"
+1="1:Self"
+2="2:Proxy"
+.R=".R:Refused"
+.D=".D:Don't know"
+.N=".N:Not ascertained";
+
+Value pvspec
+1="1:Primary Care"                                                          
+2="2:Obstetrics/Gynecology"                                                    
+3="3:Ophthalmology"                                                            
+4="4:Orthopedics"                                                              
+5="5:Psychiatry/Psychology"                                                               
+6="6:Cardiology"                                                               
+7="7:Dermatology"                                                              
+8="8:Urology"                                                                  
+9="9:Surgery"      
+10="10:Gerontology"
+11="11:Osteopathy/DO"
+12="12:Nurse practioner"
+13="13:Physicians assistant"
+14="14:Other" 
+.="Inapplicable/Missing"
+.R=".R:Refused"
+.D=".D:Don't know"
+.N=".N:Not ascertained";
+
+value race
+.="Inapplicable/Missing"
+1="1:Non-Hispanic white"
+2="2:Non-Hispanic black"
+3="3:Hispanic"
+4="4:Other"
+.R=".R:Refused"
+.D=".D:Don't know"
+.N=".N:Not ascertained";
+
+value recfmt
+1="1:Less than 1 year ago"                    
+2="2:1 year to less than 2 years"                   
+3="3:2 years to less than 3 years"                   
+4="4:3 years to less than 5 years"                   
+5="5:5 or more years ago"   
+.="Inapplicable/Missing"
+.R=".R:Refused"
+.D=".D:Don't know"
+.N=".N:Not ascertained"; 
+
+value recordna
+1="1:Yes"                                     
+2="2:No"                                      
+3="3:Not applicable to SP"                    
+4="4:Not sure"    
+.="Inapplicable/Missing"
+.R=".R:Refused"
+.D=".D:Don't know"
+.N=".N:Not ascertained";
+
+value refdif
+.="Inapplicable/Missing"
+1="1:Yes"
+2="2:No"
+3="3:N/A - haven't tried to obtain referral"
+.R=".R:Refused"
+.D=".D:Don't know"
+.N=".N:Not ascertained";
+
+value roomnum
+.="Inapplicable/Missing"
+1="1:One room" 
+2="2:Two rooms"
+3="3:Three rooms"
+4="4:Four rooms"
+5="5:Five rooms"
+6="6:Six rooms"
+7="7:Seven rooms"
+8="8:Eight rooms"
+9="9:Nine or more rooms"
+.R=".R:Refused"
+.D=".D:Don't know"
+.N=".N:Not ascertained";
+
+value rxamntlf
+1="1:More than last year"                     
+2="2:Less than last year"                     
+3="3:The same as last year"                   
+4="4:No cost for RX last year"
+.="Inapplicable/Missing"
+.R=".R:Refused"
+.D=".D:Don't know"
+.N=".N:Not ascertained";
+
+value rxcostlf
+1="1:More than last year"                     
+2="2:Less than last year"                     
+3="3:The same as last year"                   
+4="4:No drug coverage premium last year"
+.="Inapplicable/Missing"
+.R=".R:Refused"
+.D=".D:Don't know"
+.N=".N:Not ascertained";
+
+value sat2fmt
+1="1:Satsified/very satisfied"
+2="2:Dissatisfied/very dissatisfied"
+.="Inapplicable/Missing"
+.R=".R:Refused"
+.D=".D:Don't know"
+.N=".N:Not ascertained";
+
+value satffmt
+.="Inapplicable/Missing"
+1="1:Very Satisfied"
+2="2:Satisfied"
+3="3:Dissatisfied"
+4="4:Very Dissatisfied"
+5="5:No experience"
+.R=".R:Refused"
+.D=".D:Don't know"
+.N=".N:Not ascertained";
+
+value servfmt
+.="Inapplicable/Missing"
+1="1:All included"
+2="2:Some included/some separate"
+3="3:All separate"
+.R=".R:Refused"
+.D=".D:Don't know"
+.N=".N:Not asc
+ertained";
+
+value sex
+.="Inapplicable/Missing"
+1="1:Male"
+2="2:Female"
+.R=".R:Refused"
+.D=".D:Don't know"
+.N=".N:Not ascertained";
+
+value showfmt
+.="Inapplicable/Missing"
+1="1:Walking"
+2="2:Driving"
+3="3:Being driven"
+4="4:Ambulance or other special vehicle"
+5="5:Taxi"
+6="6:Other public transportation"
+7="7:Other"
+.R=".R:Refused"
+.D=".D:Don't know"
+.N=".N:Not ascertained";
+
+value site2fmt
+.="Inapplicable/Missing"
+1="1:Dr office/Medical clinic/VA facility"
+2="2:Managed care plan center/HMO"
+3="3:Other clinic (rural,company,family,etc)"
+4="4:Urgent care/Hospital/ER"
+5="5:Other/At home"
+.R=".R:Refused"
+.D=".D:Don't know"
+.N=".N:Not ascertained";
+
+value snfdayf
+.="Inapplicable/Missing"
+0="0:0 day covered"
+1="1:1 day or more covered"
+.R=".R:Refused"
+.D=".D:Don't know"
+.N=".N:Not ascertained";
+
+value televid
+1="1:Telephone"
+2="2:Video"
+3="3:Both telephone and video"
+.="Inapplicable/Missing"
+.R=".R:Refused"
+.D=".D:Don't know"
+.N=".N:Not ascertained"; 
+
+value timefmt
+.="Inapplicable/Missing"
+1="1:None of the time"
+2="2:Some of the time"
+3="3:Most of the time"
+4="4:All of the time"
+.R=".R:Refused"
+.D=".D:Don't know"
+.N=".N:Not ascertained";
+
+value time2fmt
+.="Inapplicable/Missing"
+1="1:Less than 6 months ago"
+2="2:6 months to less than 1 year"
+3="3:1 year to less than 2 years"
+4="4: 2 years or more"
+5="5:Never taken" 
+.R=".R:Refused"
+.D=".D:Don't know"
+.N=".N:Not ascertained";
+
+value time3fmt
+.="Inapplicable/Missing"
+1="1:All of the time"
+2="2:Most of the time"
+3="3:Some of the time"
+4="4:A little of the time"
+5="5:None of the time"
+.R=".R:Refused"
+.D=".D:Don't know"
+.N=".N:Not ascertained";
+
+value time4fmt
+.="Inapplicable/Missing"
+0="0:Never had blood cholesterol taken"
+1="1:Less than 6 months ago"
+2="2:6 months to 1 year ago"
+3="3:1 year to less than 2 years ago"
+4="4:2 years to less than 5 years ago"
+5="5:5 or more years ago"
+.R=".R:Refused"
+.D=".D:Don't know"
+.N=".N:Not ascertained";
+
+
+
+value time5fmt
+.R=".R:Refused"
+.D=".D:Don't know"
+.N=".N:Not ascertained"
+.="Inapplicable/Missing"
+1="1:Less than 5 years ago"
+2="2:5 to 9 years ago"
+3="3:10 or more years ago";
+
+value time6fmt
+.="Inapplicable/Missing"
+1="1:Less than 1 year"
+2="2:1 to 4 years"
+3="3:5 to 9 years"
+4="4:10 to 14 years"
+5="5:15 to 19 years"
+6="6:20 to 29 years"
+7="7:30 or more years"
+.R=".R:Refused"
+.D=".D:Don't know"
+.N=".N:Not ascertained";
+                 
+value time7fmt
+.="Inapplicable/Missing"
+1="1:Less than 1 week"
+2="2:More than 1 week"
+3="3:Never resumed regular activities"
+.R=".R:Refused"
+.D=".D:Don't know"
+.N=".N:Not ascertained";
+
+value toldfmt
+1="1:Someone made appt during earlier visit"  
+2="2:SP contacted office to set up appt"      
+3="3:Dr office contacted SP to set up appt"   
+4="4:Standing appointment"
+.="Inapplicable/Missing"
+.R=".R:Refused"
+.D=".D:Don't know"
+.N=".N:Not ascertained";
+
+value truefmt
+.="Inapplicable/Missing"
+1="1:True" 
+2="2:False"
+.R=".R:Refused"
+.D=".D:Don't know"
+.N=".N:Not ascertained";
+
+value vacnumf
+0="0:No recorded doses"
+1="1:1 dose"
+2="2:2 doses"
+3="3:3 doses"
+4="4:4 doses"
+5="5:5+ doses"
+.="Inapplicable/Missing"
+.R=".R:Refused"
+.D=".D:Don't know"
+.N=".N:Not ascertained"; 
+
+value yes2fmt
+.="Inapplicable/Missing"
+1="1:Yes" 
+2="2:No"
+3="3:No experience"
+.R=".R:Refused"
+.D=".D:Don't know"
+.N=".N:Not ascertained";
+
+value yesfmt
+1="1:Yes"
+2="2:No"
+.="Inapplicable/Missing"
+.R=".R:Refused"
+.D=".D:Don't know"
+.N=".N:Not ascertained";
+
+value yesnomob
+1="1:Yes"                                     
+2="2:No"                                      
+3="3:Does not drive"                          
+4="4:Has never driven"                        
+5="5:Gave up driving before"  
+.="Inapplicable/Missing"
+.R=".R:Refused"
+.D=".D:Don't know"
+.N=".N:Not ascertained";
+
+value yyn
+.="Inapplicable/Missing"
+1="1:Yes, definitely"
+2="2:Yes, somewhat"
+3="3:No"
+.R=".R:Refused"
+.D=".D:Don't know"
+.N=".N:Not ascertained";
+
+
+
+
+run;
