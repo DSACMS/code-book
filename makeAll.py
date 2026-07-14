@@ -84,7 +84,7 @@ def main():
     logger.info("Step 2: Creating the clean text frequency report...")
     report_payload, _ = make_codeBook(yaml_output_path)
     
-    txt_filename = f"codeBook_{raw_season}_{file_year}.txt"
+    txt_filename = f"codebook_{raw_season}_{file_year}.txt"
     txt_output_path = os.path.abspath(os.path.join(args.output_dir, txt_filename))
 
     if os.path.exists(txt_output_path):

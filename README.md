@@ -101,7 +101,7 @@ Produces `codebook_FALL_2023.yaml` in the output directory. All arguments have d
 python makeCodebook.py codebook_FALL_2023.yaml
 ```
 
-Produces `codeBook_FALL_2023.txt` in the current directory (falls back to `codeBook_report.txt` if the filename doesn't match the expected `codeBook_<season>_<year>.yaml` pattern). Pass `-o` if you want it saved somewhere else.
+Produces `codebook_FALL_2023.txt` in the current directory (falls back to `codebook_report.txt` if the filename doesn't match the expected `codebook_<season>_<year>.yaml` pattern). Pass `-o` if you want it saved somewhere else.
 
 ### 3. Run the full pipeline in one step
 
