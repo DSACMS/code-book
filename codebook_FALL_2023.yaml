@@ -1,0 +1,5664 @@
+PUF_ID:
+  format: PUFFMT
+  description: Unique PUF Identification Number
+  value_distributions:
+  - code: LOW-HIGH
+    label: PUF_ID Count
+    frequency: 13016
+SURVEYYR:
+  format: SVYRFMT
+  description: Survey year
+  value_distributions:
+  - code: 2023
+    label: 2023
+    frequency: 13016
+  notes: Previously named SVYYR.
+VERSION:
+  format: VERSFMT
+  description: Version number
+  value_distributions:
+  - code: 1
+    label: Version 1
+    frequency: 13016
+ADM_H_MEDSTA:
+  format: MEDSTAF
+  description: Medicare status code as of 12/31
+  value_distributions:
+  - code: 1
+    label: Aged
+    frequency: 10904
+  - code: 2
+    label: Disabled
+    frequency: 2090
+  - code: 3
+    label: Unknown
+    frequency: 22
+  notes: Results include all respondents; source administrative data.
+ADM_H_GHPSW:
+  format: YESFMT
+  description: Some group health participation in year
+  value_distributions:
+  - code: 1
+    label: 'Yes'
+    frequency: 7123
+  - code: 2
+    label: 'No'
+    frequency: 5893
+  notes: Results include all respondents; source administrative data.
+ADM_H_PDRS:
+  format: PDRSFMT
+  description: RDS Indicator for the year
+  value_distributions:
+  - code: .
+    label: Inapplicable/Missing
+    frequency: 280
+  - code: 1
+    label: Not subsidized
+    frequency: 12479
+  - code: 2
+    label: Subsidized part year
+    frequency: 23
+  - code: 3
+    label: Subsidized full year
+    frequency: 234
+  notes: Results include all respondents; source administrative data.
+ADM_OP_MDCD:
+  format: OPMDCD
+  description: Medicare-Medicaid dual eligibility
+  value_distributions:
+  - code: 1
+    label: Nondual
+    frequency: 9923
+  - code: 2
+    label: Full dual
+    frequency: 2143
+  - code: 3
+    label: Partial dual
+    frequency: 490
+  - code: 4
+    label: QMB dual
+    frequency: 460
+  notes: Results include all respondents; source administrative data.
+ADM_DUAL_FLAG_YR:
+  format: DUALFMT
+  description: Dual eligibility flag for the year
+  value_distributions:
+  - code: 1
+    label: Non dual
+    frequency: 9923
+  - code: 2
+    label: Part year dual
+    frequency: 356
+  - code: 3
+    label: Full year dual
+    frequency: 2737
+  notes: Results include all respondents; source administrative data.
+ADM_FFS_FLAG_YR:
+  format: FFSFMT
+  description: Fee-for-Service flag for the year
+  value_distributions:
+  - code: 1
+    label: No FFS
+    frequency: 6763
+  - code: 2
+    label: Part year FFS
+    frequency: 494
+  - code: 3
+    label: Full year FFS
+    frequency: 5759
+  notes: Results include all respondents; source administrative data.
+ADM_MA_FLAG_YR:
+  format: MAFMT
+  description: Medicare Advantage flag for the year
+  value_distributions:
+  - code: 1
+    label: No MA
+    frequency: 5893
+  - code: 2
+    label: Part year MA
+    frequency: 463
+  - code: 3
+    label: Full year MA
+    frequency: 6660
+  notes: Results include all respondents; source administrative data.
+ADM_PARTD:
+  format: YESFMT
+  description: Part D plan flag for the year
+  value_distributions:
+  - code: 1
+    label: 'Yes'
+    frequency: 10936
+  - code: 2
+    label: 'No'
+    frequency: 2080
+  notes: Results include all respondents; source administrative data.
+ADM_LIS_FLAG_YR:
+  format: PREMFMT
+  description: Low income subsidy indicator for the yr
+  value_distributions:
+  - code: 1
+    label: No premium subsidy
+    frequency: 9627
+  - code: 2
+    label: Part year premium subsidy
+    frequency: 185
+  - code: 3
+    label: Full year premium subsidy
+    frequency: 3204
+  notes: Results include all respondents; source administrative data.
+ADM_PREM_AMT_YR:
+  format: PREM2FMT
+  description: Premium subsidy coverage for the year
+  value_distributions:
+  - code: 1
+    label: No premium subsidy
+    frequency: 9627
+  - code: 2
+    label: Not full year 100% premium subsidy
+    frequency: 247
+  - code: 3
+    label: Full year 100% premium subsidy
+    frequency: 3142
+  notes: Results include all respondents; source administrative data.
+ADM_H_HHASW:
+  format: YESFMT
+  description: 1+ HHA visit current year (FFS)
+  value_distributions:
+  - code: 1
+    label: 'Yes'
+    frequency: 516
+  - code: 2
+    label: 'No'
+    frequency: 12500
+  notes: Results include all respondents; source administrative data.
+ADM_H_HOSSW:
+  format: YESFMT
+  description: 1+ hospice bill current yr (FFS)
+  value_distributions:
+  - code: 1
+    label: 'Yes'
+    frequency: 105
+  - code: 2
+    label: 'No'
+    frequency: 12911
+  notes: Results include all respondents; source administrative data.
+ADM_H_INPSW:
+  format: YESFMT
+  description: 1+ inpatient discharge current yr (FFS)
+  value_distributions:
+  - code: 1
+    label: 'Yes'
+    frequency: 771
+  - code: 2
+    label: 'No'
+    frequency: 12245
+  notes: Results include all respondents; source administrative data.
+ADM_H_OUTSW:
+  format: YESFMT
+  description: 1+ outpatient visit current yr (FFS)
+  value_distributions:
+  - code: 1
+    label: 'Yes'
+    frequency: 4425
+  - code: 2
+    label: 'No'
+    frequency: 8591
+  notes: Results include all respondents; source administrative data.
+ADM_H_PBSW:
+  format: YESFMT
+  description: 1+ Part B claim current yr (FFS)
+  value_distributions:
+  - code: 1
+    label: 'Yes'
+    frequency: 6581
+  - code: 2
+    label: 'No'
+    frequency: 6435
+  notes: Results include all respondents; source administrative data.
+ADM_H_SNFSW:
+  format: YESFMT
+  description: 1+ SNF admission current yr (FFS)
+  value_distributions:
+  - code: 1
+    label: 'Yes'
+    frequency: 144
+  - code: 2
+    label: 'No'
+    frequency: 12872
+  notes: Results include all respondents; source administrative data.
+ADM_H_ACTSTY:
+  format: IPSTYFMT
+  description: Number inpatient stays current yr (FFS)
+  value_distributions:
+  - code: 0
+    label: No stay
+    frequency: 12261
+  - code: 1
+    label: One stay
+    frequency: 553
+  - code: 2
+    label: Two stays
+    frequency: 122
+  - code: 3
+    label: Three stays
+    frequency: 50
+  - code: 4
+    label: Four or more stays
+    frequency: 30
+  notes: Results include all respondents; source administrative data.
+ADM_H_ACTDAY:
+  format: IPDAYFMT
+  description: Number IP covered days current yr (FFS)
+  value_distributions:
+  - code: 0
+    label: 0 day
+    frequency: 12302
+  - code: 1
+    label: 1 day
+    frequency: 114
+  - code: 2
+    label: 2 days
+    frequency: 118
+  - code: 3
+    label: 3 days
+    frequency: 104
+  - code: 4
+    label: 4 days
+    frequency: 77
+  - code: 5
+    label: 5 or more days
+    frequency: 301
+  notes: Results include all respondents; source administrative data.
+ADM_H_SNFSTY:
+  format: IPSTYFMT
+  description: Total SNF stays current yr (FFS)
+  value_distributions:
+  - code: 0
+    label: No stay
+    frequency: 12872
+  - code: 1
+    label: One stay
+    frequency: 116
+  - code: 2
+    label: Two stays
+    frequency: 28
+  notes: Results include all respondents; source administrative data.
+ADM_H_SNFDAY:
+  format: SNFDAYF
+  description: Total SNF covered days current yr (FFS)
+  value_distributions:
+  - code: 0
+    label: 0 day covered
+    frequency: 12872
+  - code: 1
+    label: 1 day or more covered
+    frequency: 144
+  notes: Results include all respondents; source administrative data.
+ADM_H_HHVIS:
+  format: IPSTY2F
+  description: Total HHA visits current yr (FFS)
+  value_distributions:
+  - code: 0
+    label: No visit
+    frequency: 12500
+  - code: 1
+    label: One or more visit
+    frequency: 516
+  notes: Results include all respondents; source administrative data.
+ADM_H_PHYEVT:
+  format: PHYVIST
+  description: Total office visits in current yr (FFS)
+  value_distributions:
+  - code: 0
+    label: No office visit
+    frequency: 7899
+  - code: 1
+    label: 1 to 5 office visits
+    frequency: 1941
+  - code: 2
+    label: 6 to 10 office visits
+    frequency: 1453
+  - code: 3
+    label: 11 to 15 office visits
+    frequency: 863
+  - code: 4
+    label: 16 to 20 office visits
+    frequency: 431
+  - code: 5
+    label: 21 or more office visits
+    frequency: 429
+  notes: Results include all respondents; source administrative data.
+INS_PRIVRX:
+  format: YESFMT
+  description: Private plan covers Rx drugs (excl. RDS)
+  value_distributions:
+  - code: .
+    label: Inapplicable/Missing
+    frequency: 7435
+  - code: 1
+    label: 'Yes'
+    frequency: 2560
+  - code: 2
+    label: 'No'
+    frequency: 3021
+  notes: Results only include those who have private insurance.
+INS_PRIVLTC:
+  format: YESFMT
+  description: Private plan covers nursing home
+  value_distributions:
+  - code: .
+    label: Inapplicable/Missing
+    frequency: 7435
+  - code: 1
+    label: 'Yes'
+    frequency: 1119
+  - code: 2
+    label: 'No'
+    frequency: 4462
+  notes: Results only include those who have private insurance.
+INS_PRIVVIS:
+  format: YESFMT
+  description: Private plan covers vision
+  value_distributions:
+  - code: .
+    label: Inapplicable/Missing
+    frequency: 7435
+  - code: 1
+    label: 'Yes'
+    frequency: 2477
+  - code: 2
+    label: 'No'
+    frequency: 3104
+  notes: Results only include those who have private insurance.
+INS_PRIVDS:
+  format: YESFMT
+  description: Private plan covers dental
+  value_distributions:
+  - code: .
+    label: Inapplicable/Missing
+    frequency: 7435
+  - code: 1
+    label: 'Yes'
+    frequency: 2844
+  - code: 2
+    label: 'No'
+    frequency: 2737
+  notes: Results only include those who have private insurance.
+INS_D_MADV:
+  format: D_MADV
+  description: Enrolled in Medicare Advantage
+  value_distributions:
+  - code: 1
+    label: Enrolled in MA during year
+    frequency: 7123
+  - code: 2
+    label: Never enrolled in MA during year
+    frequency: 5893
+  notes: Results include all respondents; source administrative data.
+  notes2: See similar variable ADM_MA_FLAG_YR, which has 3 levels.
+INS_D_PRIVNUM:
+  format: YESFMT
+  description: One or more private plans (excl. RDS)
+  value_distributions:
+  - code: 1
+    label: 'Yes'
+    frequency: 5581
+  - code: 2
+    label: 'No'
+    frequency: 7435
+  notes: Results include all respondents; source survey and administrative data.
+INS_D_PRIVNUMC:
+  format: PRIVNUM
+  description: Number of private plans (excl. RDS)
+  value_distributions:
+  - code: 0
+    label: No private plan
+    frequency: 7435
+  - code: 1
+    label: One private plan
+    frequency: 3874
+  - code: 2
+    label: Two private plans
+    frequency: 1184
+  - code: 3
+    label: Three or more private plans
+    frequency: 523
+  notes: Results include all respondents; source survey and administrative data.
+INS_D_PVESI:
+  format: YESFMT
+  description: Has employer-sponsored insurance
+  value_distributions:
+  - code: 1
+    label: 'Yes'
+    frequency: 2584
+  - code: 2
+    label: 'No'
+    frequency: 10432
+  notes: Results include all respondents; source administrative data.
+INS_D_PVSELF:
+  format: YESFMT
+  description: Has self-purchased private insurance
+  value_distributions:
+  - code: 1
+    label: 'Yes'
+    frequency: 3439
+  - code: 2
+    label: 'No'
+    frequency: 9577
+  notes: Results include all respondents; source administrative data.
+INS_D_RDS:
+  format: INSDRDS
+  description: Has Retiree Drug Subsidy (RDS)
+  value_distributions:
+  - code: 1
+    label: Had RDS during year
+    frequency: 257
+  - code: 2
+    label: Never had RDS during year
+    frequency: 12759
+  notes: Results include all respondents; source administrative data.
+INS_MADVRXHT:
+  format: YESFMT
+  description: Medicare Advantage plan covers drugs
+  value_distributions:
+  - code: .
+    label: Inapplicable/Missing
+    frequency: 5893
+  - code: 1
+    label: 'Yes'
+    frequency: 6923
+  - code: 2
+    label: 'No'
+    frequency: 200
+INT_LANG:
+  format: LANG
+  description: Language of interview
+  value_distributions:
+  - code: 1
+    label: English
+    frequency: 12207
+  - code: 2
+    label: Spanish
+    frequency: 809
+  question_numbers:
+  - END1
+  notes: Results include all respondents.
+INT_SPPROXY:
+  format: PROXY
+  description: Self - respondent or proxy
+  value_distributions:
+  - code: 1
+    label: Self
+    frequency: 11437
+  - code: 2
+    label: Proxy
+    frequency: 1579
+  question_numbers:
+  - IN4
+  notes: Results include all respondents.
+DEM_AGE:
+  format: AGE2GRP
+  description: Age group
+  value_distributions:
+  - code: 1
+    label: Age <65 years
+    frequency: 2112
+  - code: 2
+    label: Age 65-74 years
+    frequency: 4501
+  - code: 3
+    label: Age 75+ years
+    frequency: 6403
+  notes2: Results include all respondents.
+DEM_SEX:
+  format: SEX
+  description: Sex code(Admin)
+  value_distributions:
+  - code: 1
+    label: Male
+    frequency: 5838
+  - code: 2
+    label: Female
+    frequency: 7178
+  question_numbers:
+  - ENS5
+  - IN11
+  notes: Results include all respondents.
+  notes2: Self-Reported at baseline/initial interview.
+DEM_RACE:
+  format: RACE
+  description: Race/ethnicity group
+  value_distributions:
+  - code: 1
+    label: Non-Hispanic white
+    frequency: 9232
+  - code: 2
+    label: Non-Hispanic black
+    frequency: 1456
+  - code: 3
+    label: Hispanic
+    frequency: 1604
+  - code: 4
+    label: Other
+    frequency: 724
+  question_numbers:
+  - BQ11A
+  - DI1A
+  notes: Results include all respondents.
+DEM_RE_AGE:
+  format: IVCORE
+  description: Race/ethnicity age group
+  value_distributions:
+  - code: 1
+    label: Non-Hispanic white, <65 years
+    frequency: 1214
+  - code: 10
+    label: Hispanic, 65-74 years
+    frequency: 569
+  - code: 11
+    label: Hispanic, 75+ years
+    frequency: 752
+  - code: 12
+    label: Other, <65 years
+    frequency: 141
+  - code: 13
+    label: Other, 65-74 years
+    frequency: 221
+  - code: 14
+    label: Other, 75+ years
+    frequency: 362
+  - code: 2
+    label: Non-Hispanic white, 65-74 years
+    frequency: 3247
+  - code: 3
+    label: Non-Hispanic white, 75-84 years
+    frequency: 3214
+  - code: 4
+    label: Non-Hispanic white, 85+ years
+    frequency: 1557
+  - code: 5
+    label: Non-Hispanic black, <65 years
+    frequency: 474
+  - code: 6
+    label: Non-Hispanic black, 65-74 years
+    frequency: 464
+  - code: 7
+    label: Non-Hispanic black, 75-84 years
+    frequency: 346
+  - code: 8
+    label: Non-Hispanic black, 85+ years
+    frequency: 172
+  - code: 9
+    label: Hispanic, <65 years
+    frequency: 283
+  notes: Results include all respondents.
+DEM_EDU:
+  format: EDU
+  description: Highest grade completed
+  value_distributions:
+  - code: D
+    label: Don't know
+    frequency: 43
+  - code: R
+    label: Refused
+    frequency: 16
+  - code: 1
+    label: Less than high school
+    frequency: 1912
+  - code: 2
+    label: High school or vocational/technical/business
+    frequency: 3904
+  - code: 3
+    label: More than high school
+    frequency: 7141
+  question_numbers:
+  - DI13A
+DEM_MARSTA:
+  format: MARSTA
+  description: Marital status
+  value_distributions:
+  - code: D
+    label: Don't know
+    frequency: 4
+  - code: R
+    label: Refused
+    frequency: 5
+  - code: 1
+    label: Married
+    frequency: 6060
+  - code: 2
+    label: Widowed
+    frequency: 3084
+  - code: 3
+    label: Divorced/separated
+    frequency: 2235
+  - code: 4
+    label: Never Married
+    frequency: 1628
+  question_numbers:
+  - IN13
+DEM_INCOME:
+  format: INCOM25F
+  description: Income group
+  value_distributions:
+  - code: 1
+    label: <$25,000
+    frequency: 4373
+  - code: 2
+    label: '>=$25,000'
+    frequency: 8643
+  question_numbers:
+  - DI4
+  - DI5A
+  notes2: Results include all respondents.
+DEM_INCSRCE:
+  format: INCSRCEF
+  description: Source of income data
+  value_distributions:
+  - code: .
+    label: Inapplicable/Missing
+    frequency: 17
+  - code: 1
+    label: Not imputed
+    frequency: 5089
+  - code: 2
+    label: Imputed by carry forward
+    frequency: 2097
+  - code: 3
+    label: Imputed by hotdeck
+    frequency: 5813
+  notes2: Results include all respondents.
+DEM_ARMED:
+  format: YESFMT
+  description: Ever served in armed forces
+  value_distributions:
+  - code: R
+    label: Refused
+    frequency: 1
+  - code: 1
+    label: 'Yes'
+    frequency: 1927
+  - code: 2
+    label: 'No'
+    frequency: 11088
+  question_numbers:
+  - ENS12
+  notes2: Inapplicable if SP is less than 17 years old.
+DEM_CBSA:
+  format: METRO
+  description: Metro residence designated by CBSA
+  value_distributions:
+  - code: 1
+    label: Metro area
+    frequency: 10377
+  - code: 2
+    label: Non-metro area
+    frequency: 2639
+DEM_IPR_IND:
+  format: IPR
+  description: Income Poverty Ratio Medicare Threshold
+  value_distributions:
+  - code: 1
+    label: <=100% of the Federal Poverty Level
+    frequency: 2366
+  - code: 2
+    label: '>100% and <=120% of the Federal Poverty'
+    frequency: 689
+  - code: 3
+    label: '>120% and <=135% of the Federal Poverty'
+    frequency: 734
+  - code: 4
+    label: '>135% and <=200% of the Federal Poverty'
+    frequency: 2001
+  - code: 5
+    label: '>200% of the Federal Poverty Level'
+    frequency: 7226
+  notes: Beginning in 2017 the income poverty thresholds reflect the Medicare beneficiary
+    thresholds.
+ACC_HCTROUBL:
+  format: YESFMT
+  description: Has SP had troub get needed health care?
+  value_distributions:
+  - code: D
+    label: Don't know
+    frequency: 12
+  - code: R
+    label: Refused
+    frequency: 3
+  - code: 1
+    label: 'Yes'
+    frequency: 1091
+  - code: 2
+    label: 'No'
+    frequency: 11910
+  question_numbers:
+  - HFAC29
+  notes: Results include all respondents.
+ACC_HCTRBMNY:
+  format: INDPUF
+  description: 'Troub getting care: cost, insuff. money'
+  value_distributions:
+  - code: .
+    label: Inapplicable/Missing
+    frequency: 11925
+  - code: D
+    label: Don't know
+    frequency: 2
+  - code: R
+    label: Refused
+    frequency: 1
+  - code: 0
+    label: Not indicated
+    frequency: 905
+  - code: 1
+    label: Indicated
+    frequency: 183
+  question_numbers:
+  - HFAC30A
+  notes: Applies only if ACC_HCTROUBL = 1.
+ACC_HCDELAY:
+  format: YESFMT
+  description: Last year ever delay in care due to cost
+  value_distributions:
+  - code: D
+    label: Don't know
+    frequency: 5
+  - code: R
+    label: Refused
+    frequency: 5
+  - code: 1
+    label: 'Yes'
+    frequency: 821
+  - code: 2
+    label: 'No'
+    frequency: 12185
+  question_numbers:
+  - HFAC31
+  notes: Results include all respondents.
+ACC_PAYPROB:
+  format: YESFMT
+  description: Problem paying medical bills
+  value_distributions:
+  - code: D
+    label: Don't know
+    frequency: 14
+  - code: R
+    label: Refused
+    frequency: 5
+  - code: 1
+    label: 'Yes'
+    frequency: 892
+  - code: 2
+    label: 'No'
+    frequency: 12105
+  question_numbers:
+  - HFAC32A
+ACC_PAYOVRTM:
+  format: YESFMT
+  description: Medical bills being paid off over time
+  value_distributions:
+  - code: .
+    label: Inapplicable/Missing
+    frequency: 12124
+  - code: D
+    label: Don't know
+    frequency: 13
+  - code: 1
+    label: 'Yes'
+    frequency: 399
+  - code: 2
+    label: 'No'
+    frequency: 480
+  question_numbers:
+  - HFAC32B
+  notes: Applies only if ACC_PAYPROB = 1.
+ACC_MCQUALTY:
+  format: SATFFMT
+  description: 'Satisfaction: qual of med care last year'
+  value_distributions:
+  - code: D
+    label: Don't know
+    frequency: 22
+  - code: R
+    label: Refused
+    frequency: 7
+  - code: 1
+    label: Very Satisfied
+    frequency: 6359
+  - code: 2
+    label: Satisfied
+    frequency: 5747
+  - code: 3
+    label: Dissatisfied
+    frequency: 540
+  - code: 4
+    label: Very Dissatisfied
+    frequency: 157
+  - code: 5
+    label: No experience
+    frequency: 184
+  question_numbers:
+  - SC1
+  notes: Results include all respondents.
+ACC_MCAVAIL:
+  format: SATFFMT
+  description: 'Satisfaction: medical care night/wkend'
+  value_distributions:
+  - code: D
+    label: Don't know
+    frequency: 78
+  - code: R
+    label: Refused
+    frequency: 6
+  - code: 1
+    label: Very Satisfied
+    frequency: 2827
+  - code: 2
+    label: Satisfied
+    frequency: 4583
+  - code: 3
+    label: Dissatisfied
+    frequency: 657
+  - code: 4
+    label: Very Dissatisfied
+    frequency: 185
+  - code: 5
+    label: No experience
+    frequency: 4680
+  question_numbers:
+  - SC2
+  notes: Results include all respondents.
+ACC_MCEASE:
+  format: SATFFMT
+  description: 'Satisfaction: ease get to Dr from home'
+  value_distributions:
+  - code: D
+    label: Don't know
+    frequency: 35
+  - code: R
+    label: Refused
+    frequency: 6
+  - code: 1
+    label: Very Satisfied
+    frequency: 5530
+  - code: 2
+    label: Satisfied
+    frequency: 6688
+  - code: 3
+    label: Dissatisfied
+    frequency: 459
+  - code: 4
+    label: Very Dissatisfied
+    frequency: 128
+  - code: 5
+    label: No experience
+    frequency: 170
+  question_numbers:
+  - SC3
+  notes: Results include all respondents.
+ACC_MCCOSTS:
+  format: SATFFMT
+  description: 'Satisfaction: OOP costs for med services'
+  value_distributions:
+  - code: D
+    label: Don't know
+    frequency: 70
+  - code: R
+    label: Refused
+    frequency: 6
+  - code: 1
+    label: Very Satisfied
+    frequency: 4473
+  - code: 2
+    label: Satisfied
+    frequency: 6677
+  - code: 3
+    label: Dissatisfied
+    frequency: 1103
+  - code: 4
+    label: Very Dissatisfied
+    frequency: 251
+  - code: 5
+    label: No experience
+    frequency: 436
+  question_numbers:
+  - SC4
+  notes: Results include all respondents.
+ACC_MCINFO:
+  format: SATFFMT
+  description: 'Satisfaction: info abt what was wrong'
+  value_distributions:
+  - code: D
+    label: Don't know
+    frequency: 49
+  - code: R
+    label: Refused
+    frequency: 7
+  - code: 1
+    label: Very Satisfied
+    frequency: 4788
+  - code: 2
+    label: Satisfied
+    frequency: 7244
+  - code: 3
+    label: Dissatisfied
+    frequency: 592
+  - code: 4
+    label: Very Dissatisfied
+    frequency: 115
+  - code: 5
+    label: No experience
+    frequency: 221
+  question_numbers:
+  - SC5
+  notes: Results include all respondents.
+ACC_MCCONCRN:
+  format: SATFFMT
+  description: 'Satisfaction: Dr concern w/overall hlth'
+  value_distributions:
+  - code: D
+    label: Don't know
+    frequency: 91
+  - code: R
+    label: Refused
+    frequency: 7
+  - code: 1
+    label: Very Satisfied
+    frequency: 4732
+  - code: 2
+    label: Satisfied
+    frequency: 7223
+  - code: 3
+    label: Dissatisfied
+    frequency: 617
+  - code: 4
+    label: Very Dissatisfied
+    frequency: 117
+  - code: 5
+    label: No experience
+    frequency: 229
+  question_numbers:
+  - SC7
+  notes: Results include all respondents.
+ACC_MCSAMLOC:
+  format: SATFFMT
+  description: 'Satisfaction: med care at same location'
+  value_distributions:
+  - code: D
+    label: Don't know
+    frequency: 64
+  - code: R
+    label: Refused
+    frequency: 6
+  - code: 1
+    label: Very Satisfied
+    frequency: 3639
+  - code: 2
+    label: Satisfied
+    frequency: 6448
+  - code: 3
+    label: Dissatisfied
+    frequency: 1024
+  - code: 4
+    label: Very Dissatisfied
+    frequency: 169
+  - code: 5
+    label: No experience
+    frequency: 1666
+  question_numbers:
+  - SC8
+  notes: Results include all respondents.
+ACC_MCSPECAR:
+  format: SATFFMT
+  description: 'Satisfaction: avail care by specialists'
+  value_distributions:
+  - code: D
+    label: Don't know
+    frequency: 49
+  - code: R
+    label: Refused
+    frequency: 7
+  - code: 1
+    label: Very Satisfied
+    frequency: 4350
+  - code: 2
+    label: Satisfied
+    frequency: 6736
+  - code: 3
+    label: Dissatisfied
+    frequency: 975
+  - code: 4
+    label: Very Dissatisfied
+    frequency: 197
+  - code: 5
+    label: No experience
+    frequency: 702
+  question_numbers:
+  - SC8A
+  notes: Results include all respondents.
+ACC_MCTELANS:
+  format: SATFFMT
+  description: 'Satisfaction: phone answers for tx or Rx'
+  value_distributions:
+  - code: D
+    label: Don't know
+    frequency: 57
+  - code: R
+    label: Refused
+    frequency: 7
+  - code: 1
+    label: Very Satisfied
+    frequency: 3203
+  - code: 2
+    label: Satisfied
+    frequency: 6760
+  - code: 3
+    label: Dissatisfied
+    frequency: 933
+  - code: 4
+    label: Very Dissatisfied
+    frequency: 203
+  - code: 5
+    label: No experience
+    frequency: 1853
+  question_numbers:
+  - SC8B
+  notes: Results include all respondents.
+ACC_MCWORRY:
+  format: TRUEFMT
+  description: Worry abt hlth more than others your age
+  value_distributions:
+  - code: D
+    label: Don't know
+    frequency: 300
+  - code: R
+    label: Refused
+    frequency: 7
+  - code: 1
+    label: 'True'
+    frequency: 3058
+  - code: 2
+    label: 'False'
+    frequency: 9651
+  question_numbers:
+  - SC10A
+  notes: Results include all respondents.
+ACC_MCAVOID:
+  format: TRUEFMT
+  description: Do almost anything to avoid going to Dr
+  value_distributions:
+  - code: D
+    label: Don't know
+    frequency: 32
+  - code: R
+    label: Refused
+    frequency: 5
+  - code: 1
+    label: 'True'
+    frequency: 2843
+  - code: 2
+    label: 'False'
+    frequency: 10136
+  question_numbers:
+  - SC10A
+  notes: Results include all respondents.
+ACC_MCSICK:
+  format: TRUEFMT
+  description: When sick - try keeping sickness to self
+  value_distributions:
+  - code: D
+    label: Don't know
+    frequency: 73
+  - code: R
+    label: Refused
+    frequency: 5
+  - code: 1
+    label: 'True'
+    frequency: 4159
+  - code: 2
+    label: 'False'
+    frequency: 8779
+  question_numbers:
+  - SC10A
+  notes: Results include all respondents.
+ACC_MCDRSOON:
+  format: TRUEFMT
+  description: Usually go to Dr as soon as feel bad
+  value_distributions:
+  - code: D
+    label: Don't know
+    frequency: 105
+  - code: R
+    label: Refused
+    frequency: 5
+  - code: 1
+    label: 'True'
+    frequency: 5727
+  - code: 2
+    label: 'False'
+    frequency: 7179
+  question_numbers:
+  - SC10A
+  notes: Results include all respondents.
+HLT_HYSTEREC:
+  format: YESFMT
+  description: Hysterectomy (ever)
+  value_distributions:
+  - code: .
+    label: Inapplicable/Missing
+    frequency: 5877
+  - code: D
+    label: Don't know
+    frequency: 15
+  - code: 1
+    label: 'Yes'
+    frequency: 2837
+  - code: 2
+    label: 'No'
+    frequency: 4287
+  question_numbers:
+  - HFF9
+  notes: Named PRV_HYSTEREC in 2015.
+  notes2: Applies only if DEM_SEX = 2.
+HLT_OCARTERY:
+  format: YESFMT
+  description: Hardening of arteries (ever)
+  value_distributions:
+  - code: D
+    label: Don't know
+    frequency: 69
+  - code: R
+    label: Refused
+    frequency: 4
+  - code: 1
+    label: 'Yes'
+    frequency: 987
+  - code: 2
+    label: 'No'
+    frequency: 11956
+  question_numbers:
+  - HFJ1
+  notes: Results include all respondents.
+HLT_OCHBP:
+  format: YESFMT
+  description: Hypertension/high BP (ever)
+  value_distributions:
+  - code: D
+    label: Don't know
+    frequency: 21
+  - code: R
+    label: Refused
+    frequency: 3
+  - code: 1
+    label: 'Yes'
+    frequency: 8210
+  - code: 2
+    label: 'No'
+    frequency: 4782
+  question_numbers:
+  - HFJ2
+  notes: Results include all respondents.
+HLT_OCMYOCAR:
+  format: YESFMT
+  description: MI/heart attack (ever)
+  value_distributions:
+  - code: D
+    label: Don't know
+    frequency: 19
+  - code: R
+    label: Refused
+    frequency: 3
+  - code: 1
+    label: 'Yes'
+    frequency: 1142
+  - code: 2
+    label: 'No'
+    frequency: 11852
+  question_numbers:
+  - HFJ4
+  notes: Results include all respondents.
+HLT_OCCHD:
+  format: YESFMT
+  description: Angina pectoris/CHD (ever)
+  value_distributions:
+  - code: D
+    label: Don't know
+    frequency: 65
+  - code: R
+    label: Refused
+    frequency: 3
+  - code: 1
+    label: 'Yes'
+    frequency: 1018
+  - code: 2
+    label: 'No'
+    frequency: 11930
+  question_numbers:
+  - HFJ6
+  notes: Results include all respondents.
+HLT_OCCFAIL:
+  format: YESFMT
+  description: Congestive heart failure (ever)
+  value_distributions:
+  - code: D
+    label: Don't know
+    frequency: 41
+  - code: R
+    label: Refused
+    frequency: 3
+  - code: 1
+    label: 'Yes'
+    frequency: 798
+  - code: 2
+    label: 'No'
+    frequency: 12174
+  question_numbers:
+  - HFJ8
+  notes: Results include all respondents.
+HLT_OCHRTCND:
+  format: YESFMT
+  description: Other heart cond, eg valve/rhythm (ever)
+  value_distributions:
+  - code: D
+    label: Don't know
+    frequency: 36
+  - code: R
+    label: Refused
+    frequency: 3
+  - code: 1
+    label: 'Yes'
+    frequency: 3091
+  - code: 2
+    label: 'No'
+    frequency: 9886
+  question_numbers:
+  - HFJ14
+  notes: Replaces former variables HLT_OCCVALVE, HLT_OCRHYTHM, and HLT_OCOTHHRT.
+  notes2: Results include all respondents.
+HLT_OCSTROKE:
+  format: YESFMT
+  description: Stroke/brain hemorrhage (ever)
+  value_distributions:
+  - code: D
+    label: Don't know
+    frequency: 18
+  - code: R
+    label: Refused
+    frequency: 4
+  - code: 1
+    label: 'Yes'
+    frequency: 1272
+  - code: 2
+    label: 'No'
+    frequency: 11722
+  question_numbers:
+  - HFJ16
+  notes: Results include all respondents.
+HLT_OCCHOLES:
+  format: YESFMT
+  description: High cholesterol (ever)
+  value_distributions:
+  - code: .
+    label: Inapplicable/Missing
+    frequency: 13
+  - code: D
+    label: Don't know
+    frequency: 58
+  - code: R
+    label: Refused
+    frequency: 3
+  - code: 1
+    label: 'Yes'
+    frequency: 8017
+  - code: 2
+    label: 'No'
+    frequency: 4925
+  question_numbers:
+  - HFJ17A
+  notes: Results include all respondents.
+HLT_OCCSKIN:
+  format: YESFMT
+  description: Skin cancer (ever)
+  value_distributions:
+  - code: D
+    label: Don't know
+    frequency: 10
+  - code: R
+    label: Refused
+    frequency: 4
+  - code: 1
+    label: 'Yes'
+    frequency: 2878
+  - code: 2
+    label: 'No'
+    frequency: 10124
+  question_numbers:
+  - HFJ18
+  notes: Results include all respondents.
+HLT_OCCANCER:
+  format: YESFMT
+  description: Other (non-skin) cancer (ever)
+  value_distributions:
+  - code: D
+    label: Don't know
+    frequency: 12
+  - code: R
+    label: Refused
+    frequency: 5
+  - code: 1
+    label: 'Yes'
+    frequency: 2491
+  - code: 2
+    label: 'No'
+    frequency: 10508
+  question_numbers:
+  - HFJ20
+  notes: Results include all respondents.
+HLT_OCARTHRH:
+  format: YESFMT
+  description: Rheumatoid arthritis (ever)
+  value_distributions:
+  - code: D
+    label: Don't know
+    frequency: 139
+  - code: R
+    label: Refused
+    frequency: 4
+  - code: 1
+    label: 'Yes'
+    frequency: 1772
+  - code: 2
+    label: 'No'
+    frequency: 11101
+  question_numbers:
+  - HFJ24
+  notes: Results include all respondents.
+HLT_OCOSARTH:
+  format: YESFMT
+  description: Osteoarthritis (ever)
+  value_distributions:
+  - code: D
+    label: Don't know
+    frequency: 239
+  - code: R
+    label: Refused
+    frequency: 6
+  - code: 1
+    label: 'Yes'
+    frequency: 3883
+  - code: 2
+    label: 'No'
+    frequency: 8888
+  question_numbers:
+  - HFJ24B
+  notes: Not released in 2019-2020.
+  notes2: Results include all respondents.
+HLT_OCARTHOT:
+  format: YESFMT
+  description: Arthritis, other (ever)
+  value_distributions:
+  - code: .
+    label: Inapplicable/Missing
+    frequency: 1
+  - code: D
+    label: Don't know
+    frequency: 161
+  - code: R
+    label: Refused
+    frequency: 6
+  - code: 1
+    label: 'Yes'
+    frequency: 3897
+  - code: 2
+    label: 'No'
+    frequency: 8951
+  question_numbers:
+  - HFJ25
+  notes: Not released in 2019-2020.
+  notes2: Results include all respondents.
+HLT_ALZDEM:
+  format: YESFMT
+  description: Ever told Alzheimer's or dx of dementia
+  value_distributions:
+  - code: D
+    label: Don't know
+    frequency: 3
+  - code: R
+    label: Refused
+    frequency: 4
+  - code: 1
+    label: 'Yes'
+    frequency: 550
+  - code: 2
+    label: 'No'
+    frequency: 12459
+  question_numbers:
+  - HFJ29A
+  - HFJ29B
+  notes: Results include all respondents.
+HLT_OCDEPRSS:
+  format: YESFMT
+  description: Depression (ever)
+  value_distributions:
+  - code: D
+    label: Don't know
+    frequency: 27
+  - code: R
+    label: Refused
+    frequency: 4
+  - code: 1
+    label: 'Yes'
+    frequency: 3462
+  - code: 2
+    label: 'No'
+    frequency: 9523
+  question_numbers:
+  - HFJ30AA
+  notes: Results include all respondents.
+HLT_OCPSYCHO:
+  format: YESFMT
+  description: Ever told had mental disorder
+  value_distributions:
+  - code: D
+    label: Don't know
+    frequency: 19
+  - code: R
+    label: Refused
+    frequency: 5
+  - code: 1
+    label: 'Yes'
+    frequency: 1288
+  - code: 2
+    label: 'No'
+    frequency: 11704
+  question_numbers:
+  - HFJ30A
+  notes: Results include all respondents.
+HLT_OCOSTEOP:
+  format: YESFMT
+  description: Osteoporosis/soft bones (ever)
+  value_distributions:
+  - code: D
+    label: Don't know
+    frequency: 61
+  - code: R
+    label: Refused
+    frequency: 5
+  - code: 1
+    label: 'Yes'
+    frequency: 2348
+  - code: 2
+    label: 'No'
+    frequency: 10602
+  question_numbers:
+  - HFJ32
+  notes: Results include all respondents.
+HLT_OCBRKHIP:
+  format: YESFMT
+  description: Broken hip (ever)
+  value_distributions:
+  - code: D
+    label: Don't know
+    frequency: 5
+  - code: R
+    label: Refused
+    frequency: 4
+  - code: 1
+    label: 'Yes'
+    frequency: 476
+  - code: 2
+    label: 'No'
+    frequency: 12531
+  question_numbers:
+  - HFJ33
+  notes: Results include all respondents.
+HLT_OCEMPHYS:
+  format: YESFMT
+  description: Emphysema/asthma/COPD (ever)
+  value_distributions:
+  - code: D
+    label: Don't know
+    frequency: 14
+  - code: R
+    label: Refused
+    frequency: 5
+  - code: 1
+    label: 'Yes'
+    frequency: 2516
+  - code: 2
+    label: 'No'
+    frequency: 10481
+  question_numbers:
+  - HFJ36
+  notes: Results include all respondents.
+HLT_OCPPARAL:
+  format: YESFMT
+  description: Complete/partial paralysis (ever)
+  value_distributions:
+  - code: D
+    label: Don't know
+    frequency: 7
+  - code: R
+    label: Refused
+    frequency: 4
+  - code: 1
+    label: 'Yes'
+    frequency: 405
+  - code: 2
+    label: 'No'
+    frequency: 12600
+  question_numbers:
+  - HFJ37
+  notes: Results include all respondents.
+HLT_HAVEPROS:
+  format: YESFMT
+  description: Enlarged prostate/BPH (ever)
+  value_distributions:
+  - code: .
+    label: Inapplicable/Missing
+    frequency: 7226
+  - code: D
+    label: Don't know
+    frequency: 46
+  - code: R
+    label: Refused
+    frequency: 3
+  - code: 1
+    label: 'Yes'
+    frequency: 1590
+  - code: 2
+    label: 'No'
+    frequency: 4151
+  question_numbers:
+  - HFJ40
+  notes: Applies only if DEM_SEX = 1.
+HLT_OCKIDNY:
+  format: YESFMT
+  description: Chronic kidney disease (ever)
+  value_distributions:
+  - code: .
+    label: Inapplicable/Missing
+    frequency: 7
+  - code: D
+    label: Don't know
+    frequency: 48
+  - code: R
+    label: Refused
+    frequency: 5
+  - code: 1
+    label: 'Yes'
+    frequency: 989
+  - code: 2
+    label: 'No'
+    frequency: 11967
+HLT_OCBETES:
+  format: YESFMT
+  description: Diabetes/high blood sugar (ever)
+  value_distributions:
+  - code: .
+    label: Inapplicable/Missing
+    frequency: 17
+  - code: D
+    label: Don't know
+    frequency: 25
+  - code: R
+    label: Refused
+    frequency: 5
+  - code: 1
+    label: 'Yes'
+    frequency: 4118
+  - code: 2
+    label: 'No'
+    frequency: 8851
+  question_numbers:
+  - HFJ41A
+  notes: Results include all respondents.
+HLT_OCDTYPE:
+  format: DIAFMT
+  description: Type of diabetes diagnosed
+  value_distributions:
+  - code: .
+    label: Inapplicable/Missing
+    frequency: 8993
+  - code: D
+    label: Don't know
+    frequency: 56
+  - code: 1
+    label: Type 1 diabetes
+    frequency: 178
+  - code: 2
+    label: Type 2 diabetes
+    frequency: 2296
+  - code: 3
+    label: Borderline/gestational/other
+    frequency: 1493
+  question_numbers:
+  - HFJ41B
+  notes: Applies only if HLT_OCBETES = 1.
+HLT_OCDVISIT:
+  format: YESFMT
+  description: Told on 2+ visits had diabetes
+  value_distributions:
+  - code: .
+    label: Inapplicable/Missing
+    frequency: 8898
+  - code: D
+    label: Don't know
+    frequency: 13
+  - code: R
+    label: Refused
+    frequency: 1
+  - code: 1
+    label: 'Yes'
+    frequency: 3317
+  - code: 2
+    label: 'No'
+    frequency: 787
+  question_numbers:
+  - HFJ41C
+  notes: Applies only if HLT_OCBETES = 1.
+HLT_LOSTURIN:
+  format: LOSTURNF
+  description: How often lost urine control (past year)
+  value_distributions:
+  - code: .
+    label: Inapplicable/Missing
+    frequency: 138
+  - code: D
+    label: Don't know
+    frequency: 86
+  - code: R
+    label: Refused
+    frequency: 11
+  - code: 1
+    label: At least once/year
+    frequency: 4490
+  - code: 2
+    label: Not at all
+    frequency: 8291
+  question_numbers:
+  - HFQ1
+  notes: Results include all respondents.
+HLT_TALKURIN:
+  format: YESFMT
+  description: Talked to Dr about urine control
+  value_distributions:
+  - code: .
+    label: Inapplicable/Missing
+    frequency: 8526
+  - code: D
+    label: Don't know
+    frequency: 18
+  - code: 1
+    label: 'Yes'
+    frequency: 2478
+  - code: 2
+    label: 'No'
+    frequency: 1994
+  question_numbers:
+  - HFQ2
+  notes: Applies only if HLT_LOSTURIN = 1.
+HLT_REASURIN:
+  format: YESFMT
+  description: Medical exam for urine control problem
+  value_distributions:
+  - code: .
+    label: Inapplicable/Missing
+    frequency: 10538
+  - code: D
+    label: Don't know
+    frequency: 29
+  - code: 1
+    label: 'Yes'
+    frequency: 1457
+  - code: 2
+    label: 'No'
+    frequency: 992
+  question_numbers:
+  - HFQ4
+  notes: Applies only if HLT_TALKURIN = 1.
+HLT_SURGURIN:
+  format: YESFMT
+  description: Dr talked urine control meds/surgery
+  value_distributions:
+  - code: .
+    label: Inapplicable/Missing
+    frequency: 10538
+  - code: D
+    label: Don't know
+    frequency: 13
+  - code: 1
+    label: 'Yes'
+    frequency: 1307
+  - code: 2
+    label: 'No'
+    frequency: 1158
+  question_numbers:
+  - HFQ5
+  notes: Applies only if HLT_TALKURIN = 1.
+HLT_HYPETOLD:
+  format: HYPETF
+  description: Told on 2+ visits had high BP
+  value_distributions:
+  - code: .
+    label: Inapplicable/Missing
+    frequency: 4867
+  - code: D
+    label: Don't know
+    frequency: 71
+  - code: R
+    label: Refused
+    frequency: 4
+  - code: 1
+    label: 'Yes'
+    frequency: 6635
+  - code: 2
+    label: 'No'
+    frequency: 1439
+  question_numbers:
+  - HFT1
+  notes: Applies only if HLT_OCHBP = 1.
+HLT_HYPEYRS:
+  format: TIME5FMT
+  description: Years since 1st told of hgh bld pressure
+  value_distributions:
+  - code: .
+    label: Inapplicable/Missing
+    frequency: 4943
+  - code: D
+    label: Don't know
+    frequency: 774
+  - code: R
+    label: Refused
+    frequency: 4
+  - code: 1
+    label: Less than 5 years ago
+    frequency: 897
+  - code: 2
+    label: 5 to 9 years ago
+    frequency: 949
+  - code: 3
+    label: 10 or more years ago
+    frequency: 5449
+  question_numbers:
+  - HFT2
+  notes: Applies only if HLT_OCHBP = 1.
+  notes2: Previously named PRV_HYPEYRS.
+HLT_HYPEHOME:
+  format: YESFMT
+  description: Measures BP at home
+  value_distributions:
+  - code: .
+    label: Inapplicable/Missing
+    frequency: 5784
+  - code: D
+    label: Don't know
+    frequency: 1
+  - code: R
+    label: Refused
+    frequency: 1
+  - code: 1
+    label: 'Yes'
+    frequency: 4917
+  - code: 2
+    label: 'No'
+    frequency: 2313
+  question_numbers:
+  - HFT6D
+  notes: Applies only if HLT_OCHBP = 1.
+  notes2: Previously named PRV_HYPEHOME.
+HLT_HYPEMEDS:
+  format: YESFMT
+  description: Takes meds for high BP
+  value_distributions:
+  - code: .
+    label: Inapplicable/Missing
+    frequency: 5784
+  - code: D
+    label: Don't know
+    frequency: 20
+  - code: R
+    label: Refused
+    frequency: 1
+  - code: 1
+    label: 'Yes'
+    frequency: 6825
+  - code: 2
+    label: 'No'
+    frequency: 386
+  question_numbers:
+  - HFT6G
+  notes: Applies only if HLT_OCHBP = 1.
+  notes2: Previously named PRV_HYPEMEDS.
+HLT_HYPEDRNK:
+  format: HYPEDRNF
+  description: Reducing alcohol intake due to high BP
+  value_distributions:
+  - code: .
+    label: Inapplicable/Missing
+    frequency: 5784
+  - code: D
+    label: Don't know
+    frequency: 7
+  - code: R
+    label: Refused
+    frequency: 3
+  - code: 1
+    label: 'Yes'
+    frequency: 1075
+  - code: 2
+    label: 'No'
+    frequency: 2359
+  - code: 3
+    label: N/A; Does not drink alcohol
+    frequency: 3788
+  question_numbers:
+  - HFT6J
+  notes: Applies only if HLT_OCHBP = 1.
+  notes2: Previously named PRV_HYPEDRNK.
+HLT_HYPELONG:
+  format: TIME6FMT
+  description: How long taken meds for high BP (years)
+  value_distributions:
+  - code: .
+    label: Inapplicable/Missing
+    frequency: 6191
+  - code: D
+    label: Don't know
+    frequency: 842
+  - code: R
+    label: Refused
+    frequency: 2
+  - code: 1
+    label: Less than 1 year
+    frequency: 133
+  - code: 2
+    label: 1 to 4 years
+    frequency: 720
+  - code: 3
+    label: 5 to 9 years
+    frequency: 766
+  - code: 4
+    label: 10 to 14 years
+    frequency: 1002
+  - code: 5
+    label: 15 to 19 years
+    frequency: 705
+  - code: 6
+    label: 20 to 29 years
+    frequency: 1386
+  - code: 7
+    label: 30 or more years
+    frequency: 1269
+  question_numbers:
+  - HFT7
+  notes: Applies only if HLT_HYPEMEDS = 1.
+  notes2: Previously named PRV_HYPELONG.
+HLT_HYPECOND:
+  format: YESFMT
+  description: Side effects from BP meds
+  value_distributions:
+  - code: .
+    label: Inapplicable/Missing
+    frequency: 6191
+  - code: D
+    label: Don't know
+    frequency: 107
+  - code: 1
+    label: 'Yes'
+    frequency: 779
+  - code: 2
+    label: 'No'
+    frequency: 5939
+  question_numbers:
+  - HFT11A
+  notes: Applies only if HLT_HYPEMEDS = 1.
+  notes2: Previously named PRV_HYPECOND.
+HLT_HYPECTRL:
+  format: CTRLFMT
+  description: How confident in control of BP
+  value_distributions:
+  - code: .
+    label: Inapplicable/Missing
+    frequency: 5784
+  - code: D
+    label: Don't know
+    frequency: 97
+  - code: R
+    label: Refused
+    frequency: 3
+  - code: 1
+    label: Very confident
+    frequency: 2420
+  - code: 2
+    label: Confident
+    frequency: 2526
+  - code: 3
+    label: Somewhat confident
+    frequency: 1545
+  - code: 4
+    label: Not confident
+    frequency: 641
+  question_numbers:
+  - HFT12A
+  notes: Applies only if HLT_OCHBP = 1.
+  notes2: Previously named PRV_HYPECTRL.
+HLT_HYPEPAY:
+  format: YESFMT
+  description: Difficulty paying for BP meds
+  value_distributions:
+  - code: .
+    label: Inapplicable/Missing
+    frequency: 6191
+  - code: D
+    label: Don't know
+    frequency: 7
+  - code: 1
+    label: 'Yes'
+    frequency: 154
+  - code: 2
+    label: 'No'
+    frequency: 6664
+  question_numbers:
+  - HFT13
+  notes: Applies only if HLT_HYPEMEDS = 1.
+  notes2: Previously named PRV_HYPEPAY.
+HLT_HYPESKIP:
+  format: YESFMT
+  description: Skip/share BP meds b/c high cost
+  value_distributions:
+  - code: .
+    label: Inapplicable/Missing
+    frequency: 6191
+  - code: D
+    label: Don't know
+    frequency: 4
+  - code: 1
+    label: 'Yes'
+    frequency: 103
+  - code: 2
+    label: 'No'
+    frequency: 6718
+  question_numbers:
+  - HFT14
+  notes: Applies only if HLT_HYPEMEDS = 1.
+  notes2: Previously named PRV_HYPESKIP.
+HLT_PROSSURG:
+  format: YESFMT
+  description: Prostate surgery (ever)
+  value_distributions:
+  - code: .
+    label: Inapplicable/Missing
+    frequency: 7209
+  - code: D
+    label: Don't know
+    frequency: 5
+  - code: R
+    label: Refused
+    frequency: 2
+  - code: 1
+    label: 'Yes'
+    frequency: 892
+  - code: 2
+    label: 'No'
+    frequency: 4908
+  question_numbers:
+  - PV15
+  notes: Applies only if male.
+HLT_GENHELTH:
+  format: GENHFMT
+  description: General health compared others same age
+  value_distributions:
+  - code: D
+    label: Don't know
+    frequency: 31
+  - code: R
+    label: Refused
+    frequency: 2
+  - code: 1
+    label: Excellent
+    frequency: 2128
+  - code: 2
+    label: Very good
+    frequency: 4172
+  - code: 3
+    label: Good
+    frequency: 3892
+  - code: 4
+    label: Fair
+    frequency: 2098
+  - code: 5
+    label: Poor
+    frequency: 693
+  question_numbers:
+  - HFA1
+  notes: Results include all respondents.
+HLT_COMPHLTH:
+  format: COMPFMT
+  description: General health compared to one year ago
+  value_distributions:
+  - code: D
+    label: Don't know
+    frequency: 19
+  - code: R
+    label: Refused
+    frequency: 5
+  - code: 1
+    label: Much better
+    frequency: 825
+  - code: 2
+    label: Somewhat better
+    frequency: 1465
+  - code: 3
+    label: About the same
+    frequency: 8208
+  - code: 4
+    label: Somewhat worse
+    frequency: 2154
+  - code: 5
+    label: Much worse
+    frequency: 340
+  question_numbers:
+  - HFA2
+  notes: Results include all respondents.
+HLT_HELMTACT:
+  format: TIMEFMT
+  description: Limited social activities (past month)
+  value_distributions:
+  - code: D
+    label: Don't know
+    frequency: 26
+  - code: R
+    label: Refused
+    frequency: 3
+  - code: 1
+    label: None of the time
+    frequency: 8825
+  - code: 2
+    label: Some of the time
+    frequency: 2535
+  - code: 3
+    label: Most of the time
+    frequency: 956
+  - code: 4
+    label: All of the time
+    frequency: 671
+  question_numbers:
+  - HFA3
+  notes: Results include all respondents.
+HLT_BMI_CAT:
+  format: BMIFMT
+  description: BMI categories (kg/m^2)
+  value_distributions:
+  - code: .
+    label: Inapplicable/Missing
+    frequency: 347
+  - code: 1
+    label: Underweight/healthy, <25
+    frequency: 4211
+  - code: 2
+    label: Overweight, 25-<30
+    frequency: 4434
+  - code: 3
+    label: Obese/high-risk obese, >=30
+    frequency: 4024
+  question_numbers:
+  - HFE1
+HLT_DIAINSUL:
+  format: YESFMT
+  description: Takes insulin
+  value_distributions:
+  - code: .
+    label: Inapplicable/Missing
+    frequency: 8992
+  - code: D
+    label: Don't know
+    frequency: 3
+  - code: 1
+    label: 'Yes'
+    frequency: 811
+  - code: 2
+    label: 'No'
+    frequency: 3210
+  question_numbers:
+  - HFP4
+  notes: Applies only if HLT_OCBETES = 1.
+HLT_DIAMEDS:
+  format: YESFMT
+  description: Takes prescribed diabetes pill/medicine
+  value_distributions:
+  - code: .
+    label: Inapplicable/Missing
+    frequency: 8996
+  - code: D
+    label: Don't know
+    frequency: 5
+  - code: 1
+    label: 'Yes'
+    frequency: 2348
+  - code: 2
+    label: 'No'
+    frequency: 1667
+  question_numbers:
+  - HFP4
+  notes: Applies only if HLT_OCBETES = 1.
+HLT_DIATEST:
+  format: YESFMT
+  description: Tests own blood for sugar/glucose
+  value_distributions:
+  - code: .
+    label: Inapplicable/Missing
+    frequency: 8990
+  - code: D
+    label: Don't know
+    frequency: 1
+  - code: 1
+    label: 'Yes'
+    frequency: 2458
+  - code: 2
+    label: 'No'
+    frequency: 1567
+  question_numbers:
+  - HFP4
+  notes: Applies only if HLT_OCBETES = 1.
+HLT_CONTGLUC:
+  format: YESFMT
+  description: Uses continuous glucose monitor
+  value_distributions:
+  - code: .
+    label: Inapplicable/Missing
+    frequency: 11050
+  - code: D
+    label: Don't know
+    frequency: 1
+  - code: 1
+    label: 'Yes'
+    frequency: 84
+  - code: 2
+    label: 'No'
+    frequency: 1881
+HLT_DIATENYR:
+  format: YESFMT
+  description: Foot exam in last year
+  value_distributions:
+  - code: .
+    label: Inapplicable/Missing
+    frequency: 9007
+  - code: D
+    label: Don't know
+    frequency: 15
+  - code: 1
+    label: 'Yes'
+    frequency: 2645
+  - code: 2
+    label: 'No'
+    frequency: 1349
+  question_numbers:
+  - HFP10
+  notes: Applies only if HLT_OCBETES = 1.
+HLT_DIACTRLP:
+  format: DIACTRPF
+  description: Blood sugar well controlled
+  value_distributions:
+  - code: .
+    label: Inapplicable/Missing
+    frequency: 9084
+  - code: D
+    label: Don't know
+    frequency: 97
+  - code: 1
+    label: All/most of the time
+    frequency: 3214
+  - code: 2
+    label: Some/a little/none of the time
+    frequency: 621
+  question_numbers:
+  - HFP14
+  notes: Applies only if HLT_OCBETES = 1.
+HLT_DIAHYPO:
+  format: YESFMT
+  description: Ever experience hypoglycemia
+  value_distributions:
+  - code: .
+    label: Inapplicable/Missing
+    frequency: 9010
+  - code: D
+    label: Don't know
+    frequency: 24
+  - code: 1
+    label: 'Yes'
+    frequency: 690
+  - code: 2
+    label: 'No'
+    frequency: 3292
+  question_numbers:
+  - HFP14A1
+  notes: Applies only if HLT_OCBETES = 1.
+HLT_DIAMNGE:
+  format: YESFMT
+  description: Had diabetes self management course
+  value_distributions:
+  - code: .
+    label: Inapplicable/Missing
+    frequency: 8942
+  - code: D
+    label: Don't know
+    frequency: 8
+  - code: 1
+    label: 'Yes'
+    frequency: 1187
+  - code: 2
+    label: 'No'
+    frequency: 2879
+  question_numbers:
+  - HFP17
+  notes: Applies only if HLT_OCBETES = 1.
+HLT_DISTEETH:
+  format: YESFMT
+  description: Lost all upper and lower natural teeth
+  value_distributions:
+  - code: D
+    label: Don't know
+    frequency: 3
+  - code: R
+    label: Refused
+    frequency: 4
+  - code: 1
+    label: 'Yes'
+    frequency: 2381
+  - code: 2
+    label: 'No'
+    frequency: 10628
+HLT_DISDECSN:
+  format: YESFMT
+  description: Difficulty concentrate/remember/decide
+  value_distributions:
+  - code: D
+    label: Don't know
+    frequency: 33
+  - code: R
+    label: Refused
+    frequency: 4
+  - code: 1
+    label: 'Yes'
+    frequency: 2375
+  - code: 2
+    label: 'No'
+    frequency: 10604
+  question_numbers:
+  - DIS3
+HLT_DISWALK:
+  format: YESFMT
+  description: Difficulty walking/stairs
+  value_distributions:
+  - code: D
+    label: Don't know
+    frequency: 18
+  - code: R
+    label: Refused
+    frequency: 3
+  - code: 1
+    label: 'Yes'
+    frequency: 3737
+  - code: 2
+    label: 'No'
+    frequency: 9258
+  question_numbers:
+  - DIS4
+  notes: See also HLT_DIFWALK.
+HLT_DISBATH:
+  format: YESFMT
+  description: Difficulty dressing/bathing
+  value_distributions:
+  - code: D
+    label: Don't know
+    frequency: 4
+  - code: R
+    label: Refused
+    frequency: 3
+  - code: 1
+    label: 'Yes'
+    frequency: 1427
+  - code: 2
+    label: 'No'
+    frequency: 11582
+  question_numbers:
+  - DIS5
+HLT_DISERRND:
+  format: YESFMT
+  description: Difficulty doing errands
+  value_distributions:
+  - code: D
+    label: Don't know
+    frequency: 14
+  - code: R
+    label: Refused
+    frequency: 3
+  - code: 1
+    label: 'Yes'
+    frequency: 2603
+  - code: 2
+    label: 'No'
+    frequency: 10396
+  question_numbers:
+  - DIS6
+HLT_FOODTRBL:
+  format: HCFMT
+  description: Difficulty eating solid foods b/c teeth
+  value_distributions:
+  - code: D
+    label: Don't know
+    frequency: 4
+  - code: R
+    label: Refused
+    frequency: 3
+  - code: 1
+    label: No trouble
+    frequency: 10791
+  - code: 2
+    label: A little
+    frequency: 1722
+  - code: 3
+    label: A lot of trouble
+    frequency: 496
+  question_numbers:
+  - HFD1A
+  notes: Results include all respondents.
+  notes2: Not released in 2015.
+HLT_DIFSTOOP:
+  format: DIFFFMT
+  description: Difficulty stooping/crouching/kneeling
+  value_distributions:
+  - code: D
+    label: Don't know
+    frequency: 19
+  - code: R
+    label: Refused
+    frequency: 4
+  - code: 1
+    label: No difficulty
+    frequency: 3880
+  - code: 2
+    label: Little difficulty
+    frequency: 3331
+  - code: 3
+    label: Some difficulty
+    frequency: 2389
+  - code: 4
+    label: A lot of difficulty/Unable to do it
+    frequency: 3393
+  question_numbers:
+  - HFH1
+  notes: Results include all respondents.
+HLT_DIFLIFT:
+  format: DIFFFMT
+  description: Difficulty lifting/carrying 10 pounds
+  value_distributions:
+  - code: D
+    label: Don't know
+    frequency: 30
+  - code: R
+    label: Refused
+    frequency: 5
+  - code: 1
+    label: No difficulty
+    frequency: 8325
+  - code: 2
+    label: Little difficulty
+    frequency: 1555
+  - code: 3
+    label: Some difficulty
+    frequency: 1190
+  - code: 4
+    label: A lot of difficulty/Unable to do it
+    frequency: 1911
+  question_numbers:
+  - HFH2
+  notes: Results include all respondents.
+HLT_DIFREACH:
+  format: DIFFFMT
+  description: Difficulty extending arms above shoulder
+  value_distributions:
+  - code: D
+    label: Don't know
+    frequency: 12
+  - code: R
+    label: Refused
+    frequency: 4
+  - code: 1
+    label: No difficulty
+    frequency: 9399
+  - code: 2
+    label: Little difficulty
+    frequency: 1444
+  - code: 3
+    label: Some difficulty
+    frequency: 1096
+  - code: 4
+    label: A lot of difficulty/Unable to do it
+    frequency: 1061
+  question_numbers:
+  - HFH3
+  notes: Results include all respondents.
+HLT_DIFWRITE:
+  format: DIFFFMT
+  description: Difficulty writing/handling object
+  value_distributions:
+  - code: D
+    label: Don't know
+    frequency: 9
+  - code: R
+    label: Refused
+    frequency: 4
+  - code: 1
+    label: No difficulty
+    frequency: 9707
+  - code: 2
+    label: Little difficulty
+    frequency: 1558
+  - code: 3
+    label: Some difficulty
+    frequency: 1032
+  - code: 4
+    label: A lot of difficulty/Unable to do it
+    frequency: 706
+  question_numbers:
+  - HFH4
+  notes: Results include all respondents.
+HLT_DIFWALK:
+  format: DIFFFMT
+  description: Difficulty walking 1/4 mile
+  value_distributions:
+  - code: D
+    label: Don't know
+    frequency: 61
+  - code: R
+    label: Refused
+    frequency: 4
+  - code: 1
+    label: No difficulty
+    frequency: 7156
+  - code: 2
+    label: Little difficulty
+    frequency: 1407
+  - code: 3
+    label: Some difficulty
+    frequency: 1258
+  - code: 4
+    label: A lot of difficulty/Unable to do it
+    frequency: 3130
+  question_numbers:
+  - HFH5
+  notes: Results include all respondents.
+HLT_D_VIGTIM:
+  format: HRACTA
+  description: Hrs/wk spent doing vigorous activities
+  value_distributions:
+  - code: .
+    label: Inapplicable/Missing
+    frequency: 75
+  - code: 0
+    label: None
+    frequency: 8800
+  - code: 1
+    label: One hour per week
+    frequency: 656
+  - code: 10
+    label: Fifteen to twenty five hours per week
+    frequency: 204
+  - code: 11
+    label: Twenty six or more hours per week
+    frequency: 164
+  - code: 2
+    label: Two hours per week
+    frequency: 807
+  - code: 3
+    label: Three hours per week
+    frequency: 491
+  - code: 4
+    label: Four hours per week
+    frequency: 479
+  - code: 5
+    label: Five hours per week
+    frequency: 300
+  - code: 6
+    label: Six hours per week
+    frequency: 185
+  - code: 7
+    label: Seven hours per week
+    frequency: 347
+  - code: 8
+    label: Eight to thirteen hours per week
+    frequency: 303
+  - code: 9
+    label: Fourteen hours per week
+    frequency: 205
+  question_numbers:
+  - HFH10
+  notes: Previously named PRV_D_VIGTIM.
+HLT_D_MODTIM:
+  format: HRACTB
+  description: Hrs/wk spent doing moderate activities
+  value_distributions:
+  - code: .
+    label: Inapplicable/Missing
+    frequency: 151
+  - code: 0
+    label: None
+    frequency: 4248
+  - code: 1
+    label: One hour per week
+    frequency: 825
+  - code: 10
+    label: Eleven to thirteen
+    frequency: 138
+  - code: 11
+    label: Fourteen hours per week
+    frequency: 684
+  - code: 12
+    label: Fifteen hours per week
+    frequency: 122
+  - code: 13
+    label: Sixteen to twenty hours per week
+    frequency: 199
+  - code: 14
+    label: Twenty one to twenty five hours per week
+    frequency: 314
+  - code: 15
+    label: Twenty six to thirty hours per week
+    frequency: 229
+  - code: 16
+    label: Thirty one or more hours per week
+    frequency: 225
+  - code: 2
+    label: Two hours per week
+    frequency: 1308
+  - code: 3
+    label: Three hours per week
+    frequency: 756
+  - code: 4
+    label: Four hours per week
+    frequency: 1068
+  - code: 5
+    label: Five hours per week
+    frequency: 685
+  - code: 6
+    label: Six hours per week
+    frequency: 304
+  - code: 7
+    label: Seven hours per week
+    frequency: 1141
+  - code: 8
+    label: Eight to nine hours per week
+    frequency: 235
+  - code: 9
+    label: Ten hours per week
+    frequency: 384
+  question_numbers:
+  - HFH11
+  notes: Previously named PRV_D_MODTIM.
+HLT_D_MUSTIM:
+  format: HRACTC
+  description: Hrs/wk spent increasing muscle strength
+  value_distributions:
+  - code: .
+    label: Inapplicable/Missing
+    frequency: 56
+  - code: 0
+    label: None
+    frequency: 7613
+  - code: 1
+    label: One hour per week
+    frequency: 1361
+  - code: 2
+    label: Two hours per week
+    frequency: 1480
+  - code: 3
+    label: Three hours per week
+    frequency: 655
+  - code: 4
+    label: Four hours per week
+    frequency: 760
+  - code: 5
+    label: Five hours per week
+    frequency: 282
+  - code: 6
+    label: Six hours per week
+    frequency: 101
+  - code: 7
+    label: Seven hours per week
+    frequency: 399
+  - code: 8
+    label: Eight or more hours per week
+    frequency: 309
+  question_numbers:
+  - HFH12
+  notes: Previously named PRV_D_MUSTIM.
+HLT_FUNC_LIM:
+  format: FUNLMTF
+  description: 'Functional limitations: IADLs and ADLs'
+  value_distributions:
+  - code: 0
+    label: No Functional Limitations
+    frequency: 7223
+  - code: 1
+    label: IADLs Only
+    frequency: 2011
+  - code: 2
+    label: 1 to 2 ADLs
+    frequency: 2404
+  - code: 3
+    label: 3 to 4 ADLs
+    frequency: 856
+  - code: 4
+    label: 5 to 6 ADLs
+    frequency: 522
+  question_numbers:
+  - HFLA1-HFLF1
+  - HFKA1-HFKF1
+  notes: Results include all respondents.
+HLT_D_LSTADL:
+  format: ADLHNM
+  description: Number helpers for listed ADLs/IADLs
+  value_distributions:
+  - code: 0
+    label: No helpers
+    frequency: 8814
+  - code: 1
+    label: 1 helper
+    frequency: 3059
+  - code: 2
+    label: 2 helpers
+    frequency: 827
+  - code: 3
+    label: 3 or more helpers
+    frequency: 316
+  notes: Results include all respondents.
+HLT_DTBLGTPL:
+  format: YESFMT
+  description: Has trouble getting places
+  value_distributions:
+  - code: D
+    label: Don't know
+    frequency: 7
+  - code: R
+    label: Refused
+    frequency: 2
+  - code: 1
+    label: 'Yes'
+    frequency: 2097
+  - code: 2
+    label: 'No'
+    frequency: 10910
+  question_numbers:
+  - MB1
+HLT_DREDTRAV:
+  format: YESFMT
+  description: Reduced day-to-day travel
+  value_distributions:
+  - code: D
+    label: Don't know
+    frequency: 11
+  - code: R
+    label: Refused
+    frequency: 2
+  - code: 1
+    label: 'Yes'
+    frequency: 3430
+  - code: 2
+    label: 'No'
+    frequency: 9573
+  question_numbers:
+  - MB2
+HLT_DASKRIDE:
+  format: YESFMT
+  description: Ask others for rides
+  value_distributions:
+  - code: D
+    label: Don't know
+    frequency: 9
+  - code: R
+    label: Refused
+    frequency: 2
+  - code: 1
+    label: 'Yes'
+    frequency: 3758
+  - code: 2
+    label: 'No'
+    frequency: 9247
+  question_numbers:
+  - MB3
+HLT_DGIVUPDR:
+  format: YESNOMOB
+  description: Given up driving altogether
+  value_distributions:
+  - code: .
+    label: Inapplicable/Missing
+    frequency: 19
+  - code: D
+    label: Don't know
+    frequency: 3
+  - code: R
+    label: Refused
+    frequency: 2
+  - code: 1
+    label: 'Yes'
+    frequency: 675
+  - code: 2
+    label: 'No'
+    frequency: 9840
+  - code: 4
+    label: Has never driven
+    frequency: 998
+  - code: 5
+    label: Gave up driving before
+    frequency: 1479
+  question_numbers:
+  - MB5
+HLT_DLIMDRIV:
+  format: YESFMT
+  description: Limited driving to daytime
+  value_distributions:
+  - code: .
+    label: Inapplicable/Missing
+    frequency: 3171
+  - code: D
+    label: Don't know
+    frequency: 5
+  - code: R
+    label: Refused
+    frequency: 2
+  - code: 1
+    label: 'Yes'
+    frequency: 2215
+  - code: 2
+    label: 'No'
+    frequency: 7623
+  question_numbers:
+  - MB4
+  notes: Applies only if HLT_DGIVUPDR = 2, .D, or .R
+HLT_DUSETRNS:
+  format: YESFMT
+  description: Use taxi or special transportation
+  value_distributions:
+  - code: D
+    label: Don't know
+    frequency: 9
+  - code: R
+    label: Refused
+    frequency: 2
+  - code: 1
+    label: 'Yes'
+    frequency: 1286
+  - code: 2
+    label: 'No'
+    frequency: 11719
+  question_numbers:
+  - MB6
+HLT_ECHELP:
+  format: YESFMT
+  description: SP wear eyeglasses/contact lenses
+  value_distributions:
+  - code: .
+    label: Inapplicable/Missing
+    frequency: 67
+  - code: 1
+    label: 'Yes'
+    frequency: 10369
+  - code: 2
+    label: 'No'
+    frequency: 2580
+  question_numbers:
+  - HFB1
+  notes: Results include all respondents.
+HLT_ECTROUB:
+  format: LOOKFMT
+  description: Description of SP's vision
+  value_distributions:
+  - code: .
+    label: Inapplicable/Missing
+    frequency: 93
+  - code: D
+    label: Don't know
+    frequency: 33
+  - code: R
+    label: Refused
+    frequency: 1
+  - code: 1
+    label: No trouble seeing
+    frequency: 8620
+  - code: 2
+    label: A little trouble seeing
+    frequency: 3821
+  - code: 3
+    label: A lot of trouble seeing
+    frequency: 448
+  question_numbers:
+  - HFB2
+  notes: Applies only if HLT_ECHELP = 1 or 2.
+HLT_EDOCEXAM:
+  format: YESFMT
+  description: Has SP had eye exam in past year
+  value_distributions:
+  - code: D
+    label: Don't know
+    frequency: 33
+  - code: R
+    label: Refused
+    frequency: 3
+  - code: 1
+    label: 'Yes'
+    frequency: 7651
+  - code: 2
+    label: 'No'
+    frequency: 5329
+  question_numbers:
+  - HFB6
+  notes: Results include all respondents.
+HLT_EDOCLAST:
+  format: LASTFMT
+  description: How Long since last eye exam
+  value_distributions:
+  - code: .
+    label: Inapplicable/Missing
+    frequency: 36
+  - code: D
+    label: Don't know
+    frequency: 143
+  - code: N
+    label: Not ascertained
+    frequency: 14
+  - code: R
+    label: Refused
+    frequency: 1
+  - code: 1
+    label: Never had an eye exam
+    frequency: 109
+  - code: 2
+    label: Less than 2 years
+    frequency: 9779
+  - code: 3
+    label: 2 years to less than 5 years
+    frequency: 2208
+  - code: 4
+    label: 5 years or more
+    frequency: 726
+  question_numbers:
+  - HFB7
+HLT_EDOCTYPE:
+  format: EDOFMT
+  description: Eye care professional last exam
+  value_distributions:
+  - code: .
+    label: Inapplicable/Missing
+    frequency: 303
+  - code: D
+    label: Don't know
+    frequency: 933
+  - code: 1
+    label: Optometrist
+    frequency: 5546
+  - code: 2
+    label: Ophthalmologist
+    frequency: 6006
+  - code: 91
+    label: Other
+    frequency: 228
+  question_numbers:
+  - HFB7A
+  notes: Applies only if HLT_EDOCLAST = 2, 3, 4 or HLT_EDOCEXAM = 1.
+HLT_EDOCDLAT:
+  format: YESFMT
+  description: Eye Dr ever dilate eyes
+  value_distributions:
+  - code: .
+    label: Inapplicable/Missing
+    frequency: 1236
+  - code: D
+    label: Don't know
+    frequency: 256
+  - code: 1
+    label: 'Yes'
+    frequency: 9288
+  - code: 2
+    label: 'No'
+    frequency: 2236
+  question_numbers:
+  - HFB7B
+  notes: Applies only if HLT_EDOCTYPE = 1, 2,or 91.
+HLT_CATAREVR:
+  format: YESFMT
+  description: Ever told had cataracts
+  value_distributions:
+  - code: .
+    label: Inapplicable/Missing
+    frequency: 1236
+  - code: D
+    label: Don't know
+    frequency: 24
+  - code: 1
+    label: 'Yes'
+    frequency: 7694
+  - code: 2
+    label: 'No'
+    frequency: 4062
+HLT_GLCOMEVR:
+  format: YESFMT
+  description: Ever told had glaucoma
+  value_distributions:
+  - code: .
+    label: Inapplicable/Missing
+    frequency: 1236
+  - code: D
+    label: Don't know
+    frequency: 52
+  - code: 1
+    label: 'Yes'
+    frequency: 1492
+  - code: 2
+    label: 'No'
+    frequency: 10236
+HLT_RETINEVR:
+  format: YESFMT
+  description: Ever told had diabetic retinopathy
+  value_distributions:
+  - code: .
+    label: Inapplicable/Missing
+    frequency: 1236
+  - code: D
+    label: Don't know
+    frequency: 56
+  - code: 1
+    label: 'Yes'
+    frequency: 429
+  - code: 2
+    label: 'No'
+    frequency: 11295
+HLT_MACULEVR:
+  format: YESFMT
+  description: Ever told had macular degeneration
+  value_distributions:
+  - code: .
+    label: Inapplicable/Missing
+    frequency: 1236
+  - code: D
+    label: Don't know
+    frequency: 99
+  - code: 1
+    label: 'Yes'
+    frequency: 1222
+  - code: 2
+    label: 'No'
+    frequency: 10459
+HLT_CATAROPC:
+  format: YESFMT
+  description: Ever had operation for cataracts
+  value_distributions:
+  - code: .
+    label: Inapplicable/Missing
+    frequency: 5298
+  - code: D
+    label: Don't know
+    frequency: 5
+  - code: 1
+    label: 'Yes'
+    frequency: 5112
+  - code: 2
+    label: 'No'
+    frequency: 2601
+HLT_EYESURG:
+  format: YESFMT
+  description: Ever had laser eye surgery
+  value_distributions:
+  - code: .
+    label: Inapplicable/Missing
+    frequency: 11436
+  - code: D
+    label: Don't know
+    frequency: 40
+  - code: 1
+    label: 'Yes'
+    frequency: 285
+  - code: 2
+    label: 'No'
+    frequency: 1255
+HLT_HCHELP:
+  format: YESFMT
+  description: SP use hearing aid
+  value_distributions:
+  - code: .
+    label: Inapplicable/Missing
+    frequency: 21
+  - code: 1
+    label: 'Yes'
+    frequency: 2132
+  - code: 2
+    label: 'No'
+    frequency: 10863
+  question_numbers:
+  - HFC1
+  notes: Results include all respondents.
+HLT_HCTROUB:
+  format: HCFMT
+  description: Description of SP's hearing
+  value_distributions:
+  - code: .
+    label: Inapplicable/Missing
+    frequency: 34
+  - code: D
+    label: Don't know
+    frequency: 24
+  - code: R
+    label: Refused
+    frequency: 2
+  - code: 1
+    label: No trouble
+    frequency: 7677
+  - code: 2
+    label: A little
+    frequency: 4634
+  - code: 3
+    label: A lot of trouble
+    frequency: 645
+  question_numbers:
+  - HFC2
+  notes: Applies only if HLT_HCHELP = 1 or 2.
+HLT_HCKNOWMC:
+  format: HCFMT
+  description: Difficult finding Mcare info bc hearing
+  value_distributions:
+  - code: .
+    label: Inapplicable/Missing
+    frequency: 7737
+  - code: D
+    label: Don't know
+    frequency: 74
+  - code: R
+    label: Refused
+    frequency: 2
+  - code: 1
+    label: No trouble
+    frequency: 4113
+  - code: 2
+    label: A little
+    frequency: 816
+  - code: 3
+    label: A lot of trouble
+    frequency: 274
+  question_numbers:
+  - HFC3
+  notes: Applies only if HLT_HCTROUB = 2 or 3.
+HLT_HCCOMDOC:
+  format: HCCOM
+  description: Difficult communicate w/ Dr bc hearing
+  value_distributions:
+  - code: .
+    label: Inapplicable/Missing
+    frequency: 7737
+  - code: D
+    label: Don't know
+    frequency: 15
+  - code: 1
+    label: No trouble
+    frequency: 4293
+  - code: 2
+    label: A little/a lot of trouble
+    frequency: 971
+  question_numbers:
+  - HFC4
+  notes: Applies only if HLT_HCTROUB = 2 or 3.
+PRV_BPTAKEN:
+  format: TIME2FMT
+  description: How long since BP taken
+  value_distributions:
+  - code: D
+    label: Don't know
+    frequency: 55
+  - code: R
+    label: Refused
+    frequency: 1
+  - code: 1
+    label: Less than 6 months ago
+    frequency: 11291
+  - code: 2
+    label: 6 months to less than 1 year
+    frequency: 1318
+  - code: 3
+    label: 1 year to less than 2 years
+    frequency: 203
+  - code: 4
+    label: 2 years or more
+    frequency: 144
+  - code: 5
+    label: Never taken
+    frequency: 4
+  question_numbers:
+  - HFF1
+  notes2: Results include all respondents.
+PRV_BCTAKEN:
+  format: TIME4FMT
+  description: How long since blood cholesterol taken
+  value_distributions:
+  - code: D
+    label: Don't know
+    frequency: 515
+  - code: R
+    label: Refused
+    frequency: 2
+  - code: 0
+    label: Never had blood cholesterol taken
+    frequency: 123
+  - code: 1
+    label: Less than 6 months ago
+    frequency: 8829
+  - code: 2
+    label: 6 months to 1 year ago
+    frequency: 2534
+  - code: 3
+    label: 1 year to less than 2 years ago
+    frequency: 659
+  - code: 4
+    label: 2 years to less than 5 years ago
+    frequency: 218
+  - code: 5
+    label: 5 or more years ago
+    frequency: 136
+  question_numbers:
+  - HFF2
+  notes2: Results include all respondents.
+PRV_MAMMOGRM:
+  format: YESFMT
+  description: Mammogram/breast X-ray (past year)
+  value_distributions:
+  - code: .
+    label: Inapplicable/Missing
+    frequency: 5918
+  - code: D
+    label: Don't know
+    frequency: 44
+  - code: R
+    label: Refused
+    frequency: 1
+  - code: 1
+    label: 'Yes'
+    frequency: 3208
+  - code: 2
+    label: 'No'
+    frequency: 3845
+  question_numbers:
+  - HFF3
+  notes: Applies only if DEM_SEX = 2.
+PRV_DIGTEXAM:
+  format: YESFMT
+  description: DRE prostate exam (past year)
+  value_distributions:
+  - code: .
+    label: Inapplicable/Missing
+    frequency: 7239
+  - code: D
+    label: Don't know
+    frequency: 108
+  - code: R
+    label: Refused
+    frequency: 4
+  - code: 1
+    label: 'Yes'
+    frequency: 1092
+  - code: 2
+    label: 'No'
+    frequency: 4573
+  question_numbers:
+  - HFF11
+  notes: Applies only if DEM_SEX = 1.
+PRV_BLOODTST:
+  format: YESFMT
+  description: PSA prostate blood test (past year)
+  value_distributions:
+  - code: .
+    label: Inapplicable/Missing
+    frequency: 7253
+  - code: D
+    label: Don't know
+    frequency: 515
+  - code: R
+    label: Refused
+    frequency: 2
+  - code: 1
+    label: 'Yes'
+    frequency: 3075
+  - code: 2
+    label: 'No'
+    frequency: 2171
+  question_numbers:
+  - HFF12
+  notes: Applies only if DEM_SEX = 1.
+PRV_ONEDOSE:
+  format: YESFMT
+  description: Got 1+ CV19 vaccine dose by Fall 2022
+  value_distributions:
+  - code: 1
+    label: 'Yes'
+    frequency: 11370
+  - code: 2
+    label: 'No'
+    frequency: 1646
+PRV_DIAEVERT:
+  format: YESFMT
+  description: Ever had a blood test for diabetes
+  value_distributions:
+  - code: .
+    label: Inapplicable/Missing
+    frequency: 4102
+  - code: D
+    label: Don't know
+    frequency: 643
+  - code: R
+    label: Refused
+    frequency: 4
+  - code: 1
+    label: 'Yes'
+    frequency: 6097
+  - code: 2
+    label: 'No'
+    frequency: 2170
+  question_numbers:
+  - HFP21
+PRV_DIARISK:
+  format: YESFMT
+  description: Ever told at high risk for diabetes
+  value_distributions:
+  - code: .
+    label: Inapplicable/Missing
+    frequency: 4102
+  - code: D
+    label: Don't know
+    frequency: 48
+  - code: R
+    label: Refused
+    frequency: 5
+  - code: 1
+    label: 'Yes'
+    frequency: 639
+  - code: 2
+    label: 'No'
+    frequency: 8222
+  question_numbers:
+  - HFP24
+  notes: Applies only if PRV_DIAEVERT is not missing.
+PRV_COLHEAR:
+  format: YESFMT
+  description: Heard of colon cancer before today
+  value_distributions:
+  - code: .
+    label: Inapplicable/Missing
+    frequency: 200
+  - code: D
+    label: Don't know
+    frequency: 28
+  - code: R
+    label: Refused
+    frequency: 4
+  - code: 1
+    label: 'Yes'
+    frequency: 12071
+  - code: 2
+    label: 'No'
+    frequency: 713
+  question_numbers:
+  - HFR1
+PRV_COLHTEST:
+  format: YESFMT
+  description: Given home fecal blood test (FOBT)
+  value_distributions:
+  - code: .
+    label: Inapplicable/Missing
+    frequency: 209
+  - code: D
+    label: Don't know
+    frequency: 102
+  - code: R
+    label: Refused
+    frequency: 7
+  - code: 1
+    label: 'Yes'
+    frequency: 3925
+  - code: 2
+    label: 'No'
+    frequency: 8773
+  question_numbers:
+  - HFR3
+PRV_COLORECT:
+  format: YESFMT
+  description: Ever tested for colon cancer
+  value_distributions:
+  - code: .
+    label: Inapplicable/Missing
+    frequency: 200
+  - code: D
+    label: Don't know
+    frequency: 59
+  - code: R
+    label: Refused
+    frequency: 6
+  - code: 1
+    label: 'Yes'
+    frequency: 9957
+  - code: 2
+    label: 'No'
+    frequency: 2794
+PRV_COLHKIT:
+  format: YESFMT
+  description: Heard of home FOBT
+  value_distributions:
+  - code: .
+    label: Inapplicable/Missing
+    frequency: 3771
+  - code: D
+    label: Don't know
+    frequency: 79
+  - code: R
+    label: Refused
+    frequency: 6
+  - code: 1
+    label: 'Yes'
+    frequency: 7638
+  - code: 2
+    label: 'No'
+    frequency: 1522
+  question_numbers:
+  - HFR4
+  notes: Complex skip logic. Please see questionnaire.
+PRV_COLCARD:
+  format: YESFMT
+  description: Sent card in for most recent FOBT
+  value_distributions:
+  - code: .
+    label: Inapplicable/Missing
+    frequency: 9091
+  - code: D
+    label: Don't know
+    frequency: 10
+  - code: 1
+    label: 'Yes'
+    frequency: 3448
+  - code: 2
+    label: 'No'
+    frequency: 467
+  question_numbers:
+  - HFR5
+  notes: Applies only if PRV_COLHTEST = 1.
+PRV_COLFDOC:
+  format: YESFMT
+  description: Had FOBT in Drs office
+  value_distributions:
+  - code: .
+    label: Inapplicable/Missing
+    frequency: 4134
+  - code: D
+    label: Don't know
+    frequency: 268
+  - code: R
+    label: Refused
+    frequency: 7
+  - code: 1
+    label: 'Yes'
+    frequency: 882
+  - code: 2
+    label: 'No'
+    frequency: 7725
+  question_numbers:
+  - HFR4A
+  notes: Complex skip logic. Please see questionnaire.
+PRV_COLRECNT:
+  format: RECFMT
+  description: How long since FOBT
+  value_distributions:
+  - code: .
+    label: Inapplicable/Missing
+    frequency: 9304
+  - code: D
+    label: Don't know
+    frequency: 140
+  - code: R
+    label: Refused
+    frequency: 5
+  - code: 1
+    label: Less than 1 year ago
+    frequency: 1032
+  - code: 2
+    label: 1 year to less than 2 years
+    frequency: 651
+  - code: 3
+    label: 2 years to less than 3 years
+    frequency: 464
+  - code: 4
+    label: 3 years to less than 5 years
+    frequency: 433
+  - code: 5
+    label: 5 or more years ago
+    frequency: 987
+  question_numbers:
+  - HFR7
+  notes: Inapplicable if PRV_COLCARD = . and PRV_COLFDOC not equal to 1.
+PRV_EVERSCOP:
+  format: YESFMT
+  description: Colonoscopy/sigmoidoscopy (ever)
+  value_distributions:
+  - code: .
+    label: Inapplicable/Missing
+    frequency: 200
+  - code: D
+    label: Don't know
+    frequency: 59
+  - code: R
+    label: Refused
+    frequency: 6
+  - code: 1
+    label: 'Yes'
+    frequency: 9957
+  - code: 2
+    label: 'No'
+    frequency: 2794
+  question_numbers:
+  - HFR8
+PRV_HEARSIG:
+  format: YESFMT
+  description: Heard of colonoscopy before today
+  value_distributions:
+  - code: .
+    label: Inapplicable/Missing
+    frequency: 5304
+  - code: D
+    label: Don't know
+    frequency: 34
+  - code: R
+    label: Refused
+    frequency: 5
+  - code: 1
+    label: 'Yes'
+    frequency: 7088
+  - code: 2
+    label: 'No'
+    frequency: 585
+PRV_COLDRREC:
+  format: YESFMT
+  description: Dr ever recommend colonoscopy
+  value_distributions:
+  - code: .
+    label: Inapplicable/Missing
+    frequency: 9658
+  - code: D
+    label: Don't know
+    frequency: 37
+  - code: 1
+    label: 'Yes'
+    frequency: 2188
+  - code: 2
+    label: 'No'
+    frequency: 1133
+  question_numbers:
+  - HFR11
+  notes: Applies only if PRV_HEARSIG = 1.
+PRV_COLSCRNS:
+  format: YESFMT
+  description: Know Medicare help pay screening test
+  value_distributions:
+  - code: .
+    label: Inapplicable/Missing
+    frequency: 568
+  - code: D
+    label: Don't know
+    frequency: 168
+  - code: R
+    label: Refused
+    frequency: 2
+  - code: 1
+    label: 'Yes'
+    frequency: 5717
+  - code: 2
+    label: 'No'
+    frequency: 6561
+  question_numbers:
+  - HFR13
+PRV_OSTEVERT:
+  format: YESFMT
+  description: Ever talked to dr. about osteoporosis
+  value_distributions:
+  - code: .
+    label: Inapplicable/Missing
+    frequency: 2348
+  - code: D
+    label: Don't know
+    frequency: 129
+  - code: R
+    label: Refused
+    frequency: 4
+  - code: 1
+    label: 'Yes'
+    frequency: 2839
+  - code: 2
+    label: 'No'
+    frequency: 7696
+  question_numbers:
+  - HFS1
+  notes: Applies only if HLT_OCOSTEOP is not equal to 1.
+PRV_OSTHRISK:
+  format: YESFMT
+  description: Told at high risk for osteoporosis
+  value_distributions:
+  - code: .
+    label: Inapplicable/Missing
+    frequency: 10177
+  - code: D
+    label: Don't know
+    frequency: 48
+  - code: R
+    label: Refused
+    frequency: 1
+  - code: 1
+    label: 'Yes'
+    frequency: 677
+  - code: 2
+    label: 'No'
+    frequency: 2113
+  question_numbers:
+  - HFS2
+  notes: Applies only if PRV_OSTEVERT = 1.
+PRV_WELLNESS:
+  format: YESFMT
+  description: Annual wellness since last fall
+  value_distributions:
+  - code: D
+    label: Don't know
+    frequency: 338
+  - code: R
+    label: Refused
+    frequency: 3
+  - code: 1
+    label: 'Yes'
+    frequency: 8022
+  - code: 2
+    label: 'No'
+    frequency: 4653
+PRV_BASKORAL:
+  format: YESFMT
+  description: Ever had oral cancer exam
+  value_distributions:
+  - code: .
+    label: Inapplicable/Missing
+    frequency: 76
+  - code: D
+    label: Don't know
+    frequency: 176
+  - code: R
+    label: Refused
+    frequency: 3
+  - code: 1
+    label: 'Yes'
+    frequency: 5505
+  - code: 2
+    label: 'No'
+    frequency: 7256
+RSK_EVRSMKAL:
+  format: YESFMT
+  description: Ever smoke cigarette/cigar/tobacco
+  value_distributions:
+  - code: D
+    label: Don't know
+    frequency: 3
+  - code: R
+    label: Refused
+    frequency: 4
+  - code: 1
+    label: 'Yes'
+    frequency: 7423
+  - code: 2
+    label: 'No'
+    frequency: 5586
+  question_numbers:
+  - NA2
+  - NA9
+  - NA12
+  notes: Replaces former variable RSK_EVERSMOK.
+RSK_SMKNOWAL:
+  format: YESFMT
+  description: Currently smoke cigarette/cigar/tobacco
+  value_distributions:
+  - code: .
+    label: Inapplicable/Missing
+    frequency: 7
+  - code: 1
+    label: 'Yes'
+    frequency: 1427
+  - code: 2
+    label: 'No'
+    frequency: 11582
+  question_numbers:
+  - NA3
+  - NA10
+  - NA13
+  notes: Replaces former variable RSK_SMOKNOW.
+RSK_SMKLSONE:
+  format: YESFMT
+  description: Has ever used smokeless tobacco
+  value_distributions:
+  - code: D
+    label: Don't know
+    frequency: 16
+  - code: R
+    label: Refused
+    frequency: 5
+  - code: 1
+    label: 'Yes'
+    frequency: 1439
+  - code: 2
+    label: 'No'
+    frequency: 11556
+RSK_SMKLSNOW:
+  format: YESFMT
+  description: Uses smokeless tobacco now
+  value_distributions:
+  - code: .
+    label: Inapplicable/Missing
+    frequency: 11577
+  - code: 1
+    label: 'Yes'
+    frequency: 197
+  - code: 2
+    label: 'No'
+    frequency: 1242
+RSK_ECIGONE:
+  format: YESFMT
+  description: Has ever used e-cigarette
+  value_distributions:
+  - code: D
+    label: Don't know
+    frequency: 5
+  - code: R
+    label: Refused
+    frequency: 6
+  - code: 1
+    label: 'Yes'
+    frequency: 1075
+  - code: 2
+    label: 'No'
+    frequency: 11930
+RSK_ECIGNOW:
+  format: YESFMT
+  description: Uses e-cigarette now
+  value_distributions:
+  - code: .
+    label: Inapplicable/Missing
+    frequency: 11941
+  - code: 1
+    label: 'Yes'
+    frequency: 203
+  - code: 2
+    label: 'No'
+    frequency: 872
+RSK_ALCLIFE:
+  format: YESFMT
+  description: Has had at least 12 drinks in life
+  value_distributions:
+  - code: D
+    label: Don't know
+    frequency: 28
+  - code: R
+    label: Refused
+    frequency: 7
+  - code: 1
+    label: 'Yes'
+    frequency: 10886
+  - code: 2
+    label: 'No'
+    frequency: 2095
+  question_numbers:
+  - NA19
+RSK_D_ALCFRQ:
+  format: DRINKDAY
+  description: Number of days/month drink alcohol
+  value_distributions:
+  - code: .
+    label: Inapplicable/Missing
+    frequency: 70
+  - code: R
+    label: Refused
+    frequency: 1
+  - code: 0
+    label: None
+    frequency: 7679
+  - code: 1
+    label: One day a month
+    frequency: 1009
+  - code: 10
+    label: Twenty-six days to every day
+    frequency: 1106
+  - code: 2
+    label: Two days a month
+    frequency: 497
+  - code: 3
+    label: Three days a month
+    frequency: 134
+  - code: 4
+    label: Four days a month
+    frequency: 812
+  - code: 5
+    label: Five days a month
+    frequency: 28
+  - code: 6
+    label: Six to ten days a month
+    frequency: 703
+  - code: 7
+    label: Eleven to fifteen days a month
+    frequency: 462
+  - code: 8
+    label: Sixteen to twenty days a month
+    frequency: 250
+  - code: 9
+    label: Twenty-one to twenty-five days a month
+    frequency: 265
+  question_numbers:
+  - NA20
+  notes: Replaces former variable RSK_DRINKDAY.
+RSK_ALCDAY:
+  format: DRINKSPD
+  description: Number of alcohol drinks/day (past yr)
+  value_distributions:
+  - code: .
+    label: Inapplicable/Missing
+    frequency: 70
+  - code: D
+    label: Don't know
+    frequency: 11
+  - code: R
+    label: Refused
+    frequency: 2
+  - code: 0
+    label: 0 drinks per day
+    frequency: 7679
+  - code: 1
+    label: One drink per day
+    frequency: 2854
+  - code: 2
+    label: Two drinks per day
+    frequency: 1636
+  - code: 3
+    label: Three to five drinks per day
+    frequency: 644
+  - code: 4
+    label: Six or more drinks per day
+    frequency: 120
+  question_numbers:
+  - NA21
+  notes2: Replaces former variable RSK_DRINKSPD.
+RSK_FFDRNK:
+  format: DRINKSPM
+  description: Number days/mo has 5/4+ drinks (past yr)
+  value_distributions:
+  - code: .
+    label: Inapplicable/Missing
+    frequency: 70
+  - code: D
+    label: Don't know
+    frequency: 19
+  - code: R
+    label: Refused
+    frequency: 1
+  - code: 0
+    label: None
+    frequency: 12424
+  - code: 1
+    label: One day a month
+    frequency: 173
+  - code: 2
+    label: Two to five days a month
+    frequency: 166
+  - code: 3
+    label: Six days a month to every day
+    frequency: 163
+  question_numbers:
+  - NA22
+  notes2: Replaces former variable RSK_FOURDRINK.
+FAL_FALLANY:
+  format: YESFMT
+  description: Fallen down (past year)
+  value_distributions:
+  - code: D
+    label: Don't know
+    frequency: 43
+  - code: R
+    label: Refused
+    frequency: 5
+  - code: 1
+    label: 'Yes'
+    frequency: 3207
+  - code: 2
+    label: 'No'
+    frequency: 9761
+  question_numbers:
+  - HFM1
+  notes: Results include all respondents.
+FAL_FALLTIME:
+  format: FELLTIMF
+  description: Number of times fallen (past year)
+  value_distributions:
+  - code: .
+    label: Inapplicable/Missing
+    frequency: 9809
+  - code: D
+    label: Don't know
+    frequency: 58
+  - code: 1
+    label: Fell 1 time
+    frequency: 1474
+  - code: 2
+    label: Fell 2 times
+    frequency: 813
+  - code: 3
+    label: Fell 3 times
+    frequency: 362
+  - code: 4
+    label: Fell 4 times
+    frequency: 162
+  - code: 5
+    label: Fell 5 or more times
+    frequency: 338
+  question_numbers:
+  - HFM2
+  notes: Applies only if FAL_FALLANY = 1.
+FAL_FALLHELP:
+  format: YESFMT
+  description: Fall required medical help
+  value_distributions:
+  - code: .
+    label: Inapplicable/Missing
+    frequency: 9809
+  - code: D
+    label: Don't know
+    frequency: 2
+  - code: 1
+    label: 'Yes'
+    frequency: 857
+  - code: 2
+    label: 'No'
+    frequency: 2348
+  question_numbers:
+  - HFM3A
+  notes: Applies only if FAL_FALLANY = 1.
+FAL_FALFRACT:
+  format: INDPUF
+  description: Fracture from fall
+  value_distributions:
+  - code: .
+    label: Inapplicable/Missing
+    frequency: 9809
+  - code: D
+    label: Don't know
+    frequency: 3
+  - code: 0
+    label: Not indicated
+    frequency: 2882
+  - code: 1
+    label: Indicated
+    frequency: 322
+  question_numbers:
+  - HFM3B
+  notes: Applies only if FAL_FALLANY = 1.
+FAL_FALSPRAN:
+  format: INDPUF
+  description: Sprain from fall
+  value_distributions:
+  - code: .
+    label: Inapplicable/Missing
+    frequency: 9809
+  - code: D
+    label: Don't know
+    frequency: 3
+  - code: 0
+    label: Not indicated
+    frequency: 2868
+  - code: 1
+    label: Indicated
+    frequency: 336
+  question_numbers:
+  - HFM3B
+  notes: Applies only if FAL_FALLANY = 1.
+FAL_FALBRUIS:
+  format: INDPUF
+  description: Bruise from fall
+  value_distributions:
+  - code: .
+    label: Inapplicable/Missing
+    frequency: 9809
+  - code: D
+    label: Don't know
+    frequency: 3
+  - code: 0
+    label: Not indicated
+    frequency: 1825
+  - code: 1
+    label: Indicated
+    frequency: 1379
+  question_numbers:
+  - HFM3B
+  notes: Applies only if FAL_FALLANY = 1.
+FAL_FALCUT:
+  format: INDPUF
+  description: Cut from fall
+  value_distributions:
+  - code: .
+    label: Inapplicable/Missing
+    frequency: 9809
+  - code: D
+    label: Don't know
+    frequency: 3
+  - code: 0
+    label: Not indicated
+    frequency: 2583
+  - code: 1
+    label: Indicated
+    frequency: 621
+  question_numbers:
+  - HFM3B
+  notes: Applies only if FAL_FALLANY = 1.
+FAL_FALCDOTH:
+  format: INDPUF
+  description: Concuss/dislocate/other injury from fall
+  value_distributions:
+  - code: .
+    label: Inapplicable/Missing
+    frequency: 9812
+  - code: 0
+    label: Not indicated
+    frequency: 2855
+  - code: 1
+    label: Indicated
+    frequency: 349
+  question_numbers:
+  - HFM3B
+  notes: Applies only if FAL_FALLANY = 1.
+FAL_FALNOINJ:
+  format: INDPUF
+  description: No injury from fall
+  value_distributions:
+  - code: .
+    label: Inapplicable/Missing
+    frequency: 9809
+  - code: D
+    label: Don't know
+    frequency: 3
+  - code: 0
+    label: Not indicated
+    frequency: 2267
+  - code: 1
+    label: Indicated
+    frequency: 937
+  question_numbers:
+  - HFM3B
+  notes: Applies only if FAL_FALLANY = 1.
+FAL_FALLIMIT:
+  format: YESFMT
+  description: Limit activities b/c fall
+  value_distributions:
+  - code: .
+    label: Inapplicable/Missing
+    frequency: 9809
+  - code: D
+    label: Don't know
+    frequency: 4
+  - code: 1
+    label: 'Yes'
+    frequency: 1183
+  - code: 2
+    label: 'No'
+    frequency: 2020
+  question_numbers:
+  - HFM3C
+  notes: Applies only if FAL_FALLANY = 1.
+FAL_FALLBACK:
+  format: TIME7FMT
+  description: Time to get back to regular activities
+  value_distributions:
+  - code: .
+    label: Inapplicable/Missing
+    frequency: 11833
+  - code: D
+    label: Don't know
+    frequency: 7
+  - code: 1
+    label: Less than 1 week
+    frequency: 282
+  - code: 2
+    label: More than 1 week
+    frequency: 619
+  - code: 3
+    label: Never resumed regular activities
+    frequency: 275
+  question_numbers:
+  - HFM3D
+  notes: Applies only if FAL_FALLIMIT = 1.
+FAL_FALLFEAR:
+  format: FALLSCAL
+  description: Fear of falling scale
+  value_distributions:
+  - code: .
+    label: Inapplicable/Missing
+    frequency: 9809
+  - code: D
+    label: Don't know
+    frequency: 26
+  - code: 1
+    label: Not at all afraid of falling
+    frequency: 824
+  - code: 2
+    label: A little afraid of falling
+    frequency: 535
+  - code: 3
+    label: Moderately afraid of falling
+    frequency: 579
+  - code: 4
+    label: Afraid of falling
+    frequency: 377
+  - code: 5
+    label: Very afraid of falling
+    frequency: 307
+  - code: 6
+    label: Extremely afraid of falling
+    frequency: 559
+  question_numbers:
+  - HFM3E
+  notes: Applies if FAL_FALLANY = 1.
+HOU_D_HHTOT:
+  format: HHTOT
+  description: Total Number of People in Household
+  value_distributions:
+  - code: 1
+    label: One
+    frequency: 4208
+  - code: 2
+    label: Two
+    frequency: 6280
+  - code: 3
+    label: Three
+    frequency: 1538
+  - code: 4
+    label: Four
+    frequency: 534
+  - code: 5
+    label: Five
+    frequency: 261
+  - code: 6
+    label: Six or more
+    frequency: 195
+  question_numbers:
+  - ENS1
+  - ENS4
+  notes: Results include all respondents.
+HOU_D_HHLT50:
+  format: HHLT
+  description: Num in HH Under 50 (May Include SP)
+  value_distributions:
+  - code: 0
+    label: No one
+    frequency: 10202
+  - code: 1
+    label: One
+    frequency: 1701
+  - code: 2
+    label: Two
+    frequency: 602
+  - code: 3
+    label: Three
+    frequency: 271
+  - code: 4
+    label: Four or more
+    frequency: 240
+  question_numbers:
+  - ENS1
+  - ENS5
+  notes: Results include all respondents.
+HOU_D_HHGE50:
+  format: HHLT
+  description: Num in HH 50 and Over (May Include SP)
+  value_distributions:
+  - code: 0
+    label: No one
+    frequency: 540
+  - code: 1
+    label: One
+    frequency: 5169
+  - code: 2
+    label: Two
+    frequency: 6677
+  - code: 3
+    label: Three
+    frequency: 556
+  - code: 4
+    label: Four or more
+    frequency: 74
+  question_numbers:
+  - ENS1
+  - ENS5
+  notes: Results include all respondents.
+HOU_D_HHLT18:
+  format: HHLT
+  description: Num <18 related to SP (May Include SP)
+  value_distributions:
+  - code: 0
+    label: No one
+    frequency: 12338
+  - code: 1
+    label: One
+    frequency: 425
+  - code: 2
+    label: Two
+    frequency: 164
+  - code: 3
+    label: Three
+    frequency: 62
+  - code: 4
+    label: Four or more
+    frequency: 27
+  question_numbers:
+  - ENS1
+  - ENS5
+  notes: Results include all respondents.
+HOU_DWELLING:
+  format: DWELFMT
+  description: Description of Home
+  value_distributions:
+  - code: .
+    label: Inapplicable/Missing
+    frequency: 18
+  - code: D
+    label: Don't know
+    frequency: 5
+  - code: R
+    label: Refused
+    frequency: 7
+  - code: 1
+    label: Single family home (one-family detached)
+    frequency: 9015
+  - code: 2
+    label: Multi family dwelling
+    frequency: 475
+  - code: 3
+    label: Apartment/condo/rowhouse/townhouse
+    frequency: 2512
+  - code: 4
+    label: Mobile home or trailer
+    frequency: 937
+  - code: 5
+    label: Other
+    frequency: 47
+  question_numbers:
+  - HA1
+  notes: Results include all respondents.
+HOU_HLEVELS:
+  format: LEVELFMT
+  description: Levels in SP Housing
+  value_distributions:
+  - code: .
+    label: Inapplicable/Missing
+    frequency: 958
+  - code: D
+    label: Don't know
+    frequency: 6
+  - code: R
+    label: Refused
+    frequency: 8
+  - code: 1
+    label: One level
+    frequency: 5585
+  - code: 2
+    label: Two levels
+    frequency: 3889
+  - code: 3
+    label: Three or more levels
+    frequency: 2570
+  question_numbers:
+  - HA2
+  notes: Inapplicable if HOU_DWELLING = . or 4.
+HOU_HELEVTR:
+  format: YESFMT
+  description: Elevator in SP Housing
+  value_distributions:
+  - code: .
+    label: Inapplicable/Missing
+    frequency: 6543
+  - code: D
+    label: Don't know
+    frequency: 1
+  - code: R
+    label: Refused
+    frequency: 2
+  - code: 1
+    label: 'Yes'
+    frequency: 794
+  - code: 2
+    label: 'No'
+    frequency: 5676
+  question_numbers:
+  - HA3
+  notes: Inapplicable if HOU_HLEVELS = . or 1.
+HOU_HONELEVL:
+  format: YESFMT
+  description: One Level Living Space
+  value_distributions:
+  - code: .
+    label: Inapplicable/Missing
+    frequency: 6543
+  - code: D
+    label: Don't know
+    frequency: 4
+  - code: R
+    label: Refused
+    frequency: 3
+  - code: 1
+    label: 'Yes'
+    frequency: 3106
+  - code: 2
+    label: 'No'
+    frequency: 3360
+  question_numbers:
+  - HA4
+  notes: Inapplicable if HOU_HLEVELS = . or 1.
+HOU_HBTHLEVL:
+  format: YESFMT
+  description: Bathroom on All Levels
+  value_distributions:
+  - code: .
+    label: Inapplicable/Missing
+    frequency: 9646
+  - code: D
+    label: Don't know
+    frequency: 2
+  - code: R
+    label: Refused
+    frequency: 2
+  - code: 1
+    label: 'Yes'
+    frequency: 2367
+  - code: 2
+    label: 'No'
+    frequency: 999
+  question_numbers:
+  - HA5
+  notes: Inapplicable if HOU_HONELEVL =  . or 1.
+HOU_HRAMPS:
+  format: YESFMT
+  description: Ramps at Entrances
+  value_distributions:
+  - code: .
+    label: Inapplicable/Missing
+    frequency: 18
+  - code: D
+    label: Don't know
+    frequency: 12
+  - code: R
+    label: Refused
+    frequency: 4
+  - code: 1
+    label: 'Yes'
+    frequency: 2263
+  - code: 2
+    label: 'No'
+    frequency: 10719
+  question_numbers:
+  - HA6
+HOU_HBATHRM:
+  format: YESFMT
+  description: Does SP Bathroom have Modifications
+  value_distributions:
+  - code: .
+    label: Inapplicable/Missing
+    frequency: 18
+  - code: D
+    label: Don't know
+    frequency: 4
+  - code: R
+    label: Refused
+    frequency: 2
+  - code: 1
+    label: 'Yes'
+    frequency: 7160
+  - code: 2
+    label: 'No'
+    frequency: 5832
+  question_numbers:
+  - HA7
+HOU_HRAILING:
+  format: YESFMT
+  description: Special Railing in Housing
+  value_distributions:
+  - code: .
+    label: Inapplicable/Missing
+    frequency: 18
+  - code: D
+    label: Don't know
+    frequency: 4
+  - code: R
+    label: Refused
+    frequency: 1
+  - code: 1
+    label: 'Yes'
+    frequency: 839
+  - code: 2
+    label: 'No'
+    frequency: 12154
+  question_numbers:
+  - HA8
+HOU_HOUSTYPE:
+  format: YESFMT
+  description: Is Housing in Special Comm Type in HA10
+  value_distributions:
+  - code: .
+    label: Inapplicable/Missing
+    frequency: 18
+  - code: D
+    label: Don't know
+    frequency: 16
+  - code: R
+    label: Refused
+    frequency: 1
+  - code: 1
+    label: 'Yes'
+    frequency: 1009
+  - code: 2
+    label: 'No'
+    frequency: 11972
+  question_numbers:
+  - HA9
+HOU_HPERCARE:
+  format: YESFMT
+  description: SP Housing Have Personal Care
+  value_distributions:
+  - code: .
+    label: Inapplicable/Missing
+    frequency: 12007
+  - code: 1
+    label: 'Yes'
+    frequency: 414
+  - code: 2
+    label: 'No'
+    frequency: 595
+  question_numbers:
+  - HA11
+  notes: Applies only if HOU_HOUSTYPE = 1 or .D.
+HOU_MEALPROB:
+  format: YESFMT
+  description: Do You Have Access to Prepared Meals
+  value_distributions:
+  - code: .
+    label: Inapplicable/Missing
+    frequency: 12602
+  - code: D
+    label: Don't know
+    frequency: 1
+  - code: 1
+    label: 'Yes'
+    frequency: 258
+  - code: 2
+    label: 'No'
+    frequency: 155
+  question_numbers:
+  - HA12
+  notes: Applies only if HOU_HPERCARE = 1 or .D.
+HOU_MAIDPROB:
+  format: YESFMT
+  description: Do You Have Access to Cleaning Services
+  value_distributions:
+  - code: .
+    label: Inapplicable/Missing
+    frequency: 12602
+  - code: 1
+    label: 'Yes'
+    frequency: 233
+  - code: 2
+    label: 'No'
+    frequency: 181
+  question_numbers:
+  - HA12
+  notes: Applies only if HOU_HPERCARE = 1 or .D.
+HOU_WASHPROB:
+  format: YESFMT
+  description: Do You Have Access to Laundry Services
+  value_distributions:
+  - code: .
+    label: Inapplicable/Missing
+    frequency: 12602
+  - code: D
+    label: Don't know
+    frequency: 2
+  - code: 1
+    label: 'Yes'
+    frequency: 187
+  - code: 2
+    label: 'No'
+    frequency: 225
+  question_numbers:
+  - HA12
+  notes: Applies only if HOU_HPERCARE = 1 or .D.
+HOU_HELPPROB:
+  format: YESFMT
+  description: Do You Have Access to Help w/Medications
+  value_distributions:
+  - code: .
+    label: Inapplicable/Missing
+    frequency: 12602
+  - code: D
+    label: Don't know
+    frequency: 3
+  - code: 1
+    label: 'Yes'
+    frequency: 130
+  - code: 2
+    label: 'No'
+    frequency: 281
+  question_numbers:
+  - HA12
+  notes: Applies only if HOU_HPERCARE = 1 or .D.
+HOU_TRANPROB:
+  format: YESFMT
+  description: Do You Have Access to Transportation
+  value_distributions:
+  - code: .
+    label: Inapplicable/Missing
+    frequency: 12602
+  - code: D
+    label: Don't know
+    frequency: 2
+  - code: 1
+    label: 'Yes'
+    frequency: 265
+  - code: 2
+    label: 'No'
+    frequency: 147
+  question_numbers:
+  - HA12
+  notes: Applies only if HOU_HPERCARE = 1 or .D.
+HOU_RECPROB:
+  format: YESFMT
+  description: Do You Have Access to Rec Services
+  value_distributions:
+  - code: .
+    label: Inapplicable/Missing
+    frequency: 12602
+  - code: 1
+    label: 'Yes'
+    frequency: 385
+  - code: 2
+    label: 'No'
+    frequency: 29
+  question_numbers:
+  - HA12
+  notes: Applies only if HOU_HPERCARE = 1 or .D.
+HOU_SERVINCL:
+  format: SERVFMT
+  description: Personal Srvcs Included in Housing Cost
+  value_distributions:
+  - code: .
+    label: Inapplicable/Missing
+    frequency: 12602
+  - code: D
+    label: Don't know
+    frequency: 7
+  - code: 1
+    label: All included
+    frequency: 266
+  - code: 2
+    label: Some included/some separate
+    frequency: 111
+  - code: 3
+    label: All separate
+    frequency: 30
+  question_numbers:
+  - HA13
+  notes: Applies only if HOU_HPERCARE = 1 or .D.
+HOU_STAYPUT:
+  format: YESFMT
+  description: Stay in Same Housing if Need More Care
+  value_distributions:
+  - code: .
+    label: Inapplicable/Missing
+    frequency: 12617
+  - code: D
+    label: Don't know
+    frequency: 21
+  - code: 1
+    label: 'Yes'
+    frequency: 288
+  - code: 2
+    label: 'No'
+    frequency: 90
+  question_numbers:
+  - HA14
+  notes: Applies only if HOU_HPERCARE = 1 or .D.
+HOU_CAREPART:
+  format: YESFMT
+  description: Provide Care in Diff Part of Housing
+  value_distributions:
+  - code: .
+    label: Inapplicable/Missing
+    frequency: 12926
+  - code: 1
+    label: 'Yes'
+    frequency: 43
+  - code: 2
+    label: 'No'
+    frequency: 47
+  question_numbers:
+  - HA15
+  notes: Applies only if HOU_STAYPUT = 2.
+HOU_REQAGE:
+  format: YESFMT
+  description: Must be Certain Age for Housing
+  value_distributions:
+  - code: .
+    label: Inapplicable/Missing
+    frequency: 12617
+  - code: D
+    label: Don't know
+    frequency: 28
+  - code: 1
+    label: 'Yes'
+    frequency: 307
+  - code: 2
+    label: 'No'
+    frequency: 64
+  question_numbers:
+  - HA16
+  notes: Applies only if HOU_HPERCARE = 1 or .D.
+HOU_PERSBATH:
+  format: YESFMT
+  description: SP Have Own Bath Facilities
+  value_distributions:
+  - code: .
+    label: Inapplicable/Missing
+    frequency: 8386
+  - code: R
+    label: Refused
+    frequency: 2
+  - code: 1
+    label: 'Yes'
+    frequency: 4464
+  - code: 2
+    label: 'No'
+    frequency: 164
+  question_numbers:
+  - HA17
+  notes: Complex skip logic. Please see questionnaire.
+HOU_NBRROOMS:
+  format: ROOMNUM
+  description: How Many Rooms in Housing
+  value_distributions:
+  - code: .
+    label: Inapplicable/Missing
+    frequency: 34
+  - code: D
+    label: Don't know
+    frequency: 29
+  - code: R
+    label: Refused
+    frequency: 25
+  - code: 1
+    label: One room
+    frequency: 139
+  - code: 2
+    label: Two rooms
+    frequency: 401
+  - code: 3
+    label: Three rooms
+    frequency: 1076
+  - code: 4
+    label: Four rooms
+    frequency: 1662
+  - code: 5
+    label: Five rooms
+    frequency: 2607
+  - code: 6
+    label: Six rooms
+    frequency: 2741
+  - code: 7
+    label: Seven rooms
+    frequency: 1915
+  - code: 8
+    label: Eight rooms
+    frequency: 1276
+  - code: 9
+    label: Nine or more rooms
+    frequency: 1111
+  question_numbers:
+  - HA18
+  notes: Results include all respondents.
+HOU_PERKITCH:
+  format: YESFMT
+  description: SP Have Kitchen
+  value_distributions:
+  - code: .
+    label: Inapplicable/Missing
+    frequency: 34
+  - code: D
+    label: Don't know
+    frequency: 2
+  - code: R
+    label: Refused
+    frequency: 7
+  - code: 1
+    label: 'Yes'
+    frequency: 12708
+  - code: 2
+    label: 'No'
+    frequency: 265
+  question_numbers:
+  - HA19
+  notes: Results include all respondents.
+MA_MADVRX:
+  format: YESFMT
+  description: Mcare Adv plan covers drugs
+  value_distributions:
+  - code: .
+    label: Inapplicable/Missing
+    frequency: 5893
+  - code: D
+    label: Don't know
+    frequency: 43
+  - code: N
+    label: Not ascertained
+    frequency: 174
+  - code: 1
+    label: 'Yes'
+    frequency: 6675
+  - code: 2
+    label: 'No'
+    frequency: 231
+MA_MADVDOC:
+  format: YESFMT
+  description: Mcare Adv plan covers visit to HCP
+  value_distributions:
+  - code: .
+    label: Inapplicable/Missing
+    frequency: 5893
+  - code: D
+    label: Don't know
+    frequency: 43
+  - code: N
+    label: Not ascertained
+    frequency: 174
+  - code: 1
+    label: 'Yes'
+    frequency: 6835
+  - code: 2
+    label: 'No'
+    frequency: 71
+MA_MADVLAB:
+  format: YESFMT
+  description: Mcare Adv plan covers lab work
+  value_distributions:
+  - code: .
+    label: Inapplicable/Missing
+    frequency: 5893
+  - code: D
+    label: Don't know
+    frequency: 43
+  - code: N
+    label: Not ascertained
+    frequency: 174
+  - code: 1
+    label: 'Yes'
+    frequency: 6801
+  - code: 2
+    label: 'No'
+    frequency: 105
+MA_MADVINPT:
+  format: YESFMT
+  description: Mcare Adv plan covers inpatient stay
+  value_distributions:
+  - code: .
+    label: Inapplicable/Missing
+    frequency: 5893
+  - code: D
+    label: Don't know
+    frequency: 43
+  - code: N
+    label: Not ascertained
+    frequency: 174
+  - code: 1
+    label: 'Yes'
+    frequency: 6572
+  - code: 2
+    label: 'No'
+    frequency: 334
+MA_MADVNH:
+  format: YESFMT
+  description: Mcare Adv plan covers nursing home
+  value_distributions:
+  - code: .
+    label: Inapplicable/Missing
+    frequency: 5893
+  - code: D
+    label: Don't know
+    frequency: 43
+  - code: N
+    label: Not ascertained
+    frequency: 174
+  - code: 1
+    label: 'Yes'
+    frequency: 1990
+  - code: 2
+    label: 'No'
+    frequency: 4916
+  question_numbers:
+  - HIMC10
+  notes: Applies only if INS_D_MADV = 1.
+MA_MADVDENT:
+  format: YESFMT
+  description: Mcare Adv plan covers dental
+  value_distributions:
+  - code: .
+    label: Inapplicable/Missing
+    frequency: 5893
+  - code: D
+    label: Don't know
+    frequency: 43
+  - code: N
+    label: Not ascertained
+    frequency: 174
+  - code: 1
+    label: 'Yes'
+    frequency: 5192
+  - code: 2
+    label: 'No'
+    frequency: 1714
+  question_numbers:
+  - HIMC7
+  notes: Applies only if INS_D_MADV = 1.
+MA_MADVEYE:
+  format: YESFMT
+  description: Mcare Adv plan covers eye exams
+  value_distributions:
+  - code: .
+    label: Inapplicable/Missing
+    frequency: 5893
+  - code: D
+    label: Don't know
+    frequency: 43
+  - code: N
+    label: Not ascertained
+    frequency: 174
+  - code: 1
+    label: 'Yes'
+    frequency: 5791
+  - code: 2
+    label: 'No'
+    frequency: 1115
+  question_numbers:
+  - HIMC8
+  notes: Applies only if INS_D_MADV = 1.
+MA_MADVHEAR:
+  format: YESFMT
+  description: Mcare Adv plan covers hearing care
+  value_distributions:
+  - code: .
+    label: Inapplicable/Missing
+    frequency: 5893
+  - code: D
+    label: Don't know
+    frequency: 43
+  - code: N
+    label: Not ascertained
+    frequency: 174
+  - code: 1
+    label: 'Yes'
+    frequency: 4765
+  - code: 2
+    label: 'No'
+    frequency: 2141
+MA_MADVBEH:
+  format: YESFMT
+  description: Mcare Adv plan covers behavioral health
+  value_distributions:
+  - code: .
+    label: Inapplicable/Missing
+    frequency: 5893
+  - code: D
+    label: Don't know
+    frequency: 43
+  - code: N
+    label: Not ascertained
+    frequency: 174
+  - code: 1
+    label: 'Yes'
+    frequency: 4063
+  - code: 2
+    label: 'No'
+    frequency: 2843
+MA_MADVPAY:
+  format: YESFMT
+  description: Ever pay additional for Mcare Adv cvg
+  value_distributions:
+  - code: .
+    label: Inapplicable/Missing
+    frequency: 5893
+  - code: N
+    label: Not ascertained
+    frequency: 187
+  - code: 1
+    label: 'Yes'
+    frequency: 1475
+  - code: 2
+    label: 'No'
+    frequency: 5461
+  question_numbers:
+  - HIMC11
+  notes: Applies only if INS_D_MADV = 1.
+MA_RECMADV:
+  format: YESFMT
+  description: Recommend Mcare Adv to family/friends
+  value_distributions:
+  - code: .
+    label: Inapplicable/Missing
+    frequency: 6123
+  - code: D
+    label: Don't know
+    frequency: 200
+  - code: N
+    label: Not ascertained
+    frequency: 48
+  - code: R
+    label: Refused
+    frequency: 4
+  - code: 1
+    label: 'Yes'
+    frequency: 6284
+  - code: 2
+    label: 'No'
+    frequency: 357
+  question_numbers:
+  - HIMC19
+  notes: Applies only if INS_D_MADV = 1.
+HLT_TEETHGUM:
+  format: GENHFMT
+  description: General oral health, teeth and gums
+  value_distributions:
+  - code: D
+    label: Don't know
+    frequency: 72
+  - code: R
+    label: Refused
+    frequency: 10
+  - code: 1
+    label: Excellent
+    frequency: 1729
+  - code: 2
+    label: Very good
+    frequency: 3293
+  - code: 3
+    label: Good
+    frequency: 4503
+  - code: 4
+    label: Fair
+    frequency: 2121
+  - code: 5
+    label: Poor
+    frequency: 1288
+HLT_DRYMOUTH:
+  format: HOW5OFTN
+  description: Dry mouth (how often)
+  value_distributions:
+  - code: D
+    label: Don't know
+    frequency: 108
+  - code: R
+    label: Refused
+    frequency: 3
+  - code: 1
+    label: Never
+    frequency: 6354
+  - code: 2
+    label: Rarely
+    frequency: 1989
+  - code: 3
+    label: Somtimes
+    frequency: 2930
+  - code: 4
+    label: Often
+    frequency: 994
+  - code: 5
+    label: Usually
+    frequency: 638
+HLT_TOOTHSEN:
+  format: HOW5OFTN
+  description: Tooth sensitivity (how often)
+  value_distributions:
+  - code: .
+    label: Inapplicable/Missing
+    frequency: 2420
+  - code: D
+    label: Don't know
+    frequency: 71
+  - code: R
+    label: Refused
+    frequency: 3
+  - code: 1
+    label: Never
+    frequency: 7177
+  - code: 2
+    label: Rarely
+    frequency: 1467
+  - code: 3
+    label: Somtimes
+    frequency: 1421
+  - code: 4
+    label: Often
+    frequency: 256
+  - code: 5
+    label: Usually
+    frequency: 201
+PUFFWGT:
+  format: CONTIN
+  description: PUF Fall Ever Enrolled Full Sample Wt
+  value_distributions:
+  - code: LOW-HIGH
+    label: Range of Values
+    frequency: 13016
+PUFF001:
+  format: CONTIN
+  description: PUF Fall Ever Enrolled rep wt 1
+  value_distributions:
+  - code: LOW-HIGH
+    label: Range of Values
+    frequency: 13016
+PUFF002:
+  format: CONTIN
+  description: PUF Fall Ever Enrolled rep wt 2
+  value_distributions:
+  - code: LOW-HIGH
+    label: Range of Values
+    frequency: 13016
+PUFF003:
+  format: CONTIN
+  description: PUF Fall Ever Enrolled rep wt 3
+  value_distributions:
+  - code: LOW-HIGH
+    label: Range of Values
+    frequency: 13016
+PUFF004:
+  format: CONTIN
+  description: PUF Fall Ever Enrolled rep wt 4
+  value_distributions:
+  - code: LOW-HIGH
+    label: Range of Values
+    frequency: 13016
+PUFF005:
+  format: CONTIN
+  description: PUF Fall Ever Enrolled rep wt 5
+  value_distributions:
+  - code: LOW-HIGH
+    label: Range of Values
+    frequency: 13016
+PUFF006:
+  format: CONTIN
+  description: PUF Fall Ever Enrolled rep wt 6
+  value_distributions:
+  - code: LOW-HIGH
+    label: Range of Values
+    frequency: 13016
+PUFF007:
+  format: CONTIN
+  description: PUF Fall Ever Enrolled rep wt 7
+  value_distributions:
+  - code: LOW-HIGH
+    label: Range of Values
+    frequency: 13016
+PUFF008:
+  format: CONTIN
+  description: PUF Fall Ever Enrolled rep wt 8
+  value_distributions:
+  - code: LOW-HIGH
+    label: Range of Values
+    frequency: 13016
+PUFF009:
+  format: CONTIN
+  description: PUF Fall Ever Enrolled rep wt 9
+  value_distributions:
+  - code: LOW-HIGH
+    label: Range of Values
+    frequency: 13016
+PUFF010:
+  format: CONTIN
+  description: PUF Fall Ever Enrolled rep wt 10
+  value_distributions:
+  - code: LOW-HIGH
+    label: Range of Values
+    frequency: 13016
+PUFF011:
+  format: CONTIN
+  description: PUF Fall Ever Enrolled rep wt 11
+  value_distributions:
+  - code: LOW-HIGH
+    label: Range of Values
+    frequency: 13016
+PUFF012:
+  format: CONTIN
+  description: PUF Fall Ever Enrolled rep wt 12
+  value_distributions:
+  - code: LOW-HIGH
+    label: Range of Values
+    frequency: 13016
+PUFF013:
+  format: CONTIN
+  description: PUF Fall Ever Enrolled rep wt 13
+  value_distributions:
+  - code: LOW-HIGH
+    label: Range of Values
+    frequency: 13016
+PUFF014:
+  format: CONTIN
+  description: PUF Fall Ever Enrolled rep wt 14
+  value_distributions:
+  - code: LOW-HIGH
+    label: Range of Values
+    frequency: 13016
+PUFF015:
+  format: CONTIN
+  description: PUF Fall Ever Enrolled rep wt 15
+  value_distributions:
+  - code: LOW-HIGH
+    label: Range of Values
+    frequency: 13016
+PUFF016:
+  format: CONTIN
+  description: PUF Fall Ever Enrolled rep wt 16
+  value_distributions:
+  - code: LOW-HIGH
+    label: Range of Values
+    frequency: 13016
+PUFF017:
+  format: CONTIN
+  description: PUF Fall Ever Enrolled rep wt 17
+  value_distributions:
+  - code: LOW-HIGH
+    label: Range of Values
+    frequency: 13016
+PUFF018:
+  format: CONTIN
+  description: PUF Fall Ever Enrolled rep wt 18
+  value_distributions:
+  - code: LOW-HIGH
+    label: Range of Values
+    frequency: 13016
+PUFF019:
+  format: CONTIN
+  description: PUF Fall Ever Enrolled rep wt 19
+  value_distributions:
+  - code: LOW-HIGH
+    label: Range of Values
+    frequency: 13016
+PUFF020:
+  format: CONTIN
+  description: PUF Fall Ever Enrolled rep wt 20
+  value_distributions:
+  - code: LOW-HIGH
+    label: Range of Values
+    frequency: 13016
+PUFF021:
+  format: CONTIN
+  description: PUF Fall Ever Enrolled rep wt 21
+  value_distributions:
+  - code: LOW-HIGH
+    label: Range of Values
+    frequency: 13016
+PUFF022:
+  format: CONTIN
+  description: PUF Fall Ever Enrolled rep wt 22
+  value_distributions:
+  - code: LOW-HIGH
+    label: Range of Values
+    frequency: 13016
+PUFF023:
+  format: CONTIN
+  description: PUF Fall Ever Enrolled rep wt 23
+  value_distributions:
+  - code: LOW-HIGH
+    label: Range of Values
+    frequency: 13016
+PUFF024:
+  format: CONTIN
+  description: PUF Fall Ever Enrolled rep wt 24
+  value_distributions:
+  - code: LOW-HIGH
+    label: Range of Values
+    frequency: 13016
+PUFF025:
+  format: CONTIN
+  description: PUF Fall Ever Enrolled rep wt 25
+  value_distributions:
+  - code: LOW-HIGH
+    label: Range of Values
+    frequency: 13016
+PUFF026:
+  format: CONTIN
+  description: PUF Fall Ever Enrolled rep wt 26
+  value_distributions:
+  - code: LOW-HIGH
+    label: Range of Values
+    frequency: 13016
+PUFF027:
+  format: CONTIN
+  description: PUF Fall Ever Enrolled rep wt 27
+  value_distributions:
+  - code: LOW-HIGH
+    label: Range of Values
+    frequency: 13016
+PUFF028:
+  format: CONTIN
+  description: PUF Fall Ever Enrolled rep wt 28
+  value_distributions:
+  - code: LOW-HIGH
+    label: Range of Values
+    frequency: 13016
+PUFF029:
+  format: CONTIN
+  description: PUF Fall Ever Enrolled rep wt 29
+  value_distributions:
+  - code: LOW-HIGH
+    label: Range of Values
+    frequency: 13016
+PUFF030:
+  format: CONTIN
+  description: PUF Fall Ever Enrolled rep wt 30
+  value_distributions:
+  - code: LOW-HIGH
+    label: Range of Values
+    frequency: 13016
+PUFF031:
+  format: CONTIN
+  description: PUF Fall Ever Enrolled rep wt 31
+  value_distributions:
+  - code: LOW-HIGH
+    label: Range of Values
+    frequency: 13016
+PUFF032:
+  format: CONTIN
+  description: PUF Fall Ever Enrolled rep wt 32
+  value_distributions:
+  - code: LOW-HIGH
+    label: Range of Values
+    frequency: 13016
+PUFF033:
+  format: CONTIN
+  description: PUF Fall Ever Enrolled rep wt 33
+  value_distributions:
+  - code: LOW-HIGH
+    label: Range of Values
+    frequency: 13016
+PUFF034:
+  format: CONTIN
+  description: PUF Fall Ever Enrolled rep wt 34
+  value_distributions:
+  - code: LOW-HIGH
+    label: Range of Values
+    frequency: 13016
+PUFF035:
+  format: CONTIN
+  description: PUF Fall Ever Enrolled rep wt 35
+  value_distributions:
+  - code: LOW-HIGH
+    label: Range of Values
+    frequency: 13016
+PUFF036:
+  format: CONTIN
+  description: PUF Fall Ever Enrolled rep wt 36
+  value_distributions:
+  - code: LOW-HIGH
+    label: Range of Values
+    frequency: 13016
+PUFF037:
+  format: CONTIN
+  description: PUF Fall Ever Enrolled rep wt 37
+  value_distributions:
+  - code: LOW-HIGH
+    label: Range of Values
+    frequency: 13016
+PUFF038:
+  format: CONTIN
+  description: PUF Fall Ever Enrolled rep wt 38
+  value_distributions:
+  - code: LOW-HIGH
+    label: Range of Values
+    frequency: 13016
+PUFF039:
+  format: CONTIN
+  description: PUF Fall Ever Enrolled rep wt 39
+  value_distributions:
+  - code: LOW-HIGH
+    label: Range of Values
+    frequency: 13016
+PUFF040:
+  format: CONTIN
+  description: PUF Fall Ever Enrolled rep wt 40
+  value_distributions:
+  - code: LOW-HIGH
+    label: Range of Values
+    frequency: 13016
+PUFF041:
+  format: CONTIN
+  description: PUF Fall Ever Enrolled rep wt 41
+  value_distributions:
+  - code: LOW-HIGH
+    label: Range of Values
+    frequency: 13016
+PUFF042:
+  format: CONTIN
+  description: PUF Fall Ever Enrolled rep wt 42
+  value_distributions:
+  - code: LOW-HIGH
+    label: Range of Values
+    frequency: 13016
+PUFF043:
+  format: CONTIN
+  description: PUF Fall Ever Enrolled rep wt 43
+  value_distributions:
+  - code: LOW-HIGH
+    label: Range of Values
+    frequency: 13016
+PUFF044:
+  format: CONTIN
+  description: PUF Fall Ever Enrolled rep wt 44
+  value_distributions:
+  - code: LOW-HIGH
+    label: Range of Values
+    frequency: 13016
+PUFF045:
+  format: CONTIN
+  description: PUF Fall Ever Enrolled rep wt 45
+  value_distributions:
+  - code: LOW-HIGH
+    label: Range of Values
+    frequency: 13016
+PUFF046:
+  format: CONTIN
+  description: PUF Fall Ever Enrolled rep wt 46
+  value_distributions:
+  - code: LOW-HIGH
+    label: Range of Values
+    frequency: 13016
+PUFF047:
+  format: CONTIN
+  description: PUF Fall Ever Enrolled rep wt 47
+  value_distributions:
+  - code: LOW-HIGH
+    label: Range of Values
+    frequency: 13016
+PUFF048:
+  format: CONTIN
+  description: PUF Fall Ever Enrolled rep wt 48
+  value_distributions:
+  - code: LOW-HIGH
+    label: Range of Values
+    frequency: 13016
+PUFF049:
+  format: CONTIN
+  description: PUF Fall Ever Enrolled rep wt 49
+  value_distributions:
+  - code: LOW-HIGH
+    label: Range of Values
+    frequency: 13016
+PUFF050:
+  format: CONTIN
+  description: PUF Fall Ever Enrolled rep wt 50
+  value_distributions:
+  - code: LOW-HIGH
+    label: Range of Values
+    frequency: 13016
+PUFF051:
+  format: CONTIN
+  description: PUF Fall Ever Enrolled rep wt 51
+  value_distributions:
+  - code: LOW-HIGH
+    label: Range of Values
+    frequency: 13016
+PUFF052:
+  format: CONTIN
+  description: PUF Fall Ever Enrolled rep wt 52
+  value_distributions:
+  - code: LOW-HIGH
+    label: Range of Values
+    frequency: 13016
+PUFF053:
+  format: CONTIN
+  description: PUF Fall Ever Enrolled rep wt 53
+  value_distributions:
+  - code: LOW-HIGH
+    label: Range of Values
+    frequency: 13016
+PUFF054:
+  format: CONTIN
+  description: PUF Fall Ever Enrolled rep wt 54
+  value_distributions:
+  - code: LOW-HIGH
+    label: Range of Values
+    frequency: 13016
+PUFF055:
+  format: CONTIN
+  description: PUF Fall Ever Enrolled rep wt 55
+  value_distributions:
+  - code: LOW-HIGH
+    label: Range of Values
+    frequency: 13016
+PUFF056:
+  format: CONTIN
+  description: PUF Fall Ever Enrolled rep wt 56
+  value_distributions:
+  - code: LOW-HIGH
+    label: Range of Values
+    frequency: 13016
+PUFF057:
+  format: CONTIN
+  description: PUF Fall Ever Enrolled rep wt 57
+  value_distributions:
+  - code: LOW-HIGH
+    label: Range of Values
+    frequency: 13016
+PUFF058:
+  format: CONTIN
+  description: PUF Fall Ever Enrolled rep wt 58
+  value_distributions:
+  - code: LOW-HIGH
+    label: Range of Values
+    frequency: 13016
+PUFF059:
+  format: CONTIN
+  description: PUF Fall Ever Enrolled rep wt 59
+  value_distributions:
+  - code: LOW-HIGH
+    label: Range of Values
+    frequency: 13016
+PUFF060:
+  format: CONTIN
+  description: PUF Fall Ever Enrolled rep wt 60
+  value_distributions:
+  - code: LOW-HIGH
+    label: Range of Values
+    frequency: 13016
+PUFF061:
+  format: CONTIN
+  description: PUF Fall Ever Enrolled rep wt 61
+  value_distributions:
+  - code: LOW-HIGH
+    label: Range of Values
+    frequency: 13016
+PUFF062:
+  format: CONTIN
+  description: PUF Fall Ever Enrolled rep wt 62
+  value_distributions:
+  - code: LOW-HIGH
+    label: Range of Values
+    frequency: 13016
+PUFF063:
+  format: CONTIN
+  description: PUF Fall Ever Enrolled rep wt 63
+  value_distributions:
+  - code: LOW-HIGH
+    label: Range of Values
+    frequency: 13016
+PUFF064:
+  format: CONTIN
+  description: PUF Fall Ever Enrolled rep wt 64
+  value_distributions:
+  - code: LOW-HIGH
+    label: Range of Values
+    frequency: 13016
+PUFF065:
+  format: CONTIN
+  description: PUF Fall Ever Enrolled rep wt 65
+  value_distributions:
+  - code: LOW-HIGH
+    label: Range of Values
+    frequency: 13016
+PUFF066:
+  format: CONTIN
+  description: PUF Fall Ever Enrolled rep wt 66
+  value_distributions:
+  - code: LOW-HIGH
+    label: Range of Values
+    frequency: 13016
+PUFF067:
+  format: CONTIN
+  description: PUF Fall Ever Enrolled rep wt 67
+  value_distributions:
+  - code: LOW-HIGH
+    label: Range of Values
+    frequency: 13016
+PUFF068:
+  format: CONTIN
+  description: PUF Fall Ever Enrolled rep wt 68
+  value_distributions:
+  - code: LOW-HIGH
+    label: Range of Values
+    frequency: 13016
+PUFF069:
+  format: CONTIN
+  description: PUF Fall Ever Enrolled rep wt 69
+  value_distributions:
+  - code: LOW-HIGH
+    label: Range of Values
+    frequency: 13016
+PUFF070:
+  format: CONTIN
+  description: PUF Fall Ever Enrolled rep wt 70
+  value_distributions:
+  - code: LOW-HIGH
+    label: Range of Values
+    frequency: 13016
+PUFF071:
+  format: CONTIN
+  description: PUF Fall Ever Enrolled rep wt 71
+  value_distributions:
+  - code: LOW-HIGH
+    label: Range of Values
+    frequency: 13016
+PUFF072:
+  format: CONTIN
+  description: PUF Fall Ever Enrolled rep wt 72
+  value_distributions:
+  - code: LOW-HIGH
+    label: Range of Values
+    frequency: 13016
+PUFF073:
+  format: CONTIN
+  description: PUF Fall Ever Enrolled rep wt 73
+  value_distributions:
+  - code: LOW-HIGH
+    label: Range of Values
+    frequency: 13016
+PUFF074:
+  format: CONTIN
+  description: PUF Fall Ever Enrolled rep wt 74
+  value_distributions:
+  - code: LOW-HIGH
+    label: Range of Values
+    frequency: 13016
+PUFF075:
+  format: CONTIN
+  description: PUF Fall Ever Enrolled rep wt 75
+  value_distributions:
+  - code: LOW-HIGH
+    label: Range of Values
+    frequency: 13016
+PUFF076:
+  format: CONTIN
+  description: PUF Fall Ever Enrolled rep wt 76
+  value_distributions:
+  - code: LOW-HIGH
+    label: Range of Values
+    frequency: 13016
+PUFF077:
+  format: CONTIN
+  description: PUF Fall Ever Enrolled rep wt 77
+  value_distributions:
+  - code: LOW-HIGH
+    label: Range of Values
+    frequency: 13016
+PUFF078:
+  format: CONTIN
+  description: PUF Fall Ever Enrolled rep wt 78
+  value_distributions:
+  - code: LOW-HIGH
+    label: Range of Values
+    frequency: 13016
+PUFF079:
+  format: CONTIN
+  description: PUF Fall Ever Enrolled rep wt 79
+  value_distributions:
+  - code: LOW-HIGH
+    label: Range of Values
+    frequency: 13016
+PUFF080:
+  format: CONTIN
+  description: PUF Fall Ever Enrolled rep wt 80
+  value_distributions:
+  - code: LOW-HIGH
+    label: Range of Values
+    frequency: 13016
+PUFF081:
+  format: CONTIN
+  description: PUF Fall Ever Enrolled rep wt 81
+  value_distributions:
+  - code: LOW-HIGH
+    label: Range of Values
+    frequency: 13016
+PUFF082:
+  format: CONTIN
+  description: PUF Fall Ever Enrolled rep wt 82
+  value_distributions:
+  - code: LOW-HIGH
+    label: Range of Values
+    frequency: 13016
+PUFF083:
+  format: CONTIN
+  description: PUF Fall Ever Enrolled rep wt 83
+  value_distributions:
+  - code: LOW-HIGH
+    label: Range of Values
+    frequency: 13016
+PUFF084:
+  format: CONTIN
+  description: PUF Fall Ever Enrolled rep wt 84
+  value_distributions:
+  - code: LOW-HIGH
+    label: Range of Values
+    frequency: 13016
+PUFF085:
+  format: CONTIN
+  description: PUF Fall Ever Enrolled rep wt 85
+  value_distributions:
+  - code: LOW-HIGH
+    label: Range of Values
+    frequency: 13016
+PUFF086:
+  format: CONTIN
+  description: PUF Fall Ever Enrolled rep wt 86
+  value_distributions:
+  - code: LOW-HIGH
+    label: Range of Values
+    frequency: 13016
+PUFF087:
+  format: CONTIN
+  description: PUF Fall Ever Enrolled rep wt 87
+  value_distributions:
+  - code: LOW-HIGH
+    label: Range of Values
+    frequency: 13016
+PUFF088:
+  format: CONTIN
+  description: PUF Fall Ever Enrolled rep wt 88
+  value_distributions:
+  - code: LOW-HIGH
+    label: Range of Values
+    frequency: 13016
+PUFF089:
+  format: CONTIN
+  description: PUF Fall Ever Enrolled rep wt 89
+  value_distributions:
+  - code: LOW-HIGH
+    label: Range of Values
+    frequency: 13016
+PUFF090:
+  format: CONTIN
+  description: PUF Fall Ever Enrolled rep wt 90
+  value_distributions:
+  - code: LOW-HIGH
+    label: Range of Values
+    frequency: 13016
+PUFF091:
+  format: CONTIN
+  description: PUF Fall Ever Enrolled rep wt 91
+  value_distributions:
+  - code: LOW-HIGH
+    label: Range of Values
+    frequency: 13016
+PUFF092:
+  format: CONTIN
+  description: PUF Fall Ever Enrolled rep wt 92
+  value_distributions:
+  - code: LOW-HIGH
+    label: Range of Values
+    frequency: 13016
+PUFF093:
+  format: CONTIN
+  description: PUF Fall Ever Enrolled rep wt 93
+  value_distributions:
+  - code: LOW-HIGH
+    label: Range of Values
+    frequency: 13016
+PUFF094:
+  format: CONTIN
+  description: PUF Fall Ever Enrolled rep wt 94
+  value_distributions:
+  - code: LOW-HIGH
+    label: Range of Values
+    frequency: 13016
+PUFF095:
+  format: CONTIN
+  description: PUF Fall Ever Enrolled rep wt 95
+  value_distributions:
+  - code: LOW-HIGH
+    label: Range of Values
+    frequency: 13016
+PUFF096:
+  format: CONTIN
+  description: PUF Fall Ever Enrolled rep wt 96
+  value_distributions:
+  - code: LOW-HIGH
+    label: Range of Values
+    frequency: 13016
+PUFF097:
+  format: CONTIN
+  description: PUF Fall Ever Enrolled rep wt 97
+  value_distributions:
+  - code: LOW-HIGH
+    label: Range of Values
+    frequency: 13016
+PUFF098:
+  format: CONTIN
+  description: PUF Fall Ever Enrolled rep wt 98
+  value_distributions:
+  - code: LOW-HIGH
+    label: Range of Values
+    frequency: 13016
+PUFF099:
+  format: CONTIN
+  description: PUF Fall Ever Enrolled rep wt 99
+  value_distributions:
+  - code: LOW-HIGH
+    label: Range of Values
+    frequency: 13016
+PUFF100:
+  format: CONTIN
+  description: PUF Fall Ever Enrolled rep wt 100
+  value_distributions:
+  - code: LOW-HIGH
+    label: Range of Values
+    frequency: 13016

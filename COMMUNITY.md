@@ -4,29 +4,24 @@ code-book is supported by a dedicated team of individuals fulfilling various rol
 
 ## Project Members
 
-<!-- TODO: Who are the points of contact in your project who are responsible/accountable for the project? This can often be an engineering or design manager or leader, who may or may not be the primary maintainers of the project.
+| Role                                       | Name           | Affiliation                                                           |
+| -------------------------------------------| -------------- | --------------------------------------------------------------------- |
+| Project Owner / Technical Lead / Developer | Zion Muhammud  | DSACMS — Open Source Programming Office (Coding it Forward Fellow)    |
 
-Roles to include, but not limited to: Project Owner, Technical Lead, Developers/Contributors, Community Manager, Security Team, Policy Advisor, Contracting Officer's Representative, Compliance Officer, Procurement Officer -->
 
-| Role   | Name    | Affiliation    |
-| :----- | :------ | :------------- |
-| {role} | {names} | {affiliations} |
+See [CODEOWNERS.md](.github/CODEOWNERS) for a list of those responsible for the code and documentation in this repository.
 
-<!-- TODO: A CODEOWNERS.md file is available in .github to define individuals responsible for specific parts of the codebase. Provide a reference to this file if used:
 
-See [CODEOWNERS.md](.github/CODEOWNERS.md) for a list of those responsible for the code and documentation in this repository.
--->
-
-<!--
 ## Roles & Responsibilities
 
-The members of code-book community are responsible for guiding its development, ensuring quality standards, and fostering a collaborative environment. They play a vital role in making decisions about code contributions, handling releases, and ensuring the project meets its goals and objectives. Below is a list of the key members and their specific roles and responsibilities.
--->
+Code-book is currently maintained by a single contributor, Zion Muhammud, who fulfills the maintainer, approver, and reviewer responsibilities for the project. As the contributor base grows, this section will be expanded to reflect a more distributed structure (see the commented template below for the roles this project will adopt at that point).
 
 <!--
 ### Maintainers:
 
 TODO: List the individuals who are the maintainers. What groups/domains are maintainers a part of? Does your project have domains/areas that are maintained by specific people? List @USERNAMES directly, or any @ALIASES for groups/teams.
+
+@zionmich
 -->
 
 <!--
@@ -49,17 +44,11 @@ TODO: Who are the project reviewers? List out @USERNAMES where possible so they 
 
 -->
 
-<!-- TODO: If the repository's release process is outlined in CONTRIBUTING.md, provide a reference to it:
+<!-- No formal release process is defined yet — this note will be added back once CONTRIBUTING.md documents one. -->
 
-See [CONTRIBUTING.md](CONTRIBUTING.md) for more details on the release process.
--->
-
-<!--
 ## Contributors
 
-TODO: A list of CONTRIBUTORS is generated below using contributors.yml located in the workflows directory. In order to automatically update the COMMUNITY.md, you must enter a secret into your Secrets and Variables under Actions within your repository settings. The name of the secret must be PUSH_TO_PROTECTED_BRANCH and the value must be a Personal Access Token with specific permissions. Please follow [this link](https://github.com/CasperWA/push-protected?tab=readme-ov-file#notes-on-token-and-user-permissions) for more information.
-
-![](https://img.shields.io/github/contributors/DSACMS/code-book?style=flat-square&label=Contributor%20Count(incl.%20bots)) 
+![](https://img.shields.io/github/contributors/DSACMS/code-book?style=flat-square&label=Contributor%20Count(incl.%20bots))
 
 <!-- readme: contributors -start -->
 <table>
@@ -80,9 +69,7 @@ TODO: A list of CONTRIBUTORS is generated below using contributors.yml located i
 <!--
 ### Alumni
 
-TODO: Who are the past maintainers or contributors who previously played significant roles in this project who are no longer actively involved? Consider including their roles and dates for context.
-
-We'd like to acknowledge the following individuals for their past contributions of this project:
+No past maintainers or contributors to acknowledge yet.
 -->
 
 ## Code Book Open Source Community Guidelines
@@ -115,7 +102,6 @@ When participating in Code Book open source community conversations and spaces, 
   - your superpower, and how you hope to use it for Code Book
 - Embrace a culture of learning, and educate each other. We are all entering this conversation from different starting points and with different backgrounds. There are no dumb questions.
 - Take space and give space. We strive to create an equitable environment in which all are welcome and able to participate. We hope individuals feel comfortable voicing their opinions and providing contributions and will do our best to recognize and make space for individuals who may be struggling to find space here. Likewise, we expect individuals to recognize when they are taking up significant space and take a step back to allow room for others.
-<!-- TODO: Add if your repo has a community chat - Be present when joining synchronous conversations such as our community chat. Why be here if you're not going to _be here_? -->
 - Be respectful.
 - Default to positive. Assume others' contributions are legitimate and valuable and that they are made with good intention.
 

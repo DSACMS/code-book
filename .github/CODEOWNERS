@@ -1,0 +1,13 @@
+# CODEOWNERS
+# This file is parsed by GitHub — no markdown syntax, only "#" comments.
+
+# Default owner for everything not matched below
+*                       @zionmich
+
+# Domain-specific ownership
+*.md                    @zionmich
+/makeYaml.py            @zionmich
+/makeCodebook.py        @zionmich
+/makeAll.py             @zionmich
+/tests/                 @zionmich
+/requirements.txt       @zionmich
