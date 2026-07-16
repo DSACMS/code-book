@@ -1,0 +1,31 @@
+[tool.ruff]
+# Target the Python version you are using
+target-version = "py313"
+
+# Set the maximum line length (88 is the standard Black/Ruff default)
+line-length = 88
+
+# Exclude common directories from being linted
+exclude = [
+    ".git",
+    ".venv",
+    "__pycache__",
+    "build",
+    "dist",
+]
+
+[tool.ruff.lint]
+# Rules configured here:
+# E/W  - Pycodestyle (standard PEP 8 style violations)
+# F    - Pyflakes (syntax errors, unused imports/variables)
+# I    - Isort (automatically sorts your imports alphabetically and by group)
+# UP   - Pyupgrade (suggests modern Python syntax upgrades)
+# RUF  - Ruff-specific rules and bug finders
+select = ["E", "W", "F", "I", "UP", "RUF"]
+
+# Allow Ruff to automatically fix these rules when run with `--fix`
+fixable = ["ALL"]
+
+[tool.ruff.lint.isort]
+# Combines "from x import y" statements for cleaner imports
+combine-as-imports = true

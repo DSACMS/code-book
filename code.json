@@ -1,0 +1,87 @@
+{
+  "name": "MCBS Codebook Generator",
+  "description": "An automated metadata pipeline to generate and validate Medicare Current Beneficiary Survey (MCBS) codebooks.",
+  "longDescription": "An automated metadata pipeline designed to generate, validate, and manage data dictionaries and codebooks for the Medicare Current Beneficiary Survey (MCBS) Public Use Files (PUFs). By utilizing a structured, machine-readable metadata schema as the single source of truth, this tool eliminates documentation drift, automates frequency distribution checks, and ensures consistent mapping of survey questions and answer codes across releases.",
+  "status": "Development",
+  "permissions": {
+    "licenses": [
+      {
+        "name": "CC0-1.0",
+        "URL": "https://github.com/DSACMS/code-book/blob/main/LICENSE"
+      }
+    ],
+    "usageType": [
+      "openSource"
+    ]
+  },
+  "organization": "Centers for Medicare & Medicaid Services",
+  "repositoryURL": "https://github.com/DSACMS/code-book",
+  "repositoryHost": "github.com/DSACMS",
+  "repositoryVisibility": "public",
+  "vcs": "git",
+  "laborHours": null,
+  "reuseFrequency": {
+    "forks": 0,
+    "clones": 0
+  },
+  "platforms": [
+    "windows",
+    "mac",
+    "linux"
+  ],
+  "categories": [
+    "data-collection",
+    "data-analytics",
+    "survey"
+  ],
+  "softwareType": "standalone/backend",
+  "languages": [
+    "python"
+  ],
+  "maintenance": "internal",
+  "contractNumber": [],
+  "SBOM": "https://github.com/DSACMS/code-book/network/dependencies",
+  "date": {
+    "created": "2026-06-18T16:36:13Z",
+    "lastModified": "2026-07-16T05:08:20Z",
+    "metadataLastUpdated": "2026-07-16T05:08:20Z"
+  },
+  "tags": [
+    "dsacms-tier2",
+    "mcbs",
+    "open-source",
+    "codebook",
+    "metadata",
+    "data-pipeline",
+    "schema",
+    "data-dictionary",
+    "python",
+    "cms"
+  ],
+  "contact": {
+    "email": "mcbs@cms.hhs.gov",
+    "name": "Marina Vornovitsky"
+  },
+  "feedbackMechanism": "https://github.com/DSACMS/code-book/issues",
+  "AIUseCaseID": "0",
+  "localisation": false,
+  "repositoryType": "tools",
+  "userInput": false,
+  "fismaLevel": "low",
+  "group": "CMS/OA/DSAC",
+  "projects": [
+    "Medicare Current Beneficiary Survey"
+  ],
+  "systems": [
+    "Git",
+    "GitHub"
+  ],
+  "subsetInHealthcare": [
+    "medicare",
+    "operational"
+  ],
+  "userType": [
+    "government"
+  ],
+  "maturityModelTier": 2
+}

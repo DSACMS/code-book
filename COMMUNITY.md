@@ -16,24 +16,22 @@ See [CODEOWNERS.md](.github/CODEOWNERS) for a list of those responsible for the 
 
 Code-book is currently maintained by a single contributor, Zion Muhammud, who fulfills the maintainer, approver, and reviewer responsibilities for the project. As the contributor base grows, this section will be expanded to reflect a more distributed structure (see the commented template below for the roles this project will adopt at that point).
 
-<!--
-### Maintainers:
-
-TODO: List the individuals who are the maintainers. What groups/domains are maintainers a part of? Does your project have domains/areas that are maintained by specific people? List @USERNAMES directly, or any @ALIASES for groups/teams.
+### Maintainers List
 
 @zionmich
--->
+
+### Approvers List
+
+@zionmich
+
+### Reviewers List
+
+@zionmich
 
 <!--
-### Approvers:
-
-TODO: Who are the project approvers? List out @USERNAMES where possible so they can be tagged in issues/PRs directly.
--->
-
-<!--
-### Reviewers:
-
-TODO: Who are the project reviewers? List out @USERNAMES where possible so they can be tagged in issues/PRs directly.
+TODO: As the contributor base grows, expand the Maintainers/Approvers/Reviewers
+sections above into distinct lists of @USERNAMES per role, and adopt the
+roles/responsibilities table below.
 
 | Roles      | Responsibilities                               | Requirements                                                                      | Defined by                                                |
 | ---------- | :--------------------------------------------- | :-------------------------------------------------------------------------------- | :-------------------------------------------------------- |

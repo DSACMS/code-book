@@ -15,6 +15,10 @@ We encourage you to read this project's CONTRIBUTING policy (you are here), its
 
 This project doesn't currently use `good-first-issue` or `easy` labels. If you're new and looking for a place to start, check open issues for anything untriaged, or comment on an issue to ask if it's still relevant before picking it up — this avoids duplicate work.
 
+## Team Specific Guidelines
+
+Our project maintainers are listed in [COMMUNITY.md](COMMUNITY.md). They are responsible for reviewing and merging all pull requests. Feel free to tag them in issues or pull requests if you need input or assistance.
+
 ### Building dependencies
 
 This is a Python project. You'll need Python 3.9+ and the packages listed in `requirements.txt`:
@@ -54,7 +58,19 @@ Currently, `tests/test_makeYaml.py` covers `makeYaml.py` (file validation, filen
 
 ### Coding Style and Linters
 
-There's no linter or style config (e.g. `flake8`, `black`, `pyproject.toml`) enforced in this repo yet. In the meantime, please follow standard [PEP 8](https://peps.python.org/pep-0008/) conventions and try to match the style of the surrounding code (e.g. docstrings on public functions, descriptive variable names). If you'd like to propose adding a linter/formatter, feel free to open an issue or PR for that.
+This project enforces code quality and formatting standards using **Ruff**. Our rules—configured in the `pyproject.toml` file at the root of the repository—align with standard [PEP 8](https://peps.python.org/pep-0008/) conventions and match the **Black** code style.
+
+Before committing your changes, please run the following commands in the root of the repository:
+
+**1. Check for lint errors and autofix common issues:**
+```bash
+ruff check . --fix
+```
+
+**2. Format your code to match our styling rules:**
+```bash
+ruff format .
+```
 
 ### Writing Issues
 
@@ -90,9 +106,29 @@ Some notes on commit messages:
 - Use the active voice and present tense
 - Keep the summary line under ~72 characters and don't end it in a period
 
-### Code Review
+### Reviewing Pull Requests
 
-Pull requests are reviewed by project maintainers before merging. Once a change is approved, a maintainer will merge it into `main`.
+Pull requests are reviewed by the project maintainers listed in [COMMUNITY.md](COMMUNITY.md) before merging. Reviewers will check for:
+
+- Correctness — does the change do what it says, without breaking existing behavior
+- Test coverage — are new functions/behavior changes accompanied by tests in `tests/`
+- Code clarity — does the change follow [PEP 8](https://peps.python.org/pep-0008/) and match the style of surrounding code
+- Documentation — is the [README](README.md) updated if the change affects usage, inputs, or outputs
+- Scope — is the pull request focused on a single change
+
+Once a pull request is approved, a maintainer will merge it into `main`.
+
+## Shipping Releases
+
+Releases are created by maintainers as needed when significant changes are merged. We use semantic versioning for releases.
+
+## Documentation
+
+Documentation improvements are always welcome, and don't require an issue to be filed first for small fixes (typos, clarifications). For larger documentation changes, please open an issue first to discuss the approach. Key areas for documentation:
+
+- [README.md](README.md) — usage instructions, expected input files, and pipeline behavior
+- Docstrings and inline comments in `makeYaml.py`, `makeCodebook.py`, and `makeAll.py`
+- Sample catalog/Excel file formats referenced in the README, if their expected structure changes
 
 ## Policies
 
