@@ -37,7 +37,7 @@ def make_codeBook(yaml_path):
     report_lines = []
 
     report_lines.append("=" * 70)
-    report_lines.append(f"{'PUBLIC USE FILE (PUF) VARIABLE FREQUENCY REPORT':^70}")
+    report_lines.append(f"{'PUBLIC USE FILE (PUF) CODEBOOK REPORT':^70}")
     report_lines.append("=" * 70 + "\n")
 
     for col, info in codebook.items():

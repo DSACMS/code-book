@@ -1,5 +1,5 @@
 ======================================================================
-           PUBLIC USE FILE (PUF) VARIABLE FREQUENCY REPORT            
+                PUBLIC USE FILE (PUF) CODEBOOK REPORT                 
 ======================================================================
 
 Variable Name: PUF_ID (Format: PUFFMT)
