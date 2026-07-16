@@ -356,7 +356,7 @@ Thank you for considering contributing to an Open Source project of the US Gover
 
 ## Codeowners
 
-Code reviews and repository maintenance are managed by the designated owners of this project. For a full list of individuals and teams responsible for reviewing and approving changes, please refer to our [CODEOWNERS](.github/CODEOWNERS) file.
+The contents of this repository are managed by DSACMS. Those responsible for the code and documentation in this repository can be found in [COMMUNITY.md](COMMUNITY.md). 
 
 ## Community
 

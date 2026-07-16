@@ -1,5 +1,4 @@
 # CODEOWNERS
-# This file is parsed by GitHub — no markdown syntax, only "#" comments.
 
 # Default owner for everything not matched below
 *                       @zionmich
