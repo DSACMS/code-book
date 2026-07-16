@@ -52,11 +52,13 @@
     "open-source",
     "codebook",
     "metadata",
-    "data-pipeline",
-    "schema",
     "data-dictionary",
     "python",
-    "cms"
+    "cms",
+    "puf",
+    "yaml",
+    "survey-data",
+    "medicare-current-beneficiary-survey"
   ],
   "contact": {
     "email": "mcbs@cms.hhs.gov",

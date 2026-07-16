@@ -386,6 +386,7 @@ To help new contributors and researchers get up to speed, here are the key domai
 * **Codebook:** A comprehensive document that serves as a dictionary for a dataset, describing every variable, its formatting, its source question, and its valid response categories.
 * **Metadata:** Structured data that describes other data. In this repository, the metadata acts as the "authoritative source of truth" defining the variables, question mappings, and answer codes that make up our final codebook.
 * **Frequency Distribution:** A summary showing the number of times (counts) each discrete value or categorical response occurs in a dataset.
+* **SAS (Statistical Analysis System):** A proprietary software suite widely used in government and health policy research for statistical analysis and data management. Historically used to process raw data files and generate codebooks, which this repository's Python-based pipeline is designed to modernize and replace.
 * **OEDA (Office of Enterprise Data and Analytics):** The office within CMS responsible for managing enterprise data, generating analytics, and producing files like the MCBS PUF.
 * **OSPO (Open Source Program Office):** The entity within CMS that promotes open-source practices, helping project teams build, manage, and release software publicly in a maintainable way.
 * **Documentation Drift:** The common issue where database schemas or data files change over time, but the written documentation (such as a PDF codebook) fails to get updated, causing them to fall out of sync.

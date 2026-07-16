@@ -156,6 +156,14 @@ Multiple automated tools were run against the codebase and repository as part of
 * **bulk_extractor** — Ran `bulk_extractor -R . -o bulk-output` to recursively scan all directories for secrets, credentials, and embedded URLs/emails.
   * **Result:** No active secrets, credentials, or private internal URLs were identified. The scan surfaced standard project contact emails (`opensource@cms.hhs.gov`, `mcbs@cms.hhs.gov`), local author commit metadata, and benign licensing/metadata emails from third-party open-source dependencies bundled in the `venv/` directory — none of which represent a security or privacy concern.
 
+**Ongoing scanning cadence:** Rather than relying on one-time manual scans, this repository has automated code quality and hygiene checks built into CI via GitHub Actions, so these scans continue running on an ongoing basis without requiring a person to remember to trigger them:
+
+* **Secret scanning (`Check for Secrets`)** — runs gitleaks automatically on every push and pull request, so any commit introducing a secret is flagged before or immediately after it lands.
+* **Repository hygiene (`Repository Hygiene Check`)** — runs repolinter against the shared DSACMS Tier 2 configuration on pushes to `main`, opening a pull request with results if any required file/section goes missing.
+* **code.json maintenance (`Update Code.json`)** — runs monthly (and on any PR touching `code.json`) via the automated-codejson-generator action, keeping the project's federal metadata record current without manual upkeep.
+* **Contributor list (`Update Contributors Information`)** and **changelog generation (`Changelog`)** — keep COMMUNITY.md and release history up to date automatically on relevant triggers (push to `main`, new release), reducing the chance of stale documentation.
+
+Results from these automated workflows are surfaced as pull requests or PR checks, which are reviewed and acted on by the project maintainer(s) listed in [COMMUNITY.md](COMMUNITY.md) before merging.
 
 ### Review Licensing
 
@@ -400,7 +408,13 @@ Please refer to the style guides below for additional tips and guidance:
 
 #### Results
 
-_Insert Review Here_
+The project's README.md, CONTRIBUTING.md, and COMMUNITY.md were reviewed against the guidelines above:
+
+* **Focus on solutions, not problems:** Documentation focuses on what the tool does — turning survey data and metadata into a codebook automatically — rather than dwelling on the limitations of the legacy SAS script it replaces.
+* **Plain language:** Technical terms specific to the project (e.g. PUF, codebook, metadata) are defined in the README's Glossary section for readers unfamiliar with the domain.
+* **Audience:** Documentation is written to serve multiple audiences — end users running the pipeline, contributors looking to submit changes, and non-technical stakeholders reviewing the project's purpose (About the Project, Project Vision/Mission sections).
+
+No further edits were identified as necessary at this time. Documentation will be revisited against this style guide as the project and its contributor base grow.
 
 ### Review Project Metadata
 
@@ -434,7 +448,7 @@ As you continue development in this repository, it is important to keep this fil
 
 #### Results
 
-_Insert Review Here_
+A valid [`code.json`](./code.json) file has been successfully generated and committed to the root of the repository. The file accurately reflects the project's current metadata, contact information, and licensing, ensuring full compliance with the required federal open-source schema.
 
 ### Review Repository Details
 
@@ -444,28 +458,32 @@ comprehensive overview for users and contributors.
 
 **About Section:**
 
-- [ ] Description
+- [✔] Description
 
   _1-2 sentences describing the project_
 
-- [ ] Website
+- [✔] Website
 
   _Link to project’s website_
 
-- [ ] Topics
+- [✔] Topics
 
   _Tags for project discoverability. Helpful topics to classify a repository include the
   repository's intended purpose, subject area, community, or language._
 
 **Include in Home Page:**
 
-- [ ] Releases
-- [ ] Packages
-- [ ] Deployments
+- [✔] Releases
+- [✔] Packages
+- [✔] Deployments
 
 #### Results
 
-_Insert Review Here_
+Description: An automated metadata pipeline to generate and validate Medicare Current Beneficiary Survey (MCBS) codebooks.
+
+Website: https://github.com/DSACMS/code-book
+
+Topics: python open-source yaml metadata cms survey-data data-dictionary codebook puf mcbs dsacms-tier2 medicare-current-beneficiary-survey
 
 ### Additional Notes & Questions
 
@@ -473,29 +491,29 @@ _Insert any notes or questions here_
 
 ### Sign off on risk acceptance of open-sourcing the software product
 
-- **Date:** Add date
-- **Repository Name:** Add repo-name
+- **Date:** 7/16/2026
+- **Repository Name:** DSACMS/code-book
 
 Before outbounding this repository, it’s important that the appropriate stakeholders review and acknowledge the risks and responsibilities associated with releasing the code to the public. This step ensures transparency and accountability while enabling informed decision making.
 
 #### Security and Privacy Verification
-- [ ] I acknowledge that this project does **NOT**:
-  - [ ] contain any PII/PHI, or create an identifiable risk to the privacy of an individual.
-  - [ ] interface with any CMS Internal Systems. 
-  - [ ] contain any keys or credentials to authenticate with CMS systems.
+- [✔] I acknowledge that this project does **NOT**:
+  - [✔] contain any PII/PHI, or create an identifiable risk to the privacy of an individual.
+  - [✔] interface with any CMS Internal Systems. 
+  - [✔] contain any keys or credentials to authenticate with CMS systems.
 
 #### National Security and Intelligence Verification
-- [ ] I acknowledge that this project is **NOT**:
-  - [ ] primarily for use in national security systems, as defined in Section 11103 of title 40, USC.
-  - [ ] created by an agency or part of an agency that is an element of the intelligence community, as defined in section 3(4) of the National Security Act of 1947.
-  - [ ] exempt under section 552(b) of title 5, USC (commonly known as the "Freedom of Information Act").
+- [✔] I acknowledge that this project is **NOT**:
+  - [✔] primarily for use in national security systems, as defined in Section 11103 of title 40, USC.
+  - [✔] created by an agency or part of an agency that is an element of the intelligence community, as defined in section 3(4) of the National Security Act of 1947.
+  - [✔] exempt under section 552(b) of title 5, USC (commonly known as the "Freedom of Information Act").
 
 #### Export and Regulatory Compliance
-- [ ] I acknowledge that this project is **NOT** prohibited under:
-  - [ ] Export Administration Regulations.
-  - [ ] International Traffic in Arms Regulations (ITAR).
-  - [ ] Regulations of the Transportation Security Administration related to the protection of sensitive information.
-  - [ ] Federal laws and regulations governing the sharing of classified information.
+- [✔] I acknowledge that this project is **NOT** prohibited under:
+  - [✔] Export Administration Regulations.
+  - [✔] International Traffic in Arms Regulations (ITAR).
+  - [✔] Regulations of the Transportation Security Administration related to the protection of sensitive information.
+  - [✔] Federal laws and regulations governing the sharing of classified information.
 
 If all boxes have been checked, please proceed to the **Flipping the Switch** section below this one, otherwise, this section must be filled out and approved by the indicated stakeholders before public release.
 
@@ -519,7 +537,7 @@ Once the repository has passed outbound review, we are ready to “flip the swit
 Please enable the following features to enhance repository security and maintain code
 quality:
 
-- [ ] **Dependabot Alerts**
+- [✔] **Dependabot Alerts**
 
   _A GitHub Feature. Get notified when one of your dependencies has a vulnerability_
 
@@ -535,7 +553,7 @@ quality:
 
   _After making the repository public, make sure there is a coherent git branching plan in place. For example: agree to merge feature related pull requests into dev but merge bug fixes into main instead of dev first._
 
-- [ ] **Add Repolinter GH Action to CI**
+- [✔] **Add Repolinter GH Action to CI**
 
   _For ongoing adherence to repository hygiene standards, integrate the [repolinter GitHub Action](https://github.com/DSACMS/metrics/blob/main/.github/workflows/checks.yml) into your CI pipeline. This addition enhances your workflow by automatically enforcing repository cleanliness standards._
 
