@@ -149,7 +149,7 @@ Below is a list of suggested tools to run for code analysis:
 
 Multiple automated tools were run against the codebase and repository as part of this review:
 
-* **Repolinter** — Ran `repolinter lint` against the repository root.
+* **Repolinter** — Ran `npx repolinter lint .` against the repository root.
   * **Result:** All required repository hygiene checks passed (LICENSE, SECURITY.md, README.md, CONTRIBUTING.md, COMMUNITY.md, CODE_OF_CONDUCT.md, and all required subsections within each). Full output is available in the [Review Repository Hygiene](#review-repository-hygiene) section below.
 * **Gitleaks** — Ran `gitleaks detect -v` against the full repository history.
   * **Result:** Scanned 8 commits (~24.25 MB) using the repository's custom `.gitleaks.toml` rules. No leaks or secrets found.
@@ -230,7 +230,70 @@ repolinter lint
 
 3. The result produces a list of file and section existence checks, indicating whether each requirement was met or not.
 
-![repolinter results](../assets/images/repolinter-results.png)
+Lint:
+✔  license-file-exists: Found file (LICENSE)
+✔  security-file-exists: Found file (SECURITY.md)
+✔  readme-file-exists: Found file (README.md)
+✔  contributing-file-exists: Found file (CONTRIBUTING.md)
+✔  community-file-exists: Found file (COMMUNITY.md)
+ℹ governance-file-exists: ignored because level is "off"
+✔  code-of-conduct-file-exists: Found file (CODE_OF_CONDUCT.md)
+✔  license-contains-license: Contains license (LICENSE)
+✔  security-contains-security-and-responsible-disclosure-policy: Contains Security and Responsible Disclosure Policy (SECURITY.md)
+✔  readme-contains-about-the-project: Contains About the Project (README.md)
+✔  readme-contains-project-vision: Contains Project Vision (README.md)
+✔  readme-contains-project-mission: Contains Project Mission (README.md)
+✔  readme-contains-agency-mission: Contains Agency Mission (README.md)
+✔  readme-contains-team-mission: Contains Team Mission (README.md)
+✔  readme-contains-core-team: Contains Core Team (README.md)
+✔  readme-contains-documentation-index: Contains Documentation Index (README.md)
+✔  readme-contains-repository-structure: Contains Repository Structure (README.md)
+✔  readme-contains-development-and-software-delivery-lifecycle: Contains Development and Software Delivery Lifecycle (README.md)
+✔  readme-contains-local-development: Contains Local Development (README.md)
+✔  readme-contains-coding-style-and-linters: Contains Coding Style and Linters (README.md)
+✔  readme-contains-branching-model: Contains Branching Model (README.md)
+✔  readme-contains-contributing: Contains Contributing (README.md)
+✔  readme-contains-codeowners: Contains Codeowners (README.md)
+✔  readme-contains-community: Contains Community (README.md)
+✔  readme-contains-community-guidelines: Contains Community Guidelines (README.md)
+✔  readme-contains-governance: Contains Governance (README.md)
+✔  readme-contains-feedback: Contains Feedback (README.md)
+✔  readme-contains-glossary: Contains Glossary (README.md)
+✔  readme-contains-policies: Contains Policies (README.md)
+✔  readme-contains-open-source-policy: Contains Open Source Policy (README.md)
+✔  readme-contains-security-and-responsible-disclosure-policy: Contains Security and Responsible Disclosure Policy (README.md)
+✔  readme-contains-public-domain: Contains Public domain (README.md)
+✔  readme-contains-sbom: Contains Software Bill of Materials (README.md)
+✔  contributing-contains-how-to-contribute: Contains How to Contribute (CONTRIBUTING.md)
+✔  contributing-contains-getting-started: Contains Getting Started (CONTRIBUTING.md)
+✔  contributing-contains-team-specific-guidelines: Contains Team Specific Guidelines (CONTRIBUTING.md)
+✔  contributing-contains-building-dependencies: Contains Building dependencies (CONTRIBUTING.md)
+✔  contributing-contains-building-the-project: Contains Building the Project (CONTRIBUTING.md)
+✔  contributing-contains-workflow-and-branching: Contains Workflow and Branching (CONTRIBUTING.md)
+✔  contributing-contains-testing-conventions: Contains Testing Conventions (CONTRIBUTING.md)
+✔  contributing-contains-coding-style-and-linters: Contains Coding Style and Linters (CONTRIBUTING.md)
+✔  contributing-contains-writing-issues: Contains ISSUE_TEMPLATE.md | Issues (CONTRIBUTING.md)
+✔  contributing-contains-writing-pull-requests: Contains Writing Pull Requests (CONTRIBUTING.md)
+✔  contributing-contains-reviewing-pull-requests: Contains Reviewing Pull Requests (CONTRIBUTING.md)
+✔  contributing-contains-shipping-releases: Contains Shipping Releases (CONTRIBUTING.md)
+✔  contributing-contains-documentation: Contains Documentation (CONTRIBUTING.md)
+✔  contributing-contains-policies: Contains Policies (CONTRIBUTING.md)
+✔  contributing-contains-open-source-policy: Contains Open Source Policy (CONTRIBUTING.md)
+✔  contributing-contains-security-and-responsible-disclosure-policy: Contains Security and Responsible Disclosure Policy (CONTRIBUTING.md)
+✔  contributing-contains-public-domain: Contains Public domain (CONTRIBUTING.md)
+ℹ governance-contains-governance: ignored because level is "off"
+✔  code-of-conduct-contains-contributor-code-of-conduct: Contains Contributor Code of Conduct (CODE_OF_CONDUCT.md)
+✔  code-of-conduct-contains-acknowledgements: Contains Acknowledgements (CODE_OF_CONDUCT.md)
+✔  community-contains-table-of-project-members: Contains Project Members (COMMUNITY.md)
+✔  community-contains-roles-and-responsibilities: Contains Roles & Responsibilities (COMMUNITY.md)
+✔  community-contains-maintainers-list: Contains Maintainers List (COMMUNITY.md)
+✔  community-contains-approvers-list: Contains Approvers List (COMMUNITY.md)
+✔  community-contains-reviewers-list: Contains Reviewers List (COMMUNITY.md)
+✔  community-contains-contributors: Contains Contributors (COMMUNITY.md)
+✔  community-contains-alumni: Contains Alumni (COMMUNITY.md)
+✔  community-contains-principles: Contains Principles (COMMUNITY.md)
+✔  community-contains-community-guidelines: Contains Community Guidelines (COMMUNITY.md)
+✔  community-contains-acknowledgements: Contains Acknowledgements (COMMUNITY.md)
 
 #### Running repolinter on your repository via GitHub Actions
 
