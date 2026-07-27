@@ -1,0 +1,88 @@
+/*2023 Format library for CS PUF file*/
+
+VALUE puffmt
+            LOW-HIGH = "PUF_ID Count" ;
+
+value svyrfmt
+2023="2023";
+
+value versfmt
+1="Version 1"
+2="Version 2"
+3="Version 3"
+4="Version 4"
+5="Version 5"
+6="Version 6"
+7="Version 7"
+8="Version 8"
+9="Version 9"
+10="Version 10";
+
+value age2grp
+1="1:Age Group <65"
+2="2:Age Group [65,75)"
+3="3:Age Group >=75"
+.="Inapplicable/Missing"
+.R=".R:Refused"
+.D=".D:Don't know"
+.N=".N:Not ascertained";
+
+value sex
+.="Inapplicable/Missing"
+1="1:Male"
+2="2:Female"
+.R=".R:Refused"
+.D=".D:Don't know"
+.N=".N:Not ascertained";
+
+value race
+.="Inapplicable/Missing"
+1="1:Non-Hispanic white"
+2="2:Non-Hispanic black"
+3="3:Hispanic"
+4="4:Other"
+.R=".R:Refused"
+.D=".D:Don't know"
+.N=".N:Not ascertained";
+
+value incom25f
+1="1:<$25,000"
+2="2:>=$25,000"
+.="Inapplicable/Missing"
+.R=".R:Refused"
+.D=".D:Don't know"
+.N=".N:Not ascertained";
+
+VALUE NCHRN
+.="Inapplicable/Missing"
+1="0-1 chronic conditions"
+2="2-3 chronic conditions"
+3="4+ chronic conditions"
+.R=".R:Refused"
+.D=".D:Don't know"
+.N=".N:Not ascertained";
+
+  VALUE MONYFMT
+                   . = "Inapplicable/Missing"
+                  .R = "Refused"
+                  .D = "Don't know"
+                  .N = "Not ascertained" 
+            LOW-HIGH = "Amount as $$$$$$.CC" ;
+
+
+  VALUE NUM4FMT   
+                   . = "Inapplicable/Missing"
+                  .R = "Refused"
+                  .D = "Don't know"
+                  .N = "Not ascertained"
+            LOW-HIGH = "Number"; 
+
+VALUE CONTIN
+                   . = "Inapplicable/Missing"
+                  .R = "Refused"
+                  .D = "Don't know"
+                  .N = "Not ascertained"
+            LOW-HIGH = "Range of Values";
+
+
+run;     

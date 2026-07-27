@@ -2,6 +2,7 @@ import argparse
 import logging
 import os
 import re
+from datetime import datetime
 from pathlib import Path
 
 import pandas as pd
@@ -10,15 +11,28 @@ import yaml
 logger = logging.getLogger(__name__)
 
 
-def check_file_type(file_path, file_category):
-    """Validates that the provided file path matches the
-    permitted extensions for its pipeline category.
+def check_file_type(file_path: str, file_category: str) -> str:
+    """Validates that a file's extension matches the permitted formats for its pipeline category.
 
-    Ensures early structural failure before kicking off heavy data ingestion.
+    Acts as an early fail-fast guard before launching resource-heavy data ingestion jobs.
+
+    Args:
+        file_path: Relative or absolute path to the input file.
+        file_category: Pipeline domain category (case-insensitive, whitespace-tolerant).
+
+    Returns:
+        str: The matched file extension without the leading dot (e.g., 'csv', 'xlsx').
+
+    Raises:
+        ValueError: If `file_category` is unrecognized or `file_path` lacks a valid extension.
     """
     path = Path(file_path)
+
+    # Path.suffix returns lowercase dot extension (e.g., '.csv')
+    # Note: For multi-part extensions like '.tar.gz', Path.suffix only captures '.gz'
     extension = path.suffix.lower()
 
+    # Domain registry mapping categories to permitted extensions
     valid_extensions = {
         "data": [".csv"],
         "catalog": [".txt"],
@@ -27,6 +41,7 @@ def check_file_type(file_path, file_category):
         "notes-excel": [".xlsx", ".xls"],
     }
 
+    # Normalize category input
     category = file_category.lower().strip()
 
     if category not in valid_extensions:
@@ -39,64 +54,132 @@ def check_file_type(file_path, file_category):
 
     if extension in allowed:
         return extension.lstrip(".")
-    else:
-        allowed_str = " or ".join(allowed)
-        raise ValueError(
-            f"Unsupported file type for {file_category}: '{extension}'. "
-            f"Expected {allowed_str}."
-        )
+
+    # Construct human-readable expectation list (e.g., '.xlsx or .xls')
+    allowed_str = " or ".join(allowed)
+    raise ValueError(
+        f"Unsupported file type for {category}: '{extension}'. Expected {allowed_str}."
+    )
 
 
-def convert(val):
-    """Evaluates to true if the input is either a numeric string or integer.
-    Used for standardizing numeric input data types to float."""
-    try:
-        val = int(val)
+def convert(val: object) -> int | float | str:
+    """
+    Standardizes input data types into int, float, or str.
+
+    Order of operations:
+    1. Pass-through existing floats and ints directly.
+    2. Try parsing decimal strings directly as float.
+    3. Try parsing standard integer strings.
+    4. Fall back to float for non-period floats (e.g., '1e-5', 'inf').
+    5. Fall back to str for any non-numeric text strings.
+    """
+    if val is None or pd.isna(val):
+        return "."
+
+    if isinstance(val, (int, float)):
         return val
+
+    try:
+        if isinstance(val, str) and "." in val:
+            return float(val)
+
+        return int(val)
+
     except ValueError:
         try:
-            val = float(val)
-            return val
+            return float(val)
+
         except ValueError:
             return str(val)
 
 
-def read_data(file_path):
-    """Ingests the response source file.
-    Fills missing values with periods, and turns any numeric strings,
-    or integers into floats.
+def read_data(file_path: str) -> pd.DataFrame:
     """
+    Ingests the raw survey dataset and applies global formatting.
+
+    Replaces missing values (NaN) with a period ('.') standard sas missing marker,
+    and applies `convert()` across all values to standardize numeric strings and
+    integers into floats.
+
+    Parameters
+    ----------
+    file_path : str
+        Path to the source CSV file.
+
+    Returns
+    -------
+    pd.DataFrame
+        A DataFrame with standardized string, float, and missing representation.
+    """
+    # Load dataset with low_memory=False to prevent mixed-type chunk warnings on large files;
+    # replace null values with SAS-style missing markers ('.')
     df = pd.read_csv(file_path, low_memory=False).fillna(".")
+
+    # Apply type conversion across every element in the DataFrame
     for col in df.columns:
         df[col] = df[col].map(lambda val: convert(val))
+
     return df
 
 
-def parse_puf_catalog(catalog_path):
-    """Parses the .txt PUF Catalog, containing each format type, in addition to the
-    codes and definitons for the codes pertaining to a specific format. Stores this
-    information as a nested dictionary.
+def parse_catalog(catalog_path: str) -> dict[str, dict[str, str]]:
+    """Parses SAS style value catalog files (.txt) into a nested dictionary.
+
+    Format structures inside the catalog file follow this pattern:
+        value FORMAT_NAME
+            code = "Label"
+            code2 = "Prefix: Description";
+
+    Args:
+        catalog_path: Path to the plain text catalog configuration file.
+
+    Returns:
+        dict: A nested mapping structured as:
+            {
+                "FORMAT_NAME": {
+                    "code_key": "Cleaned Label Text"
+                }
+            }
+
+    Raises:
+        FileNotFoundError: If `catalog_path` cannot be located on disk.
     """
     format_dict = {}
     current_value = None
+
+    # Regex breakdown:
+    # ^value\s+(\w+) -> Matches 'value' followed by format block identifier
+    VALUE_HEADER_RE = re.compile(r"^value\s+(\w+)", re.IGNORECASE)
+
+    # Regex breakdown:
+    # ^([\w.-]+)     -> Key code (letters, digits, underscores, dots, hyphens)
+    # \s*=\s*        -> Equals sign surrounded by optional whitespace
+    # "([^"]*)"      -> Quoted label text
+    # \s*;?$         -> Optional trailing semicolon at line end
+    MAPPING_RE = re.compile(r"^([\w.-]+)\s*=\s*\"([^\"]*)\"\s*;?$")
 
     try:
         with open(catalog_path, encoding="utf-8") as file:
             for line in file:
                 line = line.strip()
 
-                value_match = re.match(r"^value\s+(\w+)", line, re.IGNORECASE)
+                # Ignore blank lines and comments
+                if not line or line.startswith("//") or line.startswith("#"):
+                    continue
 
+                # Check for new format header (e.g. 'value YESNOFMT')
+                value_match = VALUE_HEADER_RE.match(line)
                 if value_match:
                     current_value = value_match.group(1).upper()
                     continue
 
-                mapping_match = re.match(r"^([\w\.\-]+)\s*=\s*\"([^\"]*)\"\s*;?$", line)
-
+                # Check for key-value pair inside an active format block
+                mapping_match = MAPPING_RE.match(line)
                 if mapping_match and current_value:
                     key_code = mapping_match.group(1).strip()
                     label_text = mapping_match.group(2)
 
+                    # Strip metadata prefixes like 'Category A: Real Description' -> 'Real Description'
                     if ":" in label_text:
                         label_text = label_text.split(":", 1)[1].strip()
 
@@ -114,126 +197,168 @@ def parse_puf_catalog(catalog_path):
     return format_dict
 
 
-def extract_file_metadata(file_path):
-    """
-    Extracts the year, raw season, and formatted season strings from the filename.
-    """
-    filename = os.path.basename(file_path)
-    pattern = r"sfpuf(\d{4})_(\d+)_([a-zA-Z]+)\.csv"
-    match = re.search(pattern, filename)
-
-    if match:
-        file_year = int(match.group(1))
-        raw_season = match.group(3).upper()
-        file_season_fmt = f"PUF_{raw_season}"
-        return file_year, raw_season, file_season_fmt
-    else:
-        raise ValueError("Could not extract year and season from the file name format.")
-
-
 def build_codebook_data(
-    file_path,
-    catalog_path,
-    format_path,
-    label_path,
-    notes_path,
-    file_year,
-    file_season_fmt,
-):
+    file_path: str,
+    catalog_path: str,
+    format_path: str,
+    label_path: str,
+    notes_path: str,
+) -> dict:
     """
-    Processes the response source file, bringing inmetadata for
-    variable labels, variable formats,
-    and variable notes. Combines all of this into a structured YAML payload codebook.
+    Builds a structured dictionary payload suitable for YAML codebook export.
+
+    Combines raw data with variable metadata, format catalogs, variable labels,
+    and supplementary survey notes/question numbers.
+
+    Parameters
+    ----------
+    file_path : str
+        Path to the primary raw survey dataset (read via `read_data`).
+    catalog_path : str
+        Path to the SAS format catalog text file.
+    format_path : str
+        Path to the Excel file mapping variable names to format names.
+    label_path : str
+        Path to the Excel file mapping variable names to variable labels.
+    notes_path : str
+        Path to the Excel file containing question numbers and footnotes.
+
+    Returns
+    -------
+    dict
+        A nested dictionary mapping each column name to its codebook metadata:
+        - `format` (str): Uppercase format name applied to the variable.
+        - `description` (str): Human-readable variable label.
+        - `value_distributions` (list[dict]): List of `{"code", "label", "frequency"}`.
+        - `qnbr` (list[str], optional): Cleaned question numbers associated with variable.
+        - `notes`, `notes2`, `notes3` (str, optional): Additional footnotes.
+
+    Raises
+    ------
+    KeyError
+        If a survey dataset column is missing from `format_key` or `label_key`,
+        or if a specified format name is missing from the parsed catalog.
     """
+    # -------------------------------------------------------------------------
+    # 1. Load Raw Data & Metadata Lookup Tables
+    # -------------------------------------------------------------------------
     df = read_data(file_path)
 
+    # Format key: maps variable names to SAS format names (strips trailing dots like 'YESNO.')
     format_key = pd.read_excel(format_path, engine="openpyxl").set_index("Variable")
     format_key["Format"] = (
         format_key["Format"].astype(str).str.replace(".", "", regex=False)
     )
 
-    puf_catalog = parse_puf_catalog(catalog_path)
+    # Catalog: parsed dict mapping format names to value-label dicts
+    catalog = parse_catalog(catalog_path)
 
+    # Label key: maps variable names to descriptive text labels
     label_key = pd.read_excel(label_path, engine="openpyxl").set_index("Variable")
 
+    # Notes sheet: contains question numbers (qnbr) and multi-line footnotes
     df_notes = pd.read_excel(notes_path, engine="openpyxl")
-
-    if "PUF_ID" in df.columns:
-        df["PUF_ID"] = "LOW-HIGH"
 
     yaml_data = {}
 
+    # -------------------------------------------------------------------------
+    # 2. Process Metadata & Frequency Distributions Column-by-Column
+    # -------------------------------------------------------------------------
     for col in df.columns:
+        # Validate format lookup mapping
         if col not in format_key.index:
             raise KeyError(f"Column '{col}' not found in format_key DataFrame.")
-        else:
-            fmt_name = str(format_key.at[col, "Format"]).upper().strip()
 
-        if fmt_name == "CONTIN":
+        fmt_name = str(format_key.at[col, "Format"]).upper().strip()
+
+        # Validate format exists in catalog before probing entries
+        if fmt_name not in catalog:
+            raise KeyError(f"Format '{fmt_name}' not found in the catalog.")
+
+        # Continuous / ID variable handling: aggregate all numeric values into a single "LOW-HIGH" category
+        if any(key == "LOW-HIGH" for key in catalog[fmt_name]):
             num_or_nan = pd.to_numeric(df[col], errors="coerce")
             is_digit = num_or_nan.notna()
             df[col] = df[col].astype(str)
             df.loc[is_digit, col] = "LOW-HIGH"
 
+        # Validate variable label mapping
         if col not in label_key.index:
             raise KeyError(f"Column '{col}' not found in label_key DataFrame.")
-        else:
-            var_label = label_key.at[col, "Label"]
 
+        var_label = label_key.at[col, "Label"]
+
+        # Base dictionary entry for the variable
         var_entry = {
             "format": fmt_name,
             "description": var_label,
             "value_distributions": [],
         }
 
+        # ---------------------------------------------------------------------
+        # 3. Calculate Frequencies Against Catalog Codes
+        # ---------------------------------------------------------------------
         val_counts = df[col].value_counts()
+        inner_dict = catalog[fmt_name]
 
-        if puf_catalog and fmt_name in puf_catalog:
-            inner_dict = puf_catalog[fmt_name]
+        for key, label in sorted(inner_dict.items()):
+            # Normalize catalog keys (remove dots from special codes like '.R', except lone '.')
+            if key != "." and "." in key:
+                key = key.replace(".", "")
+            else:
+                key = convert(key)
 
-            for key, label in sorted(inner_dict.items()):
-                if key != "." and "." in key:
-                    key = key.replace(".", "")
-                else:
-                    key = convert(key)
+            label = convert(label)
+            freq = int(val_counts.get(key, 0))
 
-                label = convert(label)
+            # Record non-zero value frequencies
+            if freq > 0:
+                var_entry["value_distributions"].append(
+                    {"code": key, "label": label, "frequency": freq}
+                )
 
-                freq = int(val_counts.get(key, 0))
+        # Log warning/debug if no observed values matched any catalog codes
+        if not var_entry["value_distributions"]:
+            logger.debug(f"value distributions missing for variable {col}")
 
-                if freq > 0:
-                    var_entry["value_distributions"].append(
-                        {"code": key, "label": label, "frequency": freq}
-                    )
-        else:
-            raise KeyError(f"Format '{fmt_name}' not found in the PUF catalog.")
-
-        matched_notes = df_notes[
-            (df_notes["var_nm"] == col)
-            & (df_notes["file"] == file_season_fmt)
-            & ((df_notes["yr"] == file_year) | (df_notes["yr"].isna()))
-        ]
+        # ---------------------------------------------------------------------
+        # 4. Attach Question Numbers & Footnotes
+        # ---------------------------------------------------------------------
+        matched_notes = df_notes[df_notes["var_nm"] == col]
 
         if not matched_notes.empty:
             for _, row in matched_notes.iterrows():
                 for note_col in ["qnbr", "notes", "notes2", "notes3"]:
                     note_content = row.get(note_col)
                     if pd.notna(note_content) and str(note_content).strip() != "":
+                        cleaned_val = str(note_content).strip()
+
+                        # Process comma-delimited question numbers into a clean list
                         if note_col == "qnbr":
-                            note_col = "question_numbers"
-                            questions = [q.strip() for q in note_content.split(",")]
+                            questions = [
+                                q.strip() for q in cleaned_val.split(",") if q.strip()
+                            ]
                             var_entry[note_col] = questions
                         else:
-                            var_entry[note_col] = str(note_content).strip()
+                            var_entry[note_col] = cleaned_val
 
         yaml_data[col] = var_entry
 
     return yaml_data
 
 
-def main():
+def main() -> None:
+    """
+    Command-Line Interface (CLI) entrypoint for generating codebook YAML files.
+
+    Parses command-line arguments, validates input file paths, invokes dataset
+    processing, and exports the resulting structured codebook to disk as a YAML file.
+    """
+    # -------------------------------------------------------------------------
+    # 1. Configure Logging & CLI Argument Parser
+    # -------------------------------------------------------------------------
     logging.basicConfig(
-        level=logging.INFO,
+        level=logging.DEBUG,
         format="%(asctime)s - %(levelname)s - %(message)s",
         datefmt="%Y-%m-%d %H:%M:%S",
     )
@@ -244,32 +369,43 @@ def main():
         )
     )
 
+    # Dataset & Catalog file inputs
     parser.add_argument(
         "-f",
         "--file",
-        default="Data Files/sfpuf2023_1_fall.csv",
+        default="sample1/sfpuf2023_1_fall.csv",
         help="Path to the source data CSV file (default: %(default)s)",
     )
     parser.add_argument(
         "-c",
         "--catalog",
-        default="2023 Formats/puf_formats_2023.txt",
+        default="sample1/puf_formats_2023.txt",
         help="Path to the txt catalog file (default: %(default)s)",
     )
+
+    # Excel Key lookup inputs
     parser.add_argument(
         "--format-excel",
-        default="2023 Formats/sfpuf2023_1_fall_formats.xlsx",
+        default="sample1/sfpuf2023_1_fall_formats.xlsx",
         help="Path to the Format Key Excel file (default: %(default)s)",
     )
     parser.add_argument(
         "--label-excel",
-        default="Data Files/sfpuf2023_1_fall_labels.xlsx",
+        default="sample1/sfpuf2023_1_fall_labels.xlsx",
         help="Path to the Label Key Excel file (default: %(default)s)",
     )
     parser.add_argument(
         "--notes-excel",
-        default="2023 PUF Notes/PUFNotes2023.xlsx",
-        help="Path to the PUF Notes Excel file (default: %(default)s)",
+        default="sample1/PUFNotes2023.xlsx",
+        help="Path to the Notes Excel file (default: %(default)s)",
+    )
+
+    # Output naming & destination options
+    parser.add_argument(
+        "-s",
+        "--file-name",
+        default=None,
+        help="Optional name associated with the dataset (e.g., PUFWINTER_2023)",
     )
     parser.add_argument(
         "-o",
@@ -283,6 +419,9 @@ def main():
 
     args = parser.parse_args()
 
+    # -------------------------------------------------------------------------
+    # 2. Input Structure Validation
+    # -------------------------------------------------------------------------
     logger.info("Validating file structures...")
     check_file_type(args.file, "data")
     check_file_type(args.catalog, "catalog")
@@ -290,26 +429,34 @@ def main():
     check_file_type(args.label_excel, "label-excel")
     check_file_type(args.notes_excel, "notes-excel")
 
-    logger.info("Extracting file metadata...")
-    file_year, raw_season, file_season_fmt = extract_file_metadata(args.file)
-
-    logger.info(
-        f"Processing data and building codebook for {raw_season} {file_year}..."
-    )
+    # -------------------------------------------------------------------------
+    # 3. Build Codebook Payload
+    # -------------------------------------------------------------------------
+    logger.info("Processing data and building codebook yaml file")
     yaml_data = build_codebook_data(
         file_path=args.file,
         catalog_path=args.catalog,
         format_path=args.format_excel,
         label_path=args.label_excel,
         notes_path=args.notes_excel,
-        file_year=file_year,
-        file_season_fmt=file_season_fmt,
     )
 
-    yaml_output_filename = f"codebook_{raw_season}_{file_year}.yaml"
+    # -------------------------------------------------------------------------
+    # 4. Resolve Output Path & Export YAML
+    # -------------------------------------------------------------------------
+    # Construct filename based on user-provided dataset tag or timestamp
+    if args.file_name:
+        yaml_output_filename = f"codebook_{args.file_name}.yaml"
+    else:
+        current_date = datetime.now().strftime("%Y-%m-%d_%H%M%S")
+        yaml_output_filename = f"codebook_{current_date}.yaml"
+
     yaml_output_path = os.path.abspath(
         os.path.join(args.output_dir, yaml_output_filename)
     )
+
+    # Ensure output directory exists prior to writing
+    os.makedirs(args.output_dir, exist_ok=True)
 
     if os.path.exists(yaml_output_path):
         logger.info(f"Overwriting existing codebook file at: {yaml_output_path}")
@@ -317,7 +464,11 @@ def main():
     logger.info("Writing results to disk...")
     with open(yaml_output_path, "w", encoding="utf-8") as yf:
         yaml.dump(
-            yaml_data, yf, default_flow_style=False, sort_keys=False, allow_unicode=True
+            yaml_data,
+            yf,
+            default_flow_style=False,
+            sort_keys=False,
+            allow_unicode=True,
         )
 
     logger.info(f"Clean variable codebook built successfully: {yaml_output_path}")

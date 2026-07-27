@@ -19,7 +19,7 @@ An automated, metadata pipeline where every Medicare Current Beneficiary Survey 
 
 ## Project Mission
 
-Deliver a maintainable and version-controlled Python/R workflow that ingests raw, open-format survey data (CSV/Parquet) and structured, human-editable metadata (JSON/YAML) to generate standardized, machine-readable codebooks and researcher-ready human-readable documentation.
+Deliver a maintainable and version-controlled Python workflow that ingests raw, open-format CSV survey data and structured, human-editable YAML metadata to generate standardized, machine-readable codebooks and researcher-ready human-readable documentation.
 
 ## Agency Mission
 
@@ -43,17 +43,19 @@ A list of core team members responsible for the code and documentation in this r
 ├── requirements.txt
 ├── tests/
 │   └── test_makeYaml.py            # Unit tests for makeYaml.py
-├── Data Files/
+├── sample1/                        # First sample input set (default arguments paths)
 │   ├── sfpuf2023_1_fall.csv        # Source survey data (-f)
-│   └── sfpuf2023_1_fall_labels.xlsx  # Variable label lookup (--label-excel)
-├── 2023 Formats/
 │   ├── puf_formats_2023.txt        # Format/value catalog (-c)
-│   └── sfpuf2023_1_fall_formats.xlsx  # Variable format lookup (--format-excel)
-└── 2023 PUF Notes/
-    └── PUFNotes2023.xlsx           # Variable notes lookup (--notes-excel)
+│   ├── sfpuf2023_1_fall_formats.xlsx  # Variable format lookup (--format-excel)
+│   ├── sfpuf2023_1_fall_labels.xlsx   # Variable label lookup (--label-excel)
+│   └── PUFNotes2023.xlsx           # Variable notes lookup (--notes-excel)
+└── sample2/                        # Second sample input set
+    ├── cspuf2023.csv                  # Source survey data (-f)
+    ├── cspuf_formats_2023.txt         # Format/value catalog (-c)
+    ├── cspuf2023_formats.xlsx         # Variable format lookup (--format-excel)
+    ├── cspuf2023_labels.xlsx          # Variable label lookup (--label-excel)
+    └── PUFNotes2023.xlsx              # Variable notes lookup (--notes-excel)
 ```
-
-The `Data Files/`, `2023 Formats/`, and `2023 PUF Notes/` folders match the scripts' default argument paths. A new year's files follow the same layout with the year swapped (e.g. `2024 Formats/`, `2024 PUF Notes/`) — see [Generating Outputs for a New Year](#generating-outputs-for-a-new-year) for more information.
 
 ## Documentation Index
 
@@ -105,7 +107,7 @@ pip install -r requirements.txt
 {
   "-f, --file": {
     "type": ".csv",
-    "description": "Source survey response data. Filename must match the pattern sfpuf<year>_<n>_<season>.csv (e.g. sfpuf2023_1_fall.csv) so the year/season can be parsed automatically."
+    "description": "Source survey response data. Any filename is accepted as long as it has a .csv extension — there is no required naming pattern. Use -s/--file-name to control the tag baked into the output filename(s)."
   },
   "-c, --catalog": {
     "type": ".txt",
@@ -121,7 +123,11 @@ pip install -r requirements.txt
   },
   "--notes-excel": {
     "type": ".xlsx / .xls",
-    "description": "Contains per-variable notes (var_nm, file, yr, qnbr, notes, notes2, notes3), filtered by season/year."
+    "description": "Contains per-variable notes (var_nm, qnbr, notes, notes2, notes3), matched on variable name only."
+  },
+  "-s, --file-name": {
+    "type": "string (optional)",
+    "description": "Optional tag used to name the output file(s), e.g. 'PUFFALL_2023' produces codebook_PUFFALL_2023.yaml. If omitted, a timestamp (YYYY-MM-DD_HHMMSS) is used instead. Present on makeYaml.py and makeAll.py."
   },
   "-o, --output-dir": {
     "type": "directory",
@@ -136,44 +142,46 @@ pip install -r requirements.txt
 
 ```bash
 python makeYaml.py \
-  -f "Data Files/sfpuf2023_1_fall.csv" \
-  -c "2023 Formats/puf_formats_2023.txt" \
-  --format-excel "2023 Formats/sfpuf2023_1_fall_formats.xlsx" \
-  --label-excel "Data Files/sfpuf2023_1_fall_labels.xlsx" \
-  --notes-excel "2023 PUF Notes/PUFNotes2023.xlsx" \
+  -f "sample1/sfpuf2023_1_fall.csv" \
+  -c "sample1/puf_formats_2023.txt" \
+  --format-excel "sample1/sfpuf2023_1_fall_formats.xlsx" \
+  --label-excel "sample1/sfpuf2023_1_fall_labels.xlsx" \
+  --notes-excel "sample1/PUFNotes2023.xlsx" \
+  -s "PUFFALL_2023" \
   -o .
 ```
 
-Produces `codebook_FALL_2023.yaml` in the output directory. All arguments have defaults matching the paths above, so running `python makeYaml.py` with no flags will use those defaults.
+Produces `codebook_PUFFALL_2023.yaml` in the output directory. The `-s`/`--file-name` flag is optional — it's just a tag used to name the output file. If you leave it off, the output falls back to a timestamped name (e.g. `codebook_2026-07-27_193000.yaml`), since the tool no longer derives a season/year from the input filename. All other arguments have defaults matching the paths above (all found in the sample1 folder), so running `python makeYaml.py` with no flags will use those defaults (and produce a timestamped output name).
 
 ### 2. Generate the TXT report from an existing YAML
 
 ```bash
-python makeCodebook.py codebook_FALL_2023.yaml
+python makeCodebook.py codebook_PUFFALL_2023.yaml
 ```
 
-Produces `codebook_FALL_2023.txt` in the current directory (falls back to `codebook_report.txt` if the filename doesn't match the expected `codebook_<season>_<year>.yaml` pattern). Pass `-o` if you want it saved somewhere else.
+Produces `codebook_PUFFALL_2023.txt` in the current directory — the output filename always mirrors the input YAML's basename with a `.txt` extension. Pass `-o` if you want it saved somewhere.
 
 ### 3. Run the full pipeline in one step
 
 ```bash
 python makeAll.py \
-  -f "Data Files/sfpuf2023_1_fall.csv" \
-  -c "2023 Formats/puf_formats_2023.txt" \
-  --format-excel "2023 Formats/sfpuf2023_1_fall_formats.xlsx" \
-  --label-excel "Data Files/sfpuf2023_1_fall_labels.xlsx" \
-  --notes-excel "2023 PUF Notes/PUFNotes2023.xlsx" \
+  -f "sample1/sfpuf2023_1_fall.csv" \
+  -c "sample1/puf_formats_2023.txt" \
+  --format-excel "sample1/sfpuf2023_1_fall_formats.xlsx" \
+  --label-excel "sample1/sfpuf2023_1_fall_labels.xlsx" \
+  --notes-excel "sample1/PUFNotes2023.xlsx" \
+  -s "PUFFALL_2023" \
   -o .
 ```
 
-This runs `makeYaml`'s codebook-building logic and immediately feeds the result into `makeCodebook`'s report generator, producing both the `.yaml` and `.txt` outputs in one pass.
+This runs `makeYaml`'s codebook-building logic and immediately feeds the result into `makeCodebook`'s report generator, producing both the `.yaml` and `.txt` outputs (sharing the same base filename) in one pass.
 
-Like `makeYaml.py`, all of `makeAll.py`'s arguments have defaults matching the paths above, so `python makeAll.py` with no flags at all will also work as long as your files live at those default locations.
+Like `makeYaml.py`, all of `makeAll.py`'s arguments have defaults matching the paths above, so `python makeAll.py` with no flags at all will also work as long as your files live at those default locations — you'll just get a timestamped output name instead of a tagged one.
 
 ## What Gets Validated
 
 - **File extensions**: `check_file_type()` in `makeYaml.py` enforces that each input matches its expected extension (`.csv` for data, `.txt` for the catalog, `.xlsx`/`.xls` for the Excel lookups) and raises a `ValueError` immediately if not.
-- **Filename convention**: the source CSV's filename must match `sfpuf<year>_<n>_<season>.csv`. This is enforced by `extract_file_metadata()` in `makeYaml.py`, which parses that pattern to derive the year and season used throughout the pipeline (and in the output filenames). If the filename doesn't match, a `ValueError` is raised before any data is processed.
+- **Output naming, not filename parsing**: there's no filename-pattern requirement on the source CSV — `check_file_type()` only checks the extension. The `-s`/`--file-name` flag (present on `makeYaml.py` and `makeAll.py`) is the only thing that controls the tag baked into output filenames; if it's omitted, a timestamp is used instead.
 - **Lookup completeness**: `build_codebook_data()` in `makeYaml.py` requires every column in the survey data to have a matching entry in both the format lookup and the label lookup — a missing entry raises a `KeyError`. It also requires each variable's format name to exist in the parsed PUF catalog; if not, a `KeyError` is raised there too.
 
 ## How the Codebook Is Built
@@ -181,9 +189,9 @@ Like `makeYaml.py`, all of `makeAll.py`'s arguments have defaults matching the p
 `build_codebook_data()` in `makeYaml.py` processes each column in the survey data as follows:
 
 1. Look up its **format name** and **description/label**.
-2. If the format is `CONTIN` (continuous/numeric), collapse all numeric values to a single `LOW-HIGH` placeholder before counting.
-3. Look up value-level labels from the parsed catalog (`parse_puf_catalog`) and count how often each code appears in the data, skipping any codes with zero occurrences.
-4. Attach any matching notes and question numbers from the notes Excel file, matched on variable name, file/season, and year.
+2. If that format's catalog block defines a `LOW-HIGH` code — not only when the format is literally named `CONTIN` — collapse all numeric values in the column to that single `LOW-HIGH` placeholder before counting. This makes continuous/ID-style value handling generic to any format that uses a `LOW-HIGH` code, rather than hardcoded to a `CONTIN` format name.
+3. Look up value-level labels from the parsed catalog (`parse_catalog`) and count how often each code appears in the data, skipping any codes with zero occurrences.
+4. Attach any matching notes and question numbers from the notes Excel file, matched only on variable name (`var_nm`).
 
 The result is dumped to YAML with one entry per variable, e.g.:
 
@@ -198,7 +206,7 @@ INT_SPPROXY:
   - code: 2
     label: Proxy
     frequency: 1579
-  question_numbers:
+  qnbr:
   - IN4
   notes: Results include all respondents.
 ```
@@ -209,9 +217,11 @@ INT_SPPROXY:
 
 If you need to add a variable, change a label, or add a code, edit the underlying source files directly — nothing is meant to be hand-edited in the generated YAML/TXT, since those are regenerated from scratch each run.
 
+Note on multi-sheet workbooks: --format-excel, --label-excel, and --notes-excel are all loaded with pandas.read_excel() without a sheet_name argument, which defaults to reading only the first sheet in the workbook. If any of these files have more than one tab (e.g. one sheet per season, or a leftover "old data" tab), every sheet after the first is silently ignored — there's no warning if the data you actually need is sitting on sheet 2. Keep the data you want processed on the first sheet of each workbook.
+
 ### Catalog `.txt` file
 
-Parsed line-by-line by `parse_puf_catalog()`. The expected shape is:
+Parsed line-by-line by `parse_catalog()`. The expected shape is:
 
 ```
 value FORMAT_NAME
@@ -238,44 +248,50 @@ Must have at least two columns: `Variable` and `Label`. One row per survey colum
 
 ### `--notes-excel`
 
-Must have these columns: `var_nm`, `file`, `yr`, `qnbr`, `notes`, `notes2`, `notes3`.
-- `var_nm` must match the survey column name exactly.
-- `file` must match the formatted season string (e.g. `PUF_FALL`).
-- `yr` is matched against the file's year — leave it blank/NaN if the note should apply to that variable across all years.
-- `qnbr` can hold a comma-separated list (e.g. `"IN4, IN5"`) and becomes a `question_numbers` list in the YAML.
+Must have at least these columns: `var_nm`, `qnbr`, `notes`, `notes2`, `notes3`. (`file` and `yr` columns may still exist in the sheet for your own record-keeping, but the pipeline no longer reads or filters on them.)
+- `var_nm` must match the survey column name exactly — this is now the *only* field used to match a notes row to a variable.
+- `qnbr` can hold a comma-separated list (e.g. `"IN4, IN5"`) and becomes a `qnbr` list in the YAML.
 - `notes`, `notes2`, `notes3` are free text; empty/NaN cells are skipped, non-empty ones are added verbatim.
+- If more than one row matches the same `var_nm` (e.g. leftover rows from a previous year in the same notes file), the last matching row wins and silently overwrites the earlier row's `qnbr`/`notes`/`notes2`/`notes3` values. Keep at most one row per variable in a notes file to avoid issues.
+- If your notes workbook has multiple sheets (for example, one tab per year or season), only the first sheet is read — rows on any other sheet are never seen by the pipeline, with no error or warning. Consolidate the notes you need onto the first sheet.
+
 
 ## Generating Outputs for a New Year
 
-There's no year-specific logic hardcoded into the scripts — everything is driven by the file paths and filenames you pass in. To process a new year:
+There's no year-specific logic hardcoded into the scripts, and the source CSV's filename is no longer parsed for anything — everything is driven purely by the file paths you pass in plus the optional `-s`/`--file-name` tag. To process a new year:
 
-1. **Get the new source CSV** and make sure its filename follows `sfpuf<year>_<n>_<season>.csv` (e.g. `sfpuf2024_1_fall.csv`). This is what drives the year/season used in every output filename.
+1. **Get the new source CSV**. Any filename works as long as it ends in `.csv` — there's no required naming convention anymore, though keeping a consistent style like `sfpuf<year>_<n>_<season>.csv` (e.g. `sfpuf2024_1_fall.csv`) is still a reasonable convention.
 2. **Get or update the catalog `.txt`** for that year. If the value formats haven't changed, you can often reuse last year's catalog — otherwise add/update `value` blocks for any new or changed formats.
 3. **Update the format Excel** so every column in the new CSV has a `Variable`/`Format` row.
 4. **Update the label Excel** so every column in the new CSV has a `Variable`/`Label` row.
-5. **Update the notes Excel** with any new rows for that year/season (or leave `yr` blank on existing rows if the note still applies).
-6. **Run `makeAll.py`** pointing at the new year's files:
+5. **Update the notes Excel** with any new rows for that year/season. Since notes are now matched only on `var_nm`, ensure each variable is only entered into the notes file once to avoid overwritting issues. 
+6. **Run `makeAll.py`** pointing at the new year's files, passing `-s` with a tag for the new year so the outputs are named predictably:
 
+For example - 
 ```bash
-   python makeAll.py \
-     -f "Data Files/sfpuf2024_1_fall.csv" \
-     -c "2024 Formats/puf_formats_2024.txt" \
-     --format-excel "2024 Formats/sfpuf2024_1_fall_formats.xlsx" \
-     --label-excel "Data Files/sfpuf2024_1_fall_labels.xlsx" \
-     --notes-excel "2024 PUF Notes/PUFNotes2024.xlsx" \
-     -o .
+python makeAll.py \
+  -f "2024Data/sfpuf2024_1_fall.csv" \
+  -c "2024Data/puf_formats_2024.txt" \
+  --format-excel "2024Data/sfpuf2024_1_fall_formats.xlsx" \
+  --label-excel "2024Data/sfpuf2024_1_fall_labels.xlsx" \
+  --notes-excel "2024Data/PUFNotes2024.xlsx" \
+  -s "PUFFALL_2024" \
+  -o .
 ```
 
+   Leaving off `-s` still works — you'll just get a timestamped filename like `codebook_2026-07-27_193000.yaml` instead of `codebook_PUFFALL_2024.yaml`.
 7. Check the console output — any `KeyError` means a survey column is missing from the format or label Excel, or a format name isn't defined in the catalog. Fix the relevant lookup file and re-run.
 
 ## Known Limitations
 
-- **Strict filename matching**: the source CSV must match `sfpuf<year>_<n>_<season>.csv` exactly (via regex in `extract_file_metadata()`), or the whole run aborts before any processing happens. Extra suffixes, different prefixes, or missing parts will fail.
+- **No automatic output tagging**: since filenames are no longer parsed for year/season, you have to remember to pass `-s`/`--file-name` yourself if you want a meaningful output name — forgetting it just gives you a timestamped file, which is easy to lose track of across multiple runs.
+- **Notes matching ignores file/year**: notes are matched purely on `var_nm`. If a notes Excel file has more than one row for the same variable (e.g. leftover rows from a prior year), only the last matching row's `qnbr`/`notes`/`notes2`/`notes3` survive — there's no season/year disambiguation anymore.
+- Only the first sheet of any Excel lookup is read: --format-excel, --label-excel, and --notes-excel are all loaded via pandas.read_excel() with no sheet_name specified, so anything beyond the first sheet in a multi-tab workbook is silently ignored rather than flagged.
 - **All-or-nothing lookups**: there's no partial-run or skip-and-warn mode. A single survey column missing from the format Excel, label Excel, or catalog raises a `KeyError` and stops the entire run — you can't generate a partial codebook.
 - **Silent catalog parsing failures**: malformed lines in the catalog `.txt` (wrong quoting, unexpected spacing) are skipped without any warning rather than raising an error, so a typo in the catalog can quietly result in a missing code rather than a visible failure.
-- **Colon-stripping in labels**: any catalog label containing a colon has everything before the first colon discarded, which may not be what you want for labels that legitimately contain colons.
+- **Colon-stripping in labels**: any catalog label containing a colon has everything before the first colon discarded, which may not be what you want for labels that legitimately contain colons. This was done to remove redundant codes placed at the beginning of labels.
 - **Overwrites**: existing output files (`.yaml` and `.txt`) are overwritten/removed if they already exist at the target path.
-- **Single file per run**: each invocation handles exactly one season/year combination — there's no built-in batch mode for processing multiple files at once.
+- **Single file per run**: each invocation handles exactly one dataset — there's no built-in batch mode for processing multiple files at once.
 - **Test coverage gap**: the test suite (`tests/test_makeYaml.py`) only covers `makeYaml.py`; `makeCodebook.py` and `makeAll.py` currently have no automated tests.
 
 ## Running Tests
@@ -285,11 +301,10 @@ pytest tests/
 ```
 
 The test suite covers:
-- `convert()` — numeric string/int/float coercion
-- `extract_file_metadata()` — filename parsing (valid and invalid cases)
-- `check_file_type()` — extension/category validation
-- `parse_puf_catalog()` — parsing `value`/code-label blocks from the catalog `.txt` file
-- `build_codebook_data()` — full integration of survey data, format/label/notes lookups, and catalog value distributions
+- `convert()` — numeric string/int/float coercion, including missing-value sentinels (`None`/`NaN` → `"."`) and idempotency on already-typed values
+- `check_file_type()` — extension/category validation, including case-insensitivity, whitespace handling, and categories with multiple valid extensions
+- `parse_catalog()` — parsing `value`/code-label blocks from the catalog `.txt` file, including colon-stripped labels, mappings that appear before any `value` header (silently ignored), and missing/empty catalog files
+- `build_codebook_data()` — full integration of survey data, format/label/notes lookups, and catalog value distributions, including the generalized `LOW-HIGH` bucketing (triggered by the catalog content rather than a hardcoded `CONTIN` format name), missing-lookup `KeyError`s, notes matched purely on `var_nm` (with the last-row-wins behavior explicitly documented), question-number splitting/stripping, and columns with zero overlap against the catalog
 
 ## Local Development
 
@@ -305,7 +320,7 @@ The test suite covers:
    ```
 4. Place your source files in the expected locations (see [Repo Structure](#repo-structure)) or pass explicit paths via the CLI flags.
 5. Run the pipeline locally with `python makeAll.py` and inspect the generated `.yaml`/`.txt` outputs.
-6. Run `pytest tests/` before committing any changes.
+6. Run and or update `pytest tests/` before committing any changes.
 
 ## Coding Style and Linters
 
