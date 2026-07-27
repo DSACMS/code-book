@@ -37,24 +37,30 @@ A list of core team members responsible for the code and documentation in this r
 
 ```
 .
-├── makeYaml.py                     # Step 1: builds the YAML codebook from source files
-├── makeCodebook.py                 # Step 2: converts a YAML codebook into a TXT report
-├── makeAll.py                      # Runs both steps end-to-end in one command
+├── makeYaml.py                        # Step 1: builds the YAML codebook from source files
+├── makeCodebook.py                    # Step 2: converts a YAML codebook into a TXT report
+├── makeAll.py                         # Runs both steps end-to-end in one command
 ├── requirements.txt
+├── codebook_SF_PUF_FALL_2023.txt      # Sample TXT output generated from the new pipeline
+├── codebook_SF_PUF_FALL_2023.yaml     # Sample YAML intermediate generated from the new pipeline
+├── reference_codebooks/               # Legacy SAS-generated reference codebooks for validation
+│   ├── MCBSPUF_2023_1_fall.txt
+│   ├── MCBSPUF_2023_2_winter.txt
+│   └── MCBSPUF_2023_3_summer.txt
 ├── tests/
-│   └── test_makeYaml.py            # Unit tests for makeYaml.py
-├── sample1/                        # First sample input set (default arguments paths)
-│   ├── sfpuf2023_1_fall.csv        # Source survey data (-f)
-│   ├── puf_formats_2023.txt        # Format/value catalog (-c)
-│   ├── sfpuf2023_1_fall_formats.xlsx  # Variable format lookup (--format-excel)
-│   ├── sfpuf2023_1_fall_labels.xlsx   # Variable label lookup (--label-excel)
-│   └── PUFNotes2023.xlsx           # Variable notes lookup (--notes-excel)
-└── sample2/                        # Second sample input set
-    ├── cspuf2023.csv                  # Source survey data (-f)
-    ├── cspuf_formats_2023.txt         # Format/value catalog (-c)
-    ├── cspuf2023_formats.xlsx         # Variable format lookup (--format-excel)
-    ├── cspuf2023_labels.xlsx          # Variable label lookup (--label-excel)
-    └── PUFNotes2023.xlsx              # Variable notes lookup (--notes-excel)
+│   └── test_makeYaml.py               # Unit tests for makeYaml.py
+├── sample1/                           # First sample input set (default argument paths)
+│   ├── sfpuf2023_1_fall.csv           # Source survey data (-f)
+│   ├── puf_formats_2023.txt           # Format/value catalog (-c)
+│   ├── sfpuf2023_1_fall_formats.xlsx     # Variable format lookup (--format-excel)
+│   ├── sfpuf2023_1_fall_labels.xlsx      # Variable label lookup (--label-excel)
+│   └── PUFNotes2023.xlsx              # Variable notes lookup (--notes-excel)
+└── sample2/                           # Second sample input set
+    ├── cspuf2023.csv                     # Source survey data (-f)
+    ├── cspuf_formats_2023.txt            # Format/value catalog (-c)
+    ├── cspuf2023_formats.xlsx            # Variable format lookup (--format-excel)
+    ├── cspuf2023_labels.xlsx             # Variable label lookup (--label-excel)
+    └── PUFNotes2023.xlsx                 # Variable notes lookup (--notes-excel)
 ```
 
 ## Documentation Index
