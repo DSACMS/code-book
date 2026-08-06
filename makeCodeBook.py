@@ -50,14 +50,15 @@ def make_codeBook(yaml_path: str) -> str:
     # -------------------------------------------------------------------------
     report_lines = []
 
-    report_lines.append("=" * 70)
-    report_lines.append(f"{'CODEBOOK REPORT':^70}")
-    report_lines.append("=" * 70 + "\n")
+    report_lines.append("=" * 65)
+    report_lines.append(f"{'CODEBOOK REPORT':^65}")
 
     # -------------------------------------------------------------------------
     # 3. Process Variables
     # -------------------------------------------------------------------------
     for col, info in codebook.items():
+        #section separator for each variable
+        report_lines.append("=" * 65 + "\n")
         # Fallback to single spaces if format or description are omitted
         fmt_name = info.get("format", " ")
         var_label = info.get("description", " ")
@@ -79,11 +80,10 @@ def make_codeBook(yaml_path: str) -> str:
                 # Formats frequency with thousands separators (e.g., 1,234)
                 report_lines.append(f"{key_display:<10} | {label:<35} | {freq:<12,}")
 
-            report_lines.append("-" * 65)
-
         # Render Question Numbers
         q_numbers = info.get("qnbr", [])
         if q_numbers:
+            report_lines.append("-" * 65)
             q_str = ", ".join(str(q) for q in q_numbers)
             report_lines.append(f"Question(s):   {q_str}")
 
@@ -96,9 +96,6 @@ def make_codeBook(yaml_path: str) -> str:
             report_lines.append("Notes:")
             for index, note_content in enumerate(found_notes, start=1):
                 report_lines.append(f"  [{index}] {note_content}")
-
-        # Section separator for the next variable
-        report_lines.append("=" * 65 + "\n")
 
     # Combine all accumulated lines into a single output string
     report_content = "\n".join(report_lines)
