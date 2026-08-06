@@ -1,6 +1,6 @@
-======================================================================
-                           CODEBOOK REPORT                            
-======================================================================
+=================================================================
+                         CODEBOOK REPORT                         
+=================================================================
 
 Variable Name: PUF_ID (Format: PUFFMT)
 Description:   Unique PUF Identification Number
@@ -8,7 +8,6 @@ Description:   Unique PUF Identification Number
 Code       | Value Label                         | Frequency   
 -----------------------------------------------------------------
 LOW-HIGH   | PUF_ID Count                        | 13,016      
------------------------------------------------------------------
 =================================================================
 
 Variable Name: SURVEYYR (Format: SVYRFMT)
@@ -17,7 +16,6 @@ Description:   Survey year
 Code       | Value Label                         | Frequency   
 -----------------------------------------------------------------
 2023       | 2023                                | 13,016      
------------------------------------------------------------------
 -----------------------------------------------------------------
 Notes:
   [1] Previously named SVYYR.
@@ -29,7 +27,6 @@ Description:   Version number
 Code       | Value Label                         | Frequency   
 -----------------------------------------------------------------
 1          | Version 1                           | 13,016      
------------------------------------------------------------------
 =================================================================
 
 Variable Name: ADM_H_MEDSTA (Format: MEDSTAF)
@@ -40,7 +37,6 @@ Code       | Value Label                         | Frequency
 1          | Aged                                | 10,904      
 2          | Disabled                            | 2,090       
 3          | Unknown                             | 22          
------------------------------------------------------------------
 -----------------------------------------------------------------
 Notes:
   [1] Results include all respondents; source administrative data.
@@ -53,7 +49,6 @@ Code       | Value Label                         | Frequency
 -----------------------------------------------------------------
 1          | Yes                                 | 7,123       
 2          | No                                  | 5,893       
------------------------------------------------------------------
 -----------------------------------------------------------------
 Notes:
   [1] Results include all respondents; source administrative data.
@@ -69,7 +64,6 @@ Code       | Value Label                         | Frequency
 2          | Subsidized part year                | 23          
 3          | Subsidized full year                | 234         
 -----------------------------------------------------------------
------------------------------------------------------------------
 Notes:
   [1] Results include all respondents; source administrative data.
 =================================================================
@@ -84,7 +78,6 @@ Code       | Value Label                         | Frequency
 3          | Partial dual                        | 490         
 4          | QMB dual                            | 460         
 -----------------------------------------------------------------
------------------------------------------------------------------
 Notes:
   [1] Results include all respondents; source administrative data.
 =================================================================
@@ -97,7 +90,6 @@ Code       | Value Label                         | Frequency
 1          | Non dual                            | 9,923       
 2          | Part year dual                      | 356         
 3          | Full year dual                      | 2,737       
------------------------------------------------------------------
 -----------------------------------------------------------------
 Notes:
   [1] Results include all respondents; source administrative data.
@@ -112,7 +104,6 @@ Code       | Value Label                         | Frequency
 2          | Part year FFS                       | 494         
 3          | Full year FFS                       | 5,759       
 -----------------------------------------------------------------
------------------------------------------------------------------
 Notes:
   [1] Results include all respondents; source administrative data.
 =================================================================
@@ -126,7 +117,6 @@ Code       | Value Label                         | Frequency
 2          | Part year MA                        | 463         
 3          | Full year MA                        | 6,660       
 -----------------------------------------------------------------
------------------------------------------------------------------
 Notes:
   [1] Results include all respondents; source administrative data.
 =================================================================
@@ -138,7 +128,6 @@ Code       | Value Label                         | Frequency
 -----------------------------------------------------------------
 1          | Yes                                 | 10,936      
 2          | No                                  | 2,080       
------------------------------------------------------------------
 -----------------------------------------------------------------
 Notes:
   [1] Results include all respondents; source administrative data.
@@ -153,7 +142,6 @@ Code       | Value Label                         | Frequency
 2          | Part year premium subsidy           | 185         
 3          | Full year premium subsidy           | 3,204       
 -----------------------------------------------------------------
------------------------------------------------------------------
 Notes:
   [1] Results include all respondents; source administrative data.
 =================================================================
@@ -167,7 +155,6 @@ Code       | Value Label                         | Frequency
 2          | Not full year 100% premium subsidy  | 247         
 3          | Full year 100% premium subsidy      | 3,142       
 -----------------------------------------------------------------
------------------------------------------------------------------
 Notes:
   [1] Results include all respondents; source administrative data.
 =================================================================
@@ -179,7 +166,6 @@ Code       | Value Label                         | Frequency
 -----------------------------------------------------------------
 1          | Yes                                 | 516         
 2          | No                                  | 12,500      
------------------------------------------------------------------
 -----------------------------------------------------------------
 Notes:
   [1] Results include all respondents; source administrative data.
@@ -193,7 +179,6 @@ Code       | Value Label                         | Frequency
 1          | Yes                                 | 105         
 2          | No                                  | 12,911      
 -----------------------------------------------------------------
------------------------------------------------------------------
 Notes:
   [1] Results include all respondents; source administrative data.
 =================================================================
@@ -205,7 +190,6 @@ Code       | Value Label                         | Frequency
 -----------------------------------------------------------------
 1          | Yes                                 | 771         
 2          | No                                  | 12,245      
------------------------------------------------------------------
 -----------------------------------------------------------------
 Notes:
   [1] Results include all respondents; source administrative data.
@@ -219,7 +203,6 @@ Code       | Value Label                         | Frequency
 1          | Yes                                 | 4,425       
 2          | No                                  | 8,591       
 -----------------------------------------------------------------
------------------------------------------------------------------
 Notes:
   [1] Results include all respondents; source administrative data.
 =================================================================
@@ -232,7 +215,6 @@ Code       | Value Label                         | Frequency
 1          | Yes                                 | 6,581       
 2          | No                                  | 6,435       
 -----------------------------------------------------------------
------------------------------------------------------------------
 Notes:
   [1] Results include all respondents; source administrative data.
 =================================================================
@@ -244,7 +226,6 @@ Code       | Value Label                         | Frequency
 -----------------------------------------------------------------
 1          | Yes                                 | 144         
 2          | No                                  | 12,872      
------------------------------------------------------------------
 -----------------------------------------------------------------
 Notes:
   [1] Results include all respondents; source administrative data.
@@ -260,7 +241,6 @@ Code       | Value Label                         | Frequency
 2          | Two stays                           | 122         
 3          | Three stays                         | 50          
 4          | Four or more stays                  | 30          
------------------------------------------------------------------
 -----------------------------------------------------------------
 Notes:
   [1] Results include all respondents; source administrative data.
@@ -278,7 +258,6 @@ Code       | Value Label                         | Frequency
 4          | 4 days                              | 77          
 5          | 5 or more days                      | 301         
 -----------------------------------------------------------------
------------------------------------------------------------------
 Notes:
   [1] Results include all respondents; source administrative data.
 =================================================================
@@ -292,7 +271,6 @@ Code       | Value Label                         | Frequency
 1          | One stay                            | 116         
 2          | Two stays                           | 28          
 -----------------------------------------------------------------
------------------------------------------------------------------
 Notes:
   [1] Results include all respondents; source administrative data.
 =================================================================
@@ -305,7 +283,6 @@ Code       | Value Label                         | Frequency
 0          | 0 day covered                       | 12,872      
 1          | 1 day or more covered               | 144         
 -----------------------------------------------------------------
------------------------------------------------------------------
 Notes:
   [1] Results include all respondents; source administrative data.
 =================================================================
@@ -317,7 +294,6 @@ Code       | Value Label                         | Frequency
 -----------------------------------------------------------------
 0          | No visit                            | 12,500      
 1          | One or more visit                   | 516         
------------------------------------------------------------------
 -----------------------------------------------------------------
 Notes:
   [1] Results include all respondents; source administrative data.
@@ -335,7 +311,6 @@ Code       | Value Label                         | Frequency
 4          | 16 to 20 office visits              | 431         
 5          | 21 or more office visits            | 429         
 -----------------------------------------------------------------
------------------------------------------------------------------
 Notes:
   [1] Results include all respondents; source administrative data.
 =================================================================
@@ -348,7 +323,6 @@ Code       | Value Label                         | Frequency
 .          | Inapplicable/Missing                | 7,435       
 1          | Yes                                 | 2,560       
 2          | No                                  | 3,021       
------------------------------------------------------------------
 -----------------------------------------------------------------
 Notes:
   [1] Results only include those who have private insurance.
@@ -363,7 +337,6 @@ Code       | Value Label                         | Frequency
 1          | Yes                                 | 1,119       
 2          | No                                  | 4,462       
 -----------------------------------------------------------------
------------------------------------------------------------------
 Notes:
   [1] Results only include those who have private insurance.
 =================================================================
@@ -376,7 +349,6 @@ Code       | Value Label                         | Frequency
 .          | Inapplicable/Missing                | 7,435       
 1          | Yes                                 | 2,477       
 2          | No                                  | 3,104       
------------------------------------------------------------------
 -----------------------------------------------------------------
 Notes:
   [1] Results only include those who have private insurance.
@@ -391,7 +363,6 @@ Code       | Value Label                         | Frequency
 1          | Yes                                 | 2,844       
 2          | No                                  | 2,737       
 -----------------------------------------------------------------
------------------------------------------------------------------
 Notes:
   [1] Results only include those who have private insurance.
 =================================================================
@@ -403,7 +374,6 @@ Code       | Value Label                         | Frequency
 -----------------------------------------------------------------
 1          | Enrolled in MA during year          | 7,123       
 2          | Never enrolled in MA during year    | 5,893       
------------------------------------------------------------------
 -----------------------------------------------------------------
 Notes:
   [1] Results include all respondents; source administrative data.
@@ -417,7 +387,6 @@ Code       | Value Label                         | Frequency
 -----------------------------------------------------------------
 1          | Yes                                 | 5,581       
 2          | No                                  | 7,435       
------------------------------------------------------------------
 -----------------------------------------------------------------
 Notes:
   [1] Results include all respondents; source survey and administrative data.
@@ -433,7 +402,6 @@ Code       | Value Label                         | Frequency
 2          | Two private plans                   | 1,184       
 3          | Three or more private plans         | 523         
 -----------------------------------------------------------------
------------------------------------------------------------------
 Notes:
   [1] Results include all respondents; source survey and administrative data.
 =================================================================
@@ -445,7 +413,6 @@ Code       | Value Label                         | Frequency
 -----------------------------------------------------------------
 1          | Yes                                 | 2,584       
 2          | No                                  | 10,432      
------------------------------------------------------------------
 -----------------------------------------------------------------
 Notes:
   [1] Results include all respondents; source administrative data.
@@ -459,7 +426,6 @@ Code       | Value Label                         | Frequency
 1          | Yes                                 | 3,439       
 2          | No                                  | 9,577       
 -----------------------------------------------------------------
------------------------------------------------------------------
 Notes:
   [1] Results include all respondents; source administrative data.
 =================================================================
@@ -471,7 +437,6 @@ Code       | Value Label                         | Frequency
 -----------------------------------------------------------------
 1          | Had RDS during year                 | 257         
 2          | Never had RDS during year           | 12,759      
------------------------------------------------------------------
 -----------------------------------------------------------------
 Notes:
   [1] Results include all respondents; source administrative data.
@@ -485,7 +450,6 @@ Code       | Value Label                         | Frequency
 .          | Inapplicable/Missing                | 5,893       
 1          | Yes                                 | 6,923       
 2          | No                                  | 200         
------------------------------------------------------------------
 =================================================================
 
 Variable Name: INT_LANG (Format: LANG)
@@ -524,7 +488,6 @@ Code       | Value Label                         | Frequency
 1          | Age <65 years                       | 2,112       
 2          | Age 65-74 years                     | 4,501       
 3          | Age 75+ years                       | 6,403       
------------------------------------------------------------------
 -----------------------------------------------------------------
 Notes:
   [1] Results include all respondents.
@@ -580,7 +543,6 @@ Code       | Value Label                         | Frequency
 7          | Non-Hispanic black, 75-84 years     | 346         
 8          | Non-Hispanic black, 85+ years       | 172         
 9          | Hispanic, <65 years                 | 283         
------------------------------------------------------------------
 -----------------------------------------------------------------
 Notes:
   [1] Results include all respondents.
@@ -639,7 +601,6 @@ Code       | Value Label                         | Frequency
 2          | Imputed by carry forward            | 2,097       
 3          | Imputed by hotdeck                  | 5,813       
 -----------------------------------------------------------------
------------------------------------------------------------------
 Notes:
   [1] Results include all respondents.
 =================================================================
@@ -666,7 +627,6 @@ Code       | Value Label                         | Frequency
 -----------------------------------------------------------------
 1          | Metro area                          | 10,377      
 2          | Non-metro area                      | 2,639       
------------------------------------------------------------------
 =================================================================
 
 Variable Name: DEM_IPR_IND (Format: IPR)
@@ -679,7 +639,6 @@ Code       | Value Label                         | Frequency
 3          | >120% and <=135% of the Federal Poverty | 734         
 4          | >135% and <=200% of the Federal Poverty | 2,001       
 5          | >200% of the Federal Poverty Level  | 7,226       
------------------------------------------------------------------
 -----------------------------------------------------------------
 Notes:
   [1] Beginning in 2017 the income poverty thresholds reflect the Medicare beneficiary thresholds.
@@ -2165,7 +2124,6 @@ Code       | Value Label                         | Frequency
 1          | 1 helper                            | 3,059       
 2          | 2 helpers                           | 827         
 3          | 3 or more helpers                   | 316         
------------------------------------------------------------------
 -----------------------------------------------------------------
 Notes:
   [1] Results include all respondents.
@@ -3689,7 +3647,6 @@ D          | Don't know                          | 43
 N          | Not ascertained                     | 174         
 1          | Yes                                 | 6,675       
 2          | No                                  | 231         
------------------------------------------------------------------
 =================================================================
 
 Variable Name: MA_MADVDOC (Format: YESFMT)
@@ -3702,7 +3659,6 @@ D          | Don't know                          | 43
 N          | Not ascertained                     | 174         
 1          | Yes                                 | 6,835       
 2          | No                                  | 71          
------------------------------------------------------------------
 =================================================================
 
 Variable Name: MA_MADVLAB (Format: YESFMT)
@@ -3715,7 +3671,6 @@ D          | Don't know                          | 43
 N          | Not ascertained                     | 174         
 1          | Yes                                 | 6,801       
 2          | No                                  | 105         
------------------------------------------------------------------
 =================================================================
 
 Variable Name: MA_MADVINPT (Format: YESFMT)
@@ -3728,7 +3683,6 @@ D          | Don't know                          | 43
 N          | Not ascertained                     | 174         
 1          | Yes                                 | 6,572       
 2          | No                                  | 334         
------------------------------------------------------------------
 =================================================================
 
 Variable Name: MA_MADVNH (Format: YESFMT)
@@ -3792,7 +3746,6 @@ D          | Don't know                          | 43
 N          | Not ascertained                     | 174         
 1          | Yes                                 | 4,765       
 2          | No                                  | 2,141       
------------------------------------------------------------------
 =================================================================
 
 Variable Name: MA_MADVBEH (Format: YESFMT)
@@ -3805,7 +3758,6 @@ D          | Don't know                          | 43
 N          | Not ascertained                     | 174         
 1          | Yes                                 | 4,063       
 2          | No                                  | 2,843       
------------------------------------------------------------------
 =================================================================
 
 Variable Name: MA_MADVPAY (Format: YESFMT)
@@ -3854,7 +3806,6 @@ R          | Refused                             | 10
 3          | Good                                | 4,503       
 4          | Fair                                | 2,121       
 5          | Poor                                | 1,288       
------------------------------------------------------------------
 =================================================================
 
 Variable Name: HLT_DRYMOUTH (Format: HOW5OFTN)
@@ -3869,7 +3820,6 @@ R          | Refused                             | 3
 3          | Somtimes                            | 2,930       
 4          | Often                               | 994         
 5          | Usually                             | 638         
------------------------------------------------------------------
 =================================================================
 
 Variable Name: HLT_TOOTHSEN (Format: HOW5OFTN)
@@ -3885,7 +3835,6 @@ R          | Refused                             | 3
 3          | Somtimes                            | 1,421       
 4          | Often                               | 256         
 5          | Usually                             | 201         
------------------------------------------------------------------
 =================================================================
 
 Variable Name: PUFFWGT (Format: CONTIN)
@@ -3894,7 +3843,6 @@ Description:   PUF Fall Ever Enrolled Full Sample Wt
 Code       | Value Label                         | Frequency   
 -----------------------------------------------------------------
 LOW-HIGH   | Range of Values                     | 13,016      
------------------------------------------------------------------
 =================================================================
 
 Variable Name: PUFF001 (Format: CONTIN)
@@ -3903,7 +3851,6 @@ Description:   PUF Fall Ever Enrolled rep wt 1
 Code       | Value Label                         | Frequency   
 -----------------------------------------------------------------
 LOW-HIGH   | Range of Values                     | 13,016      
------------------------------------------------------------------
 =================================================================
 
 Variable Name: PUFF002 (Format: CONTIN)
@@ -3912,7 +3859,6 @@ Description:   PUF Fall Ever Enrolled rep wt 2
 Code       | Value Label                         | Frequency   
 -----------------------------------------------------------------
 LOW-HIGH   | Range of Values                     | 13,016      
------------------------------------------------------------------
 =================================================================
 
 Variable Name: PUFF003 (Format: CONTIN)
@@ -3921,7 +3867,6 @@ Description:   PUF Fall Ever Enrolled rep wt 3
 Code       | Value Label                         | Frequency   
 -----------------------------------------------------------------
 LOW-HIGH   | Range of Values                     | 13,016      
------------------------------------------------------------------
 =================================================================
 
 Variable Name: PUFF004 (Format: CONTIN)
@@ -3930,7 +3875,6 @@ Description:   PUF Fall Ever Enrolled rep wt 4
 Code       | Value Label                         | Frequency   
 -----------------------------------------------------------------
 LOW-HIGH   | Range of Values                     | 13,016      
------------------------------------------------------------------
 =================================================================
 
 Variable Name: PUFF005 (Format: CONTIN)
@@ -3939,7 +3883,6 @@ Description:   PUF Fall Ever Enrolled rep wt 5
 Code       | Value Label                         | Frequency   
 -----------------------------------------------------------------
 LOW-HIGH   | Range of Values                     | 13,016      
------------------------------------------------------------------
 =================================================================
 
 Variable Name: PUFF006 (Format: CONTIN)
@@ -3948,7 +3891,6 @@ Description:   PUF Fall Ever Enrolled rep wt 6
 Code       | Value Label                         | Frequency   
 -----------------------------------------------------------------
 LOW-HIGH   | Range of Values                     | 13,016      
------------------------------------------------------------------
 =================================================================
 
 Variable Name: PUFF007 (Format: CONTIN)
@@ -3957,7 +3899,6 @@ Description:   PUF Fall Ever Enrolled rep wt 7
 Code       | Value Label                         | Frequency   
 -----------------------------------------------------------------
 LOW-HIGH   | Range of Values                     | 13,016      
------------------------------------------------------------------
 =================================================================
 
 Variable Name: PUFF008 (Format: CONTIN)
@@ -3966,7 +3907,6 @@ Description:   PUF Fall Ever Enrolled rep wt 8
 Code       | Value Label                         | Frequency   
 -----------------------------------------------------------------
 LOW-HIGH   | Range of Values                     | 13,016      
------------------------------------------------------------------
 =================================================================
 
 Variable Name: PUFF009 (Format: CONTIN)
@@ -3975,7 +3915,6 @@ Description:   PUF Fall Ever Enrolled rep wt 9
 Code       | Value Label                         | Frequency   
 -----------------------------------------------------------------
 LOW-HIGH   | Range of Values                     | 13,016      
------------------------------------------------------------------
 =================================================================
 
 Variable Name: PUFF010 (Format: CONTIN)
@@ -3984,7 +3923,6 @@ Description:   PUF Fall Ever Enrolled rep wt 10
 Code       | Value Label                         | Frequency   
 -----------------------------------------------------------------
 LOW-HIGH   | Range of Values                     | 13,016      
------------------------------------------------------------------
 =================================================================
 
 Variable Name: PUFF011 (Format: CONTIN)
@@ -3993,7 +3931,6 @@ Description:   PUF Fall Ever Enrolled rep wt 11
 Code       | Value Label                         | Frequency   
 -----------------------------------------------------------------
 LOW-HIGH   | Range of Values                     | 13,016      
------------------------------------------------------------------
 =================================================================
 
 Variable Name: PUFF012 (Format: CONTIN)
@@ -4002,7 +3939,6 @@ Description:   PUF Fall Ever Enrolled rep wt 12
 Code       | Value Label                         | Frequency   
 -----------------------------------------------------------------
 LOW-HIGH   | Range of Values                     | 13,016      
------------------------------------------------------------------
 =================================================================
 
 Variable Name: PUFF013 (Format: CONTIN)
@@ -4011,7 +3947,6 @@ Description:   PUF Fall Ever Enrolled rep wt 13
 Code       | Value Label                         | Frequency   
 -----------------------------------------------------------------
 LOW-HIGH   | Range of Values                     | 13,016      
------------------------------------------------------------------
 =================================================================
 
 Variable Name: PUFF014 (Format: CONTIN)
@@ -4020,7 +3955,6 @@ Description:   PUF Fall Ever Enrolled rep wt 14
 Code       | Value Label                         | Frequency   
 -----------------------------------------------------------------
 LOW-HIGH   | Range of Values                     | 13,016      
------------------------------------------------------------------
 =================================================================
 
 Variable Name: PUFF015 (Format: CONTIN)
@@ -4029,7 +3963,6 @@ Description:   PUF Fall Ever Enrolled rep wt 15
 Code       | Value Label                         | Frequency   
 -----------------------------------------------------------------
 LOW-HIGH   | Range of Values                     | 13,016      
------------------------------------------------------------------
 =================================================================
 
 Variable Name: PUFF016 (Format: CONTIN)
@@ -4038,7 +3971,6 @@ Description:   PUF Fall Ever Enrolled rep wt 16
 Code       | Value Label                         | Frequency   
 -----------------------------------------------------------------
 LOW-HIGH   | Range of Values                     | 13,016      
------------------------------------------------------------------
 =================================================================
 
 Variable Name: PUFF017 (Format: CONTIN)
@@ -4047,7 +3979,6 @@ Description:   PUF Fall Ever Enrolled rep wt 17
 Code       | Value Label                         | Frequency   
 -----------------------------------------------------------------
 LOW-HIGH   | Range of Values                     | 13,016      
------------------------------------------------------------------
 =================================================================
 
 Variable Name: PUFF018 (Format: CONTIN)
@@ -4056,7 +3987,6 @@ Description:   PUF Fall Ever Enrolled rep wt 18
 Code       | Value Label                         | Frequency   
 -----------------------------------------------------------------
 LOW-HIGH   | Range of Values                     | 13,016      
------------------------------------------------------------------
 =================================================================
 
 Variable Name: PUFF019 (Format: CONTIN)
@@ -4065,7 +3995,6 @@ Description:   PUF Fall Ever Enrolled rep wt 19
 Code       | Value Label                         | Frequency   
 -----------------------------------------------------------------
 LOW-HIGH   | Range of Values                     | 13,016      
------------------------------------------------------------------
 =================================================================
 
 Variable Name: PUFF020 (Format: CONTIN)
@@ -4074,7 +4003,6 @@ Description:   PUF Fall Ever Enrolled rep wt 20
 Code       | Value Label                         | Frequency   
 -----------------------------------------------------------------
 LOW-HIGH   | Range of Values                     | 13,016      
------------------------------------------------------------------
 =================================================================
 
 Variable Name: PUFF021 (Format: CONTIN)
@@ -4083,7 +4011,6 @@ Description:   PUF Fall Ever Enrolled rep wt 21
 Code       | Value Label                         | Frequency   
 -----------------------------------------------------------------
 LOW-HIGH   | Range of Values                     | 13,016      
------------------------------------------------------------------
 =================================================================
 
 Variable Name: PUFF022 (Format: CONTIN)
@@ -4092,7 +4019,6 @@ Description:   PUF Fall Ever Enrolled rep wt 22
 Code       | Value Label                         | Frequency   
 -----------------------------------------------------------------
 LOW-HIGH   | Range of Values                     | 13,016      
------------------------------------------------------------------
 =================================================================
 
 Variable Name: PUFF023 (Format: CONTIN)
@@ -4101,7 +4027,6 @@ Description:   PUF Fall Ever Enrolled rep wt 23
 Code       | Value Label                         | Frequency   
 -----------------------------------------------------------------
 LOW-HIGH   | Range of Values                     | 13,016      
------------------------------------------------------------------
 =================================================================
 
 Variable Name: PUFF024 (Format: CONTIN)
@@ -4110,7 +4035,6 @@ Description:   PUF Fall Ever Enrolled rep wt 24
 Code       | Value Label                         | Frequency   
 -----------------------------------------------------------------
 LOW-HIGH   | Range of Values                     | 13,016      
------------------------------------------------------------------
 =================================================================
 
 Variable Name: PUFF025 (Format: CONTIN)
@@ -4119,7 +4043,6 @@ Description:   PUF Fall Ever Enrolled rep wt 25
 Code       | Value Label                         | Frequency   
 -----------------------------------------------------------------
 LOW-HIGH   | Range of Values                     | 13,016      
------------------------------------------------------------------
 =================================================================
 
 Variable Name: PUFF026 (Format: CONTIN)
@@ -4128,7 +4051,6 @@ Description:   PUF Fall Ever Enrolled rep wt 26
 Code       | Value Label                         | Frequency   
 -----------------------------------------------------------------
 LOW-HIGH   | Range of Values                     | 13,016      
------------------------------------------------------------------
 =================================================================
 
 Variable Name: PUFF027 (Format: CONTIN)
@@ -4137,7 +4059,6 @@ Description:   PUF Fall Ever Enrolled rep wt 27
 Code       | Value Label                         | Frequency   
 -----------------------------------------------------------------
 LOW-HIGH   | Range of Values                     | 13,016      
------------------------------------------------------------------
 =================================================================
 
 Variable Name: PUFF028 (Format: CONTIN)
@@ -4146,7 +4067,6 @@ Description:   PUF Fall Ever Enrolled rep wt 28
 Code       | Value Label                         | Frequency   
 -----------------------------------------------------------------
 LOW-HIGH   | Range of Values                     | 13,016      
------------------------------------------------------------------
 =================================================================
 
 Variable Name: PUFF029 (Format: CONTIN)
@@ -4155,7 +4075,6 @@ Description:   PUF Fall Ever Enrolled rep wt 29
 Code       | Value Label                         | Frequency   
 -----------------------------------------------------------------
 LOW-HIGH   | Range of Values                     | 13,016      
------------------------------------------------------------------
 =================================================================
 
 Variable Name: PUFF030 (Format: CONTIN)
@@ -4164,7 +4083,6 @@ Description:   PUF Fall Ever Enrolled rep wt 30
 Code       | Value Label                         | Frequency   
 -----------------------------------------------------------------
 LOW-HIGH   | Range of Values                     | 13,016      
------------------------------------------------------------------
 =================================================================
 
 Variable Name: PUFF031 (Format: CONTIN)
@@ -4173,7 +4091,6 @@ Description:   PUF Fall Ever Enrolled rep wt 31
 Code       | Value Label                         | Frequency   
 -----------------------------------------------------------------
 LOW-HIGH   | Range of Values                     | 13,016      
------------------------------------------------------------------
 =================================================================
 
 Variable Name: PUFF032 (Format: CONTIN)
@@ -4182,7 +4099,6 @@ Description:   PUF Fall Ever Enrolled rep wt 32
 Code       | Value Label                         | Frequency   
 -----------------------------------------------------------------
 LOW-HIGH   | Range of Values                     | 13,016      
------------------------------------------------------------------
 =================================================================
 
 Variable Name: PUFF033 (Format: CONTIN)
@@ -4191,7 +4107,6 @@ Description:   PUF Fall Ever Enrolled rep wt 33
 Code       | Value Label                         | Frequency   
 -----------------------------------------------------------------
 LOW-HIGH   | Range of Values                     | 13,016      
------------------------------------------------------------------
 =================================================================
 
 Variable Name: PUFF034 (Format: CONTIN)
@@ -4200,7 +4115,6 @@ Description:   PUF Fall Ever Enrolled rep wt 34
 Code       | Value Label                         | Frequency   
 -----------------------------------------------------------------
 LOW-HIGH   | Range of Values                     | 13,016      
------------------------------------------------------------------
 =================================================================
 
 Variable Name: PUFF035 (Format: CONTIN)
@@ -4209,7 +4123,6 @@ Description:   PUF Fall Ever Enrolled rep wt 35
 Code       | Value Label                         | Frequency   
 -----------------------------------------------------------------
 LOW-HIGH   | Range of Values                     | 13,016      
------------------------------------------------------------------
 =================================================================
 
 Variable Name: PUFF036 (Format: CONTIN)
@@ -4218,7 +4131,6 @@ Description:   PUF Fall Ever Enrolled rep wt 36
 Code       | Value Label                         | Frequency   
 -----------------------------------------------------------------
 LOW-HIGH   | Range of Values                     | 13,016      
------------------------------------------------------------------
 =================================================================
 
 Variable Name: PUFF037 (Format: CONTIN)
@@ -4227,7 +4139,6 @@ Description:   PUF Fall Ever Enrolled rep wt 37
 Code       | Value Label                         | Frequency   
 -----------------------------------------------------------------
 LOW-HIGH   | Range of Values                     | 13,016      
------------------------------------------------------------------
 =================================================================
 
 Variable Name: PUFF038 (Format: CONTIN)
@@ -4236,7 +4147,6 @@ Description:   PUF Fall Ever Enrolled rep wt 38
 Code       | Value Label                         | Frequency   
 -----------------------------------------------------------------
 LOW-HIGH   | Range of Values                     | 13,016      
------------------------------------------------------------------
 =================================================================
 
 Variable Name: PUFF039 (Format: CONTIN)
@@ -4245,7 +4155,6 @@ Description:   PUF Fall Ever Enrolled rep wt 39
 Code       | Value Label                         | Frequency   
 -----------------------------------------------------------------
 LOW-HIGH   | Range of Values                     | 13,016      
------------------------------------------------------------------
 =================================================================
 
 Variable Name: PUFF040 (Format: CONTIN)
@@ -4254,7 +4163,6 @@ Description:   PUF Fall Ever Enrolled rep wt 40
 Code       | Value Label                         | Frequency   
 -----------------------------------------------------------------
 LOW-HIGH   | Range of Values                     | 13,016      
------------------------------------------------------------------
 =================================================================
 
 Variable Name: PUFF041 (Format: CONTIN)
@@ -4263,7 +4171,6 @@ Description:   PUF Fall Ever Enrolled rep wt 41
 Code       | Value Label                         | Frequency   
 -----------------------------------------------------------------
 LOW-HIGH   | Range of Values                     | 13,016      
------------------------------------------------------------------
 =================================================================
 
 Variable Name: PUFF042 (Format: CONTIN)
@@ -4272,7 +4179,6 @@ Description:   PUF Fall Ever Enrolled rep wt 42
 Code       | Value Label                         | Frequency   
 -----------------------------------------------------------------
 LOW-HIGH   | Range of Values                     | 13,016      
------------------------------------------------------------------
 =================================================================
 
 Variable Name: PUFF043 (Format: CONTIN)
@@ -4281,7 +4187,6 @@ Description:   PUF Fall Ever Enrolled rep wt 43
 Code       | Value Label                         | Frequency   
 -----------------------------------------------------------------
 LOW-HIGH   | Range of Values                     | 13,016      
------------------------------------------------------------------
 =================================================================
 
 Variable Name: PUFF044 (Format: CONTIN)
@@ -4290,7 +4195,6 @@ Description:   PUF Fall Ever Enrolled rep wt 44
 Code       | Value Label                         | Frequency   
 -----------------------------------------------------------------
 LOW-HIGH   | Range of Values                     | 13,016      
------------------------------------------------------------------
 =================================================================
 
 Variable Name: PUFF045 (Format: CONTIN)
@@ -4299,7 +4203,6 @@ Description:   PUF Fall Ever Enrolled rep wt 45
 Code       | Value Label                         | Frequency   
 -----------------------------------------------------------------
 LOW-HIGH   | Range of Values                     | 13,016      
------------------------------------------------------------------
 =================================================================
 
 Variable Name: PUFF046 (Format: CONTIN)
@@ -4308,7 +4211,6 @@ Description:   PUF Fall Ever Enrolled rep wt 46
 Code       | Value Label                         | Frequency   
 -----------------------------------------------------------------
 LOW-HIGH   | Range of Values                     | 13,016      
------------------------------------------------------------------
 =================================================================
 
 Variable Name: PUFF047 (Format: CONTIN)
@@ -4317,7 +4219,6 @@ Description:   PUF Fall Ever Enrolled rep wt 47
 Code       | Value Label                         | Frequency   
 -----------------------------------------------------------------
 LOW-HIGH   | Range of Values                     | 13,016      
------------------------------------------------------------------
 =================================================================
 
 Variable Name: PUFF048 (Format: CONTIN)
@@ -4326,7 +4227,6 @@ Description:   PUF Fall Ever Enrolled rep wt 48
 Code       | Value Label                         | Frequency   
 -----------------------------------------------------------------
 LOW-HIGH   | Range of Values                     | 13,016      
------------------------------------------------------------------
 =================================================================
 
 Variable Name: PUFF049 (Format: CONTIN)
@@ -4335,7 +4235,6 @@ Description:   PUF Fall Ever Enrolled rep wt 49
 Code       | Value Label                         | Frequency   
 -----------------------------------------------------------------
 LOW-HIGH   | Range of Values                     | 13,016      
------------------------------------------------------------------
 =================================================================
 
 Variable Name: PUFF050 (Format: CONTIN)
@@ -4344,7 +4243,6 @@ Description:   PUF Fall Ever Enrolled rep wt 50
 Code       | Value Label                         | Frequency   
 -----------------------------------------------------------------
 LOW-HIGH   | Range of Values                     | 13,016      
------------------------------------------------------------------
 =================================================================
 
 Variable Name: PUFF051 (Format: CONTIN)
@@ -4353,7 +4251,6 @@ Description:   PUF Fall Ever Enrolled rep wt 51
 Code       | Value Label                         | Frequency   
 -----------------------------------------------------------------
 LOW-HIGH   | Range of Values                     | 13,016      
------------------------------------------------------------------
 =================================================================
 
 Variable Name: PUFF052 (Format: CONTIN)
@@ -4362,7 +4259,6 @@ Description:   PUF Fall Ever Enrolled rep wt 52
 Code       | Value Label                         | Frequency   
 -----------------------------------------------------------------
 LOW-HIGH   | Range of Values                     | 13,016      
------------------------------------------------------------------
 =================================================================
 
 Variable Name: PUFF053 (Format: CONTIN)
@@ -4371,7 +4267,6 @@ Description:   PUF Fall Ever Enrolled rep wt 53
 Code       | Value Label                         | Frequency   
 -----------------------------------------------------------------
 LOW-HIGH   | Range of Values                     | 13,016      
------------------------------------------------------------------
 =================================================================
 
 Variable Name: PUFF054 (Format: CONTIN)
@@ -4380,7 +4275,6 @@ Description:   PUF Fall Ever Enrolled rep wt 54
 Code       | Value Label                         | Frequency   
 -----------------------------------------------------------------
 LOW-HIGH   | Range of Values                     | 13,016      
------------------------------------------------------------------
 =================================================================
 
 Variable Name: PUFF055 (Format: CONTIN)
@@ -4389,7 +4283,6 @@ Description:   PUF Fall Ever Enrolled rep wt 55
 Code       | Value Label                         | Frequency   
 -----------------------------------------------------------------
 LOW-HIGH   | Range of Values                     | 13,016      
------------------------------------------------------------------
 =================================================================
 
 Variable Name: PUFF056 (Format: CONTIN)
@@ -4398,7 +4291,6 @@ Description:   PUF Fall Ever Enrolled rep wt 56
 Code       | Value Label                         | Frequency   
 -----------------------------------------------------------------
 LOW-HIGH   | Range of Values                     | 13,016      
------------------------------------------------------------------
 =================================================================
 
 Variable Name: PUFF057 (Format: CONTIN)
@@ -4407,7 +4299,6 @@ Description:   PUF Fall Ever Enrolled rep wt 57
 Code       | Value Label                         | Frequency   
 -----------------------------------------------------------------
 LOW-HIGH   | Range of Values                     | 13,016      
------------------------------------------------------------------
 =================================================================
 
 Variable Name: PUFF058 (Format: CONTIN)
@@ -4416,7 +4307,6 @@ Description:   PUF Fall Ever Enrolled rep wt 58
 Code       | Value Label                         | Frequency   
 -----------------------------------------------------------------
 LOW-HIGH   | Range of Values                     | 13,016      
------------------------------------------------------------------
 =================================================================
 
 Variable Name: PUFF059 (Format: CONTIN)
@@ -4425,7 +4315,6 @@ Description:   PUF Fall Ever Enrolled rep wt 59
 Code       | Value Label                         | Frequency   
 -----------------------------------------------------------------
 LOW-HIGH   | Range of Values                     | 13,016      
------------------------------------------------------------------
 =================================================================
 
 Variable Name: PUFF060 (Format: CONTIN)
@@ -4434,7 +4323,6 @@ Description:   PUF Fall Ever Enrolled rep wt 60
 Code       | Value Label                         | Frequency   
 -----------------------------------------------------------------
 LOW-HIGH   | Range of Values                     | 13,016      
------------------------------------------------------------------
 =================================================================
 
 Variable Name: PUFF061 (Format: CONTIN)
@@ -4443,7 +4331,6 @@ Description:   PUF Fall Ever Enrolled rep wt 61
 Code       | Value Label                         | Frequency   
 -----------------------------------------------------------------
 LOW-HIGH   | Range of Values                     | 13,016      
------------------------------------------------------------------
 =================================================================
 
 Variable Name: PUFF062 (Format: CONTIN)
@@ -4452,7 +4339,6 @@ Description:   PUF Fall Ever Enrolled rep wt 62
 Code       | Value Label                         | Frequency   
 -----------------------------------------------------------------
 LOW-HIGH   | Range of Values                     | 13,016      
------------------------------------------------------------------
 =================================================================
 
 Variable Name: PUFF063 (Format: CONTIN)
@@ -4461,7 +4347,6 @@ Description:   PUF Fall Ever Enrolled rep wt 63
 Code       | Value Label                         | Frequency   
 -----------------------------------------------------------------
 LOW-HIGH   | Range of Values                     | 13,016      
------------------------------------------------------------------
 =================================================================
 
 Variable Name: PUFF064 (Format: CONTIN)
@@ -4470,7 +4355,6 @@ Description:   PUF Fall Ever Enrolled rep wt 64
 Code       | Value Label                         | Frequency   
 -----------------------------------------------------------------
 LOW-HIGH   | Range of Values                     | 13,016      
------------------------------------------------------------------
 =================================================================
 
 Variable Name: PUFF065 (Format: CONTIN)
@@ -4479,7 +4363,6 @@ Description:   PUF Fall Ever Enrolled rep wt 65
 Code       | Value Label                         | Frequency   
 -----------------------------------------------------------------
 LOW-HIGH   | Range of Values                     | 13,016      
------------------------------------------------------------------
 =================================================================
 
 Variable Name: PUFF066 (Format: CONTIN)
@@ -4488,7 +4371,6 @@ Description:   PUF Fall Ever Enrolled rep wt 66
 Code       | Value Label                         | Frequency   
 -----------------------------------------------------------------
 LOW-HIGH   | Range of Values                     | 13,016      
------------------------------------------------------------------
 =================================================================
 
 Variable Name: PUFF067 (Format: CONTIN)
@@ -4497,7 +4379,6 @@ Description:   PUF Fall Ever Enrolled rep wt 67
 Code       | Value Label                         | Frequency   
 -----------------------------------------------------------------
 LOW-HIGH   | Range of Values                     | 13,016      
------------------------------------------------------------------
 =================================================================
 
 Variable Name: PUFF068 (Format: CONTIN)
@@ -4506,7 +4387,6 @@ Description:   PUF Fall Ever Enrolled rep wt 68
 Code       | Value Label                         | Frequency   
 -----------------------------------------------------------------
 LOW-HIGH   | Range of Values                     | 13,016      
------------------------------------------------------------------
 =================================================================
 
 Variable Name: PUFF069 (Format: CONTIN)
@@ -4515,7 +4395,6 @@ Description:   PUF Fall Ever Enrolled rep wt 69
 Code       | Value Label                         | Frequency   
 -----------------------------------------------------------------
 LOW-HIGH   | Range of Values                     | 13,016      
------------------------------------------------------------------
 =================================================================
 
 Variable Name: PUFF070 (Format: CONTIN)
@@ -4524,7 +4403,6 @@ Description:   PUF Fall Ever Enrolled rep wt 70
 Code       | Value Label                         | Frequency   
 -----------------------------------------------------------------
 LOW-HIGH   | Range of Values                     | 13,016      
------------------------------------------------------------------
 =================================================================
 
 Variable Name: PUFF071 (Format: CONTIN)
@@ -4533,7 +4411,6 @@ Description:   PUF Fall Ever Enrolled rep wt 71
 Code       | Value Label                         | Frequency   
 -----------------------------------------------------------------
 LOW-HIGH   | Range of Values                     | 13,016      
------------------------------------------------------------------
 =================================================================
 
 Variable Name: PUFF072 (Format: CONTIN)
@@ -4542,7 +4419,6 @@ Description:   PUF Fall Ever Enrolled rep wt 72
 Code       | Value Label                         | Frequency   
 -----------------------------------------------------------------
 LOW-HIGH   | Range of Values                     | 13,016      
------------------------------------------------------------------
 =================================================================
 
 Variable Name: PUFF073 (Format: CONTIN)
@@ -4551,7 +4427,6 @@ Description:   PUF Fall Ever Enrolled rep wt 73
 Code       | Value Label                         | Frequency   
 -----------------------------------------------------------------
 LOW-HIGH   | Range of Values                     | 13,016      
------------------------------------------------------------------
 =================================================================
 
 Variable Name: PUFF074 (Format: CONTIN)
@@ -4560,7 +4435,6 @@ Description:   PUF Fall Ever Enrolled rep wt 74
 Code       | Value Label                         | Frequency   
 -----------------------------------------------------------------
 LOW-HIGH   | Range of Values                     | 13,016      
------------------------------------------------------------------
 =================================================================
 
 Variable Name: PUFF075 (Format: CONTIN)
@@ -4569,7 +4443,6 @@ Description:   PUF Fall Ever Enrolled rep wt 75
 Code       | Value Label                         | Frequency   
 -----------------------------------------------------------------
 LOW-HIGH   | Range of Values                     | 13,016      
------------------------------------------------------------------
 =================================================================
 
 Variable Name: PUFF076 (Format: CONTIN)
@@ -4578,7 +4451,6 @@ Description:   PUF Fall Ever Enrolled rep wt 76
 Code       | Value Label                         | Frequency   
 -----------------------------------------------------------------
 LOW-HIGH   | Range of Values                     | 13,016      
------------------------------------------------------------------
 =================================================================
 
 Variable Name: PUFF077 (Format: CONTIN)
@@ -4587,7 +4459,6 @@ Description:   PUF Fall Ever Enrolled rep wt 77
 Code       | Value Label                         | Frequency   
 -----------------------------------------------------------------
 LOW-HIGH   | Range of Values                     | 13,016      
------------------------------------------------------------------
 =================================================================
 
 Variable Name: PUFF078 (Format: CONTIN)
@@ -4596,7 +4467,6 @@ Description:   PUF Fall Ever Enrolled rep wt 78
 Code       | Value Label                         | Frequency   
 -----------------------------------------------------------------
 LOW-HIGH   | Range of Values                     | 13,016      
------------------------------------------------------------------
 =================================================================
 
 Variable Name: PUFF079 (Format: CONTIN)
@@ -4605,7 +4475,6 @@ Description:   PUF Fall Ever Enrolled rep wt 79
 Code       | Value Label                         | Frequency   
 -----------------------------------------------------------------
 LOW-HIGH   | Range of Values                     | 13,016      
------------------------------------------------------------------
 =================================================================
 
 Variable Name: PUFF080 (Format: CONTIN)
@@ -4614,7 +4483,6 @@ Description:   PUF Fall Ever Enrolled rep wt 80
 Code       | Value Label                         | Frequency   
 -----------------------------------------------------------------
 LOW-HIGH   | Range of Values                     | 13,016      
------------------------------------------------------------------
 =================================================================
 
 Variable Name: PUFF081 (Format: CONTIN)
@@ -4623,7 +4491,6 @@ Description:   PUF Fall Ever Enrolled rep wt 81
 Code       | Value Label                         | Frequency   
 -----------------------------------------------------------------
 LOW-HIGH   | Range of Values                     | 13,016      
------------------------------------------------------------------
 =================================================================
 
 Variable Name: PUFF082 (Format: CONTIN)
@@ -4632,7 +4499,6 @@ Description:   PUF Fall Ever Enrolled rep wt 82
 Code       | Value Label                         | Frequency   
 -----------------------------------------------------------------
 LOW-HIGH   | Range of Values                     | 13,016      
------------------------------------------------------------------
 =================================================================
 
 Variable Name: PUFF083 (Format: CONTIN)
@@ -4641,7 +4507,6 @@ Description:   PUF Fall Ever Enrolled rep wt 83
 Code       | Value Label                         | Frequency   
 -----------------------------------------------------------------
 LOW-HIGH   | Range of Values                     | 13,016      
------------------------------------------------------------------
 =================================================================
 
 Variable Name: PUFF084 (Format: CONTIN)
@@ -4650,7 +4515,6 @@ Description:   PUF Fall Ever Enrolled rep wt 84
 Code       | Value Label                         | Frequency   
 -----------------------------------------------------------------
 LOW-HIGH   | Range of Values                     | 13,016      
------------------------------------------------------------------
 =================================================================
 
 Variable Name: PUFF085 (Format: CONTIN)
@@ -4659,7 +4523,6 @@ Description:   PUF Fall Ever Enrolled rep wt 85
 Code       | Value Label                         | Frequency   
 -----------------------------------------------------------------
 LOW-HIGH   | Range of Values                     | 13,016      
------------------------------------------------------------------
 =================================================================
 
 Variable Name: PUFF086 (Format: CONTIN)
@@ -4668,7 +4531,6 @@ Description:   PUF Fall Ever Enrolled rep wt 86
 Code       | Value Label                         | Frequency   
 -----------------------------------------------------------------
 LOW-HIGH   | Range of Values                     | 13,016      
------------------------------------------------------------------
 =================================================================
 
 Variable Name: PUFF087 (Format: CONTIN)
@@ -4677,7 +4539,6 @@ Description:   PUF Fall Ever Enrolled rep wt 87
 Code       | Value Label                         | Frequency   
 -----------------------------------------------------------------
 LOW-HIGH   | Range of Values                     | 13,016      
------------------------------------------------------------------
 =================================================================
 
 Variable Name: PUFF088 (Format: CONTIN)
@@ -4686,7 +4547,6 @@ Description:   PUF Fall Ever Enrolled rep wt 88
 Code       | Value Label                         | Frequency   
 -----------------------------------------------------------------
 LOW-HIGH   | Range of Values                     | 13,016      
------------------------------------------------------------------
 =================================================================
 
 Variable Name: PUFF089 (Format: CONTIN)
@@ -4695,7 +4555,6 @@ Description:   PUF Fall Ever Enrolled rep wt 89
 Code       | Value Label                         | Frequency   
 -----------------------------------------------------------------
 LOW-HIGH   | Range of Values                     | 13,016      
------------------------------------------------------------------
 =================================================================
 
 Variable Name: PUFF090 (Format: CONTIN)
@@ -4704,7 +4563,6 @@ Description:   PUF Fall Ever Enrolled rep wt 90
 Code       | Value Label                         | Frequency   
 -----------------------------------------------------------------
 LOW-HIGH   | Range of Values                     | 13,016      
------------------------------------------------------------------
 =================================================================
 
 Variable Name: PUFF091 (Format: CONTIN)
@@ -4713,7 +4571,6 @@ Description:   PUF Fall Ever Enrolled rep wt 91
 Code       | Value Label                         | Frequency   
 -----------------------------------------------------------------
 LOW-HIGH   | Range of Values                     | 13,016      
------------------------------------------------------------------
 =================================================================
 
 Variable Name: PUFF092 (Format: CONTIN)
@@ -4722,7 +4579,6 @@ Description:   PUF Fall Ever Enrolled rep wt 92
 Code       | Value Label                         | Frequency   
 -----------------------------------------------------------------
 LOW-HIGH   | Range of Values                     | 13,016      
------------------------------------------------------------------
 =================================================================
 
 Variable Name: PUFF093 (Format: CONTIN)
@@ -4731,7 +4587,6 @@ Description:   PUF Fall Ever Enrolled rep wt 93
 Code       | Value Label                         | Frequency   
 -----------------------------------------------------------------
 LOW-HIGH   | Range of Values                     | 13,016      
------------------------------------------------------------------
 =================================================================
 
 Variable Name: PUFF094 (Format: CONTIN)
@@ -4740,7 +4595,6 @@ Description:   PUF Fall Ever Enrolled rep wt 94
 Code       | Value Label                         | Frequency   
 -----------------------------------------------------------------
 LOW-HIGH   | Range of Values                     | 13,016      
------------------------------------------------------------------
 =================================================================
 
 Variable Name: PUFF095 (Format: CONTIN)
@@ -4749,7 +4603,6 @@ Description:   PUF Fall Ever Enrolled rep wt 95
 Code       | Value Label                         | Frequency   
 -----------------------------------------------------------------
 LOW-HIGH   | Range of Values                     | 13,016      
------------------------------------------------------------------
 =================================================================
 
 Variable Name: PUFF096 (Format: CONTIN)
@@ -4758,7 +4611,6 @@ Description:   PUF Fall Ever Enrolled rep wt 96
 Code       | Value Label                         | Frequency   
 -----------------------------------------------------------------
 LOW-HIGH   | Range of Values                     | 13,016      
------------------------------------------------------------------
 =================================================================
 
 Variable Name: PUFF097 (Format: CONTIN)
@@ -4767,7 +4619,6 @@ Description:   PUF Fall Ever Enrolled rep wt 97
 Code       | Value Label                         | Frequency   
 -----------------------------------------------------------------
 LOW-HIGH   | Range of Values                     | 13,016      
------------------------------------------------------------------
 =================================================================
 
 Variable Name: PUFF098 (Format: CONTIN)
@@ -4776,7 +4627,6 @@ Description:   PUF Fall Ever Enrolled rep wt 98
 Code       | Value Label                         | Frequency   
 -----------------------------------------------------------------
 LOW-HIGH   | Range of Values                     | 13,016      
------------------------------------------------------------------
 =================================================================
 
 Variable Name: PUFF099 (Format: CONTIN)
@@ -4785,7 +4635,6 @@ Description:   PUF Fall Ever Enrolled rep wt 99
 Code       | Value Label                         | Frequency   
 -----------------------------------------------------------------
 LOW-HIGH   | Range of Values                     | 13,016      
------------------------------------------------------------------
 =================================================================
 
 Variable Name: PUFF100 (Format: CONTIN)
@@ -4794,5 +4643,3 @@ Description:   PUF Fall Ever Enrolled rep wt 100
 Code       | Value Label                         | Frequency   
 -----------------------------------------------------------------
 LOW-HIGH   | Range of Values                     | 13,016      
------------------------------------------------------------------
-=================================================================
