@@ -1,5 +1,6 @@
 {
-  "name": "MCBS Codebook Generator",
+  "name": "code-book",
+  "version": "",
   "description": "An automated metadata pipeline to generate and validate Medicare Current Beneficiary Survey (MCBS) codebooks.",
   "longDescription": "An automated metadata pipeline designed to generate, validate, and manage data dictionaries and codebooks for the Medicare Current Beneficiary Survey (MCBS) Public Use Files (PUFs). By utilizing a structured, machine-readable metadata schema as the single source of truth, this tool eliminates documentation drift, automates frequency distribution checks, and ensures consistent mapping of survey questions and answer codes across releases.",
   "status": "Development",
@@ -18,8 +19,12 @@
   "repositoryURL": "https://github.com/DSACMS/code-book",
   "repositoryHost": "github.com/DSACMS",
   "repositoryVisibility": "public",
+  "homepageURL": "",
+  "downloadURL": "",
+  "disclaimerURL": "",
+  "disclaimerText": "",
   "vcs": "git",
-  "laborHours": null,
+  "laborHours": 10815,
   "reuseFrequency": {
     "forks": 1,
     "clones": 0
@@ -36,29 +41,33 @@
   ],
   "softwareType": "standalone/backend",
   "languages": [
-    "python"
+    "Python",
+    "SAS"
   ],
   "maintenance": "internal",
   "contractNumber": [],
   "SBOM": "https://github.com/DSACMS/code-book/network/dependencies",
+  "relatedCode": [],
+  "reusedCode": [],
+  "partners": [],
   "date": {
-    "created": "2026-06-18T16:36:13Z",
-    "lastModified": "2026-07-16T05:08:20Z",
-    "metadataLastUpdated": "2026-07-16T05:08:20Z"
+    "created": "2026-06-18T16:39:04Z",
+    "lastModified": "2026-07-27T22:08:54Z",
+    "metadataLastUpdated": "2026-08-01T02:58:14.359Z"
   },
   "tags": [
+    "cms",
+    "codebook",
+    "data-dictionary",
     "dsacms-tier2",
     "mcbs",
-    "open-source",
-    "codebook",
+    "medicare-current-beneficiary-survey",
     "metadata",
-    "data-dictionary",
-    "python",
-    "cms",
+    "open-source",
     "puf",
-    "yaml",
+    "python",
     "survey-data",
-    "medicare-current-beneficiary-survey"
+    "yaml"
   ],
   "contact": {
     "email": "mcbs@cms.hhs.gov",
