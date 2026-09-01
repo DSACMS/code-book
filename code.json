@@ -24,7 +24,7 @@
   "disclaimerURL": "",
   "disclaimerText": "",
   "vcs": "git",
-  "laborHours": 10815,
+  "laborHours": 10798,
   "reuseFrequency": {
     "forks": 1,
     "clones": 0
@@ -52,8 +52,8 @@
   "partners": [],
   "date": {
     "created": "2026-06-18T16:39:04Z",
-    "lastModified": "2026-07-27T22:08:54Z",
-    "metadataLastUpdated": "2026-08-01T02:58:14.359Z"
+    "lastModified": "2026-08-13T18:06:19Z",
+    "metadataLastUpdated": "2026-09-01T04:07:06.927Z"
   },
   "tags": [
     "cms",
