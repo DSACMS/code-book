@@ -13,7 +13,8 @@
     ],
     "usageType": [
       "openSource"
-    ]
+    ],
+    "exemptionText": ""
   },
   "organization": "Centers for Medicare & Medicaid Services",
   "repositoryURL": "https://github.com/DSACMS/code-book",
@@ -24,7 +25,7 @@
   "disclaimerURL": "",
   "disclaimerText": "",
   "vcs": "git",
-  "laborHours": 10815,
+  "laborHours": 10798,
   "reuseFrequency": {
     "forks": 1,
     "clones": 0
@@ -52,8 +53,8 @@
   "partners": [],
   "date": {
     "created": "2026-06-18T16:39:04Z",
-    "lastModified": "2026-07-27T22:08:54Z",
-    "metadataLastUpdated": "2026-08-01T02:58:14.359Z"
+    "lastModified": "2026-10-28T15:18:52Z",
+    "metadataLastUpdated": "2026-11-01T04:57:29.028Z"
   },
   "tags": [
     "cms",
